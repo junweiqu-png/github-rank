@@ -4,14 +4,36 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    - cron: '17 */6 * * *'
+    - cron: '17 12 * * *'
 
 concurrency:
   group: ranking-pages
   cancel-in-progress: false
 
 jobs:
+  cadence:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      due: ${{ steps.check.outputs.due }}
+    steps:
+      - uses: actions/checkout@v6
+      - id: check
+        name: Update only when three days have elapsed
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          node --input-type=module <<'NODE'
+          import { readFileSync, appendFileSync } from 'node:fs';
+          const last = Date.parse(JSON.parse(readFileSync('dist/data/latest.json', 'utf8')).updated_at);
+          const due = process.env.EVENT_NAME !== 'schedule' || !Number.isFinite(last) || Date.now() - last >= 3 * 24 * 60 * 60 * 1000;
+          appendFileSync(process.env.GITHUB_OUTPUT, 'due=' + due + '\n');
+          console.log(due ? 'Update is due' : 'Less than three days since last update; skipping');
+          NODE
   build:
+    needs: cadence
+    if: needs.cadence.outputs.due == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: write

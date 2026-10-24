@@ -29,7 +29,7 @@ npm start
 
 网站运行不需要 GPT、OpenAI API 或访客登录。将本目录放到专用公开 GitHub 仓库的 main 分支，在仓库 Settings → Pages 中将 Source 设为 GitHub Actions。
 
-`.github/workflows/pages.yml` 已准备好：首次推送、手动执行和每六小时（UTC 的 00:17、06:17、12:17、18:17）采集，测试后将快照保存到 Git，再部署 dist 到 GitHub Pages。使用该仓库自动提供的 GITHUB_TOKEN，无需另建 Token。北京时间为 02:17、08:17、14:17、20:17；GitHub 调度可能延迟。
+`.github/workflows/pages.yml` 已准备好：首次推送、手动执行和每隔至少三天采集，测试后将快照保存到 Git，再部署 dist 到 GitHub Pages。使用该仓库自动提供的 GITHUB_TOKEN，无需另建 Token。每天北京时间 20:17 检查距上次采集是否满 72 小时，未满则跳过采集与发布；因此按三天间隔更新，不受跨月影响。推送代码或手动执行仍会立即更新。GitHub 调度可能延迟。
 
 工作流仅写入自身仓库的数据文件和 Pages，不包含 GPT 依赖。首次启用需仓库管理员允许 Actions 写入、选择 Pages 的 Actions 发布源。发布后要确认第一次 Actions 任务成功和 Pages 地址可访问，之后才能声称自动更新已启用。
 
