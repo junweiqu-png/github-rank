@@ -1,0 +1,2308 @@
+{
+  "morluto/rea": {
+    "summary": "让 AI 分析软件行为和二进制程序，辅助逆向工程",
+    "input": "待分析的软件、二进制文件或行为问题",
+    "output": "分析证据、逆向结果和行为解释",
+    "source": "https://github.com/morluto/rea",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "mattpocock/skills": {
+    "summary": "供编程助手使用的软件工程工作流技能集",
+    "input": "开发需求、代码或评审任务",
+    "output": "按技能流程完成的设计、代码或评审结果",
+    "source": "https://github.com/mattpocock/skills",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "ollama/ollama": {
+    "summary": "在自己的电脑或服务器上运行大语言模型",
+    "input": "模型名称、问题或 API 请求",
+    "output": "模型生成的回答和文本",
+    "source": "https://github.com/ollama/ollama",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "anthropics/skills": {
+    "summary": "Anthropic 发布的 Agent 技能示例与技能包",
+    "input": "任务要求和相应文件",
+    "output": "由所选技能处理后的文档、代码等成果",
+    "source": "https://github.com/anthropics/skills",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "langgenius/dify": {
+    "summary": "通过可视化流程搭建 AI 应用、知识库问答和 Agent",
+    "input": "模型配置、知识文档、工作流和用户问题",
+    "output": "可运行的 AI 应用及回答结果",
+    "source": "https://github.com/langgenius/dify",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "open-webui/open-webui": {
+    "summary": "在自己的服务器上部署 AI 聊天网页",
+    "input": "接入的模型服务、问题和附件",
+    "output": "聊天回答及会话记录",
+    "source": "https://github.com/open-webui/open-webui",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "langchain-ai/langchain": {
+    "summary": "用于编写大模型应用和 Agent 的开发框架",
+    "input": "模型、工具、数据源和任务代码",
+    "output": "执行模型与工具后的应用结果",
+    "source": "https://github.com/langchain-ai/langchain",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "browser-use/browser-use": {
+    "summary": "让 AI 通过浏览器完成网页操作",
+    "input": "任务描述、网页和浏览器环境",
+    "output": "网页操作结果及采集的信息",
+    "source": "https://github.com/browser-use/browser-use",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "stablyai/orca": {
+    "summary": "在桌面或手机上管理多个编程 Agent",
+    "input": "编程任务、代码仓库和已有模型订阅",
+    "output": "各 Agent 的执行状态和任务成果",
+    "source": "https://github.com/stablyai/orca",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "modelcontextprotocol/servers": {
+    "summary": "MCP 服务器示例和资源目录",
+    "input": "希望连接的数据源或工具需求",
+    "output": "可参考部署的服务器和集成方式",
+    "source": "https://github.com/modelcontextprotocol/servers",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "unslothai/unsloth": {
+    "summary": "在本地运行和训练语言模型、扩散模型",
+    "input": "模型、训练数据和训练配置",
+    "output": "训练后的模型或模型生成结果",
+    "source": "https://github.com/unslothai/unsloth",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "upstash/context7": {
+    "summary": "向编程助手提供较新的软件库文档",
+    "input": "软件库名称及相关技术问题",
+    "output": "对应文档片段和代码用法",
+    "source": "https://github.com/upstash/context7",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "microsoft/autogen": {
+    "summary": "编排多个 AI Agent 协同完成任务",
+    "input": "Agent 配置、工具和任务",
+    "output": "Agent 协作过程及任务结果",
+    "source": "https://github.com/microsoft/autogen",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "chromedevtools/chrome-devtools-mcp": {
+    "summary": "让编程助手使用 Chrome 开发者工具排查网页问题",
+    "input": "网页地址、浏览器和调试任务",
+    "output": "调试信息、性能记录及操作结果",
+    "source": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "anthropics/claude-plugins-official": {
+    "summary": "Anthropic 维护的 Claude Code 插件目录",
+    "input": "需要扩展的工作能力",
+    "output": "可安装的插件及其说明",
+    "source": "https://github.com/anthropics/claude-plugins-official",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "microsoft/playwright-mcp": {
+    "summary": "通过 MCP 操作浏览器进行网页测试和自动化",
+    "input": "网页地址与浏览器操作指令",
+    "output": "网页信息、截图或操作结果",
+    "source": "https://github.com/microsoft/playwright-mcp",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "vercel-labs/skills": {
+    "summary": "发现、安装和管理 Agent 技能的命令行工具",
+    "input": "技能仓库地址或搜索关键词",
+    "output": "安装到 Agent 环境中的技能",
+    "source": "https://github.com/vercel-labs/skills",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "github/github-mcp-server": {
+    "summary": "让 AI 助手读取和操作 GitHub 项目",
+    "input": "仓库、Issue、PR 等查询或操作请求",
+    "output": "GitHub 数据或操作结果",
+    "source": "https://github.com/github/github-mcp-server",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "qwenlm/qwen-code": {
+    "summary": "在终端里使用的开源 AI 编程助手",
+    "input": "代码仓库和自然语言开发任务",
+    "output": "代码改动、解释或命令执行结果",
+    "source": "https://github.com/QwenLM/qwen-code",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "openai/skills": {
+    "summary": "面向 Codex 的技能目录",
+    "input": "任务需求及选定技能",
+    "output": "可安装技能和相应任务成果",
+    "source": "https://github.com/openai/skills",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "xerj-org/xerj": {
+    "summary": "在本地索引和搜索代码、文档与日志",
+    "input": "文件目录和搜索问题",
+    "output": "全文或语义搜索结果",
+    "source": "https://github.com/xerj-org/xerj",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "mvschwarz/openrig": {
+    "summary": "组织具有角色分工和共享上下文的 Agent 团队",
+    "input": "团队配置、项目上下文和任务",
+    "output": "团队任务状态及协作成果",
+    "source": "https://github.com/mvschwarz/openrig",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "inkeep/open-knowledge": {
+    "summary": "结合 AI 的 Markdown 编辑器与知识库",
+    "input": "Markdown 文档和知识内容",
+    "output": "编辑后的文档和可查阅的知识库",
+    "source": "https://github.com/inkeep/open-knowledge",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "jeremylongshore/tons-of-skills-marketplace": {
+    "summary": "跨模型的 Agent 技能平台和安装工具",
+    "input": "技能需求、技能包及 Agent 环境",
+    "output": "安装和适配后的技能",
+    "source": "https://github.com/jeremylongshore/tons-of-skills-marketplace",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "nano-muse/nanomuse": {
+    "summary": "可在多种设备上使用的个人 Agent",
+    "input": "日常任务、设备权限和上下文",
+    "output": "任务成果、持续任务状态及记忆",
+    "source": "https://github.com/nano-muse/nanoMuse",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "framerslab/agentos": {
+    "summary": "用 TypeScript 构建带记忆的 AI Agent",
+    "input": "Agent 配置、模型和用户任务",
+    "output": "Agent 行为及任务执行结果",
+    "source": "https://github.com/framerslab/agentos",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "ikalus1988/misakanet": {
+    "summary": "通过 MCP 查询已有的软件故障修复经验",
+    "input": "报错信息和故障线索",
+    "output": "带证据等级的修复经验",
+    "source": "https://github.com/Ikalus1988/MisakaNet",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "cotal-ai/cotal": {
+    "summary": "定义多个 Agent 如何协调工作的开放标准",
+    "input": "参与者、任务和协调信息",
+    "output": "按标准交换的协作消息",
+    "source": "https://github.com/Cotal-AI/Cotal",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "gosuda/portal-tunnel": {
+    "summary": "通过可自托管的中继将本机服务暴露给外部使用",
+    "input": "本地服务地址和中继配置",
+    "output": "可远程访问的服务入口",
+    "source": "https://github.com/gosuda/portal-tunnel",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "guaardvark/guaardvark": {
+    "summary": "在自己的 GPU 上部署综合 AI 工作室",
+    "input": "本地模型、文件和创作或自动化任务",
+    "output": "问答、生成内容或 Agent 执行结果",
+    "source": "https://github.com/guaardvark/guaardvark",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "nirholas/three.ws": {
+    "summary": "生成并嵌入可交互的 3D AI 角色",
+    "input": "文字或照片及角色配置",
+    "output": "带骨骼动画的 GLB 角色和网页组件",
+    "source": "https://github.com/nirholas/three.ws",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "sikamikanikobg/homelab-monitor": {
+    "summary": "自托管的家庭服务器监控面板",
+    "input": "GPU、容器、系统服务等运行数据",
+    "output": "资源状态和能耗监控面板",
+    "source": "https://github.com/SikamikanikoBG/homelab-monitor",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "damianvtran/local-operator": {
+    "summary": "在自己的电脑上组织和运行多个 Agent",
+    "input": "Agent 分工、模型订阅和工作任务",
+    "output": "后台协作结果及任务状态",
+    "source": "https://github.com/damianvtran/local-operator",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "cloudgeni-ai/opengeni": {
+    "summary": "面向组织的可自托管 Agent 执行服务",
+    "input": "任务、审批规则、凭据授权和上下文",
+    "output": "可回放的 Agent 会话和执行记录",
+    "source": "https://github.com/Cloudgeni-ai/opengeni",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "juspay/neurolink": {
+    "summary": "用统一接口接入多家 AI 模型和语音等能力",
+    "input": "模型配置、文本、语音或文件请求",
+    "output": "生成内容、流式响应或决策结果",
+    "source": "https://github.com/juspay/neurolink",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "jasoncolapietro/suede-creator-skills": {
+    "summary": "供编程助手使用的技能集与技能目录",
+    "input": "开发或创作任务及技能需求",
+    "output": "技能执行结果和可发现的技能条目",
+    "source": "https://github.com/JasonColapietro/suede-creator-skills",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "mizzlelover/cida": {
+    "summary": "指导 AI 写出清楚自然的现代中文",
+    "input": "写作目标、原始材料和文本证据",
+    "output": "结构清晰的中文表达",
+    "source": "https://github.com/mizzlelover/cida",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "kukucaicndy/corum-harness": {
+    "summary": "基于 DeepSeek Harness 的桌面 Agent 和开发环境",
+    "input": "项目代码、开发任务和模型配置",
+    "output": "代码改动及 Agent 执行结果",
+    "source": "https://github.com/kukucaiCndy/Corum-Harness",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "pghqdev/openscreenshot": {
+    "summary": "数据保留在本机的开源浏览器截图扩展",
+    "input": "需要截取的网页",
+    "output": "网页截图",
+    "source": "https://github.com/PGHQdev/OpenScreenShot",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "hproxy-com/free-proxy-list": {
+    "summary": "提供持续检查的免费代理列表",
+    "input": "代理筛选条件或检测请求",
+    "output": "代理地址、延迟和可用性信息",
+    "source": "https://github.com/hproxy-com/free-proxy-list",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "atrislabs/atris": {
+    "summary": "根据自然语言任务规划、构建并检查成果",
+    "input": "任务描述和项目上下文",
+    "output": "构建结果及检查证据",
+    "source": "https://github.com/atrislabs/atris",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "dcc-mcp/dcc-mcp-core": {
+    "summary": "让 AI 通过 MCP 或 REST 操作创作软件",
+    "input": "创作软件实例和操作任务",
+    "output": "软件操作结果及创作成果",
+    "source": "https://github.com/dcc-mcp/dcc-mcp-core",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "call518/mcp-openstack-ops": {
+    "summary": "通过 MCP 查询和管理 OpenStack 云环境",
+    "input": "项目范围、云凭据和运维请求",
+    "output": "云资源信息及获授权的操作结果",
+    "source": "https://github.com/call518/MCP-OpenStack-Ops",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "linny006/awesome-agent-skills": {
+    "summary": "带质量评价的 Agent 技能精选目录",
+    "input": "想解决的任务或技能关键词",
+    "output": "可选技能及评价信息",
+    "source": "https://github.com/linny006/awesome-agent-skills",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "luocfprime/labtasker": {
+    "summary": "安排和管理实验任务",
+    "input": "实验任务和调度配置",
+    "output": "任务执行顺序及状态",
+    "source": "https://github.com/luocfprime/labtasker",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "curie-eng/curie": {
+    "summary": "把 GitHub Issue 委派给自托管 Agent 完成",
+    "input": "Issue、代码仓库和审批规则",
+    "output": "供人工审查的代码改动和 PR",
+    "source": "https://github.com/curie-eng/curie",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "burin-labs/harn": {
+    "summary": "用于构建 AI Agent 的编程语言和运行时",
+    "input": "Agent 程序与任务输入",
+    "output": "程序运行后的 Agent 结果",
+    "source": "https://github.com/burin-labs/harn",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "tedix-hq/tedix": {
+    "summary": "处理工作任务并集中呈现需要人决定的事项",
+    "input": "工作任务和相关上下文",
+    "output": "已处理结果及待决策事项",
+    "source": "https://github.com/tedix-hq/tedix",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "shalintripathi/saas-marketing-agents": {
+    "summary": "面向 B2B SaaS 营销的 Agent 和技能套件",
+    "input": "产品信息、营销目标和材料",
+    "output": "营销分析、内容和活动方案",
+    "source": "https://github.com/shalintripathi/saas-marketing-agents",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "eugenelim/agent-ready-repo": {
+    "summary": "给软件团队安装 AI 开发工作流套件",
+    "input": "项目、所需技能和开发阶段",
+    "output": "安装后的技能、子 Agent 和工作流",
+    "source": "https://github.com/eugenelim/agent-ready-repo",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "linny006/skills-tracker": {
+    "summary": "跟踪 GitHub 上新出现的技能仓库",
+    "input": "GitHub 仓库数据",
+    "output": "技能项目索引及变化记录",
+    "source": "https://github.com/linny006/skills-tracker",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "productdevbook/yuva": {
+    "summary": "把邮件、在线聊天等客户消息放进统一工作台",
+    "input": "客户消息、产品和团队配置",
+    "output": "会话收件箱、帮助中心等服务界面",
+    "source": "https://github.com/productdevbook/yuva",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "wilgon456/paseobility": {
+    "summary": "为 Paseo 连接的项目和设备提供工作技能",
+    "input": "项目、浏览器、文件或电脑任务",
+    "output": "对应技能完成的操作结果",
+    "source": "https://github.com/wilgon456/Paseobility",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "corpusiq/corpusiq-docs": {
+    "summary": "整理 Agent 与 MCP 的实践知识和资源",
+    "input": "需要查阅的技术主题",
+    "output": "知识文档与项目参考",
+    "source": "https://github.com/CorpusIQ/corpusiq-docs",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "andisab/swe-marketplace": {
+    "summary": "面向软件工程的 Claude Code 插件目录",
+    "input": "开发、评审、研究等工作需求",
+    "output": "可用插件、技能及专业 Agent",
+    "source": "https://github.com/andisab/swe-marketplace",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "raghavpillai/openteam": {
+    "summary": "带长期记忆和定时工作流的自托管 Agent",
+    "input": "工作目标、设备工具和调度设置",
+    "output": "持续执行的任务结果",
+    "source": "https://github.com/raghavpillai/openteam",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "maz2580/geospark": {
+    "summary": "通过几何引擎回答可验证的空间计算问题",
+    "input": "坐标、几何数据和距离等问题",
+    "output": "计算结果及来源、许可信息",
+    "source": "https://github.com/Maz2580/geospark",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "ashlrai/phantom-secrets": {
+    "summary": "在本地用替代标识保护 Agent 使用的密钥",
+    "input": "真实密钥、代理配置和 Agent 请求",
+    "output": "替换密钥后的请求及转发结果",
+    "source": "https://github.com/ashlrai/phantom-secrets",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "memtomem/memtomem": {
+    "summary": "用 Markdown 文件保存和检索 Agent 长期记忆",
+    "input": "Markdown 或代码文件及搜索请求",
+    "output": "相关记忆和检索片段",
+    "source": "https://github.com/memtomem/memtomem",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "jialaoliu/dsh-baton": {
+    "summary": "将任务从 Claude Code 或 Codex 转交本地 DeepSeek Harness",
+    "input": "需要转交的任务",
+    "output": "本地执行后带回的任务结果",
+    "source": "https://github.com/JialaoLiu/dsh-baton",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "cmeans/mcp-synology": {
+    "summary": "通过 MCP 管理和查询群晖 NAS",
+    "input": "NAS 连接信息和文件或系统请求",
+    "output": "文件查询、系统状态及授权操作结果",
+    "source": "https://github.com/cmeans/mcp-synology",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "phinn/kinetaios": {
+    "summary": "把多个编程 Agent 放进同一个本地工作台",
+    "input": "编程任务、模型环境和项目",
+    "output": "会话、代码成果和长期记忆",
+    "source": "https://github.com/phinn/KinetAios",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "fourteen1416/academic-agent-toolkit": {
+    "summary": "覆盖论文、数学建模和科研图表的学术技能包",
+    "input": "研究材料、论文或建模需求",
+    "output": "学术文档、图表或建模成果",
+    "source": "https://github.com/FOURTEEN1416/academic-agent-toolkit",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "bradleybond512/crystal-ball": {
+    "summary": "结合三维地球和多个实时数据面板的情报平台",
+    "input": "数据源和分析查询",
+    "output": "地理面板、证据关系及分析结果",
+    "source": "https://github.com/bradleybond512/crystal-ball",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "axisvela/praxo-core": {
+    "summary": "用于开发有规则约束的 AI Agent 的框架",
+    "input": "模型、工具、记忆和规则配置",
+    "output": "受规则约束的 Agent 执行结果",
+    "source": "https://github.com/axisvela/praxo-core",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "evannzhongg/nosis": {
+    "summary": "带会话隔离和工具扩展的个人 Agent 运行时",
+    "input": "任务、会话和工具配置",
+    "output": "任务成果及持久保存的会话记录",
+    "source": "https://github.com/EvannZhongg/Nosis",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "algovaultlabs/crypto-quant-signal-mcp": {
+    "summary": "通过 MCP 提供加密资产衍生品分析信号",
+    "input": "行情和分析请求",
+    "output": "组合信号、资金费率及市场状态分析",
+    "source": "https://github.com/AlgoVaultLabs/crypto-quant-signal-mcp",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "zh-xx/antu": {
+    "summary": "把结构化法律信息变成可离线查看的图",
+    "input": "案件事实、流程或关系的 JSON 数据",
+    "output": "独立 HTML 时间线、流程图或关系图",
+    "source": "https://github.com/zh-xx/Antu",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "holistis/bug-bounty-intelligence-mcp": {
+    "summary": "用多阶段检查辅助分析 Solidity 安全问题",
+    "input": "Solidity 代码仓库",
+    "output": "模式匹配结果或安全分析报告",
+    "source": "https://github.com/holistis/bug-bounty-intelligence-mcp",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "albasha0x0/corvus": {
+    "summary": "供 AI 分析本机二进制和托管程序的 MCP 服务",
+    "input": "程序文件和逆向分析请求",
+    "output": "反编译内容、引用关系或补丁结果",
+    "source": "https://github.com/Albasha0x0/Corvus",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "aws-samples/sample-aws-genai-db-modernizer": {
+    "summary": "分析数据库迁移到 AWS 的现代化方案",
+    "input": "关系数据库结构和实际查询",
+    "output": "引擎建议、迁移阶段和成本估算",
+    "source": "https://github.com/aws-samples/sample-aws-genai-db-modernizer",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "cyanseek/dsh-landscape": {
+    "summary": "检查 DeepSeek Harness 插件能力与缺口",
+    "input": "现有插件和所需能力",
+    "output": "验证结果、能力缺口和开发需求说明",
+    "source": "https://github.com/cyanseek/dsh-landscape",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "carrick-tools/carrick": {
+    "summary": "给 AI 提供跨服务的 TypeScript 代码关系",
+    "input": "TypeScript 仓库和上下文查询",
+    "output": "类型、路由和函数行为等相关信息",
+    "source": "https://github.com/carrick-tools/carrick",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "dbc-oduffy/coordinator-claude": {
+    "summary": "组织从需求规划到交付审查的开发流程",
+    "input": "产品需求、代码和任务进度",
+    "output": "计划、委派任务及交付决策材料",
+    "source": "https://github.com/dbc-oduffy/coordinator-claude",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "cgfixit/cyclaw": {
+    "summary": "本地优先、可离线使用的 AI Agent",
+    "input": "本地任务和可用模型环境",
+    "output": "Agent 的任务执行结果",
+    "source": "https://github.com/cgfixit/CyClaw",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "formhaus-dev/formhaus": {
+    "summary": "用一份 JSON 定义多种平台中的动态表单",
+    "input": "含字段、校验和分支的 JSON",
+    "output": "表单组件和校验行为",
+    "source": "https://github.com/formhaus-dev/formhaus",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "linny006/claude-code-plugin-tracker": {
+    "summary": "跟踪 Claude Code 插件、扩展和钩子",
+    "input": "GitHub 插件仓库数据",
+    "output": "持续更新的插件索引",
+    "source": "https://github.com/linny006/claude-code-plugin-tracker",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "aylee1024/lord-claude": {
+    "summary": "在 Claude Code 中调用其他模型的命令行 Agent",
+    "input": "任务及已有模型 CLI 订阅",
+    "output": "不同模型 Agent 的执行结果",
+    "source": "https://github.com/aylee1024/lord-claude",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "clocksmith/gamma": {
+    "summary": "在本地探索、比较和测试 AI 模型",
+    "input": "模型、测试数据和实验配置",
+    "output": "比较指标和能力实验结果",
+    "source": "https://github.com/clocksmith/gamma",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "hwdsl2/uplinkcrate": {
+    "summary": "把多个 MCP 服务聚合成自托管统一入口",
+    "input": "MCP 后端、环境配置及认证信息",
+    "output": "统一的 MCP 访问端点",
+    "source": "https://github.com/hwdsl2/uplinkcrate",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "chenxi2015/aiworkstation": {
+    "summary": "本地优先的个人知识工作台，结合网页采集、笔记与 AI 创作",
+    "input": "网页内容、图片、文件和研究问题",
+    "output": "本地资料库、笔记、研究报告或创作内容",
+    "domain": "ai",
+    "source": "https://github.com/chenxi2015/aiworkstation#readme",
+    "basis": "根据仓库 README 整理，输入输出为典型使用方式；未运行项目"
+  },
+  "aarekaz/transit-mcp": {
+    "summary": "查询华盛顿和纽约的公共交通实时信息",
+    "input": "车站、线路或到站查询",
+    "output": "到站时间、故障和车辆位置",
+    "source": "https://github.com/Aarekaz/transit-mcp",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "mapax-io/neuralops-nexus": {
+    "summary": "让人与多个 AI 角色在同一工作区协作",
+    "input": "工作目标、成员及项目上下文",
+    "output": "共享任务状态及协作成果",
+    "source": "https://github.com/mapax-io/neuralops-nexus",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "pironjulien/nexusbrowser": {
+    "summary": "让 AI 在真实 Chrome 的后台标签中执行任务",
+    "input": "本地 Chrome、桥接服务和任务",
+    "output": "网页操作结果",
+    "source": "https://github.com/pironjulien/NexusBrowser",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "elnora-ai/elnora-cli": {
+    "summary": "Elnora 生物实验流程平台的命令行接口",
+    "input": "平台命令和实验流程参数",
+    "output": "平台返回的流程信息或操作结果",
+    "source": "https://github.com/Elnora-AI/elnora-cli",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "dougladmo/graph-eng": {
+    "summary": "面向 Claude Code 的图工程插件和工作流",
+    "input": "图工程任务及项目上下文",
+    "output": "相应工作流成果，具体格式见文档",
+    "source": "https://github.com/Dougladmo/graph-eng",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "longfellow1/penpal": {
+    "summary": "让多个 AI 助手共享本地记忆",
+    "input": "需要保存的上下文和记忆查询",
+    "output": "跨助手可检索的本地记忆",
+    "source": "https://github.com/Longfellow1/penpal",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "njbbaer/simulacra": {
+    "summary": "用模板化上下文构建 Telegram AI 机器人",
+    "input": "模型配置、上下文模板和聊天消息",
+    "output": "机器人的聊天回复",
+    "source": "https://github.com/njbbaer/simulacra",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "raghuramsirigiri/raghuram-skills": {
+    "summary": "把数据变成离线可用的交互报告",
+    "input": "原始数据和报告需求",
+    "output": "带交互 SVG 图表的独立 HTML",
+    "source": "https://github.com/raghuramsirigiri/raghuram-skills",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "csalcedodatabi/dax-for-agents": {
+    "summary": "供 AI 查阅的 DAX 语言参考资料",
+    "input": "DAX 函数或语法问题",
+    "output": "函数签名、语义和使用注意事项",
+    "source": "https://github.com/CSalcedoDataBI/dax-for-agents",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "ramith27/thaliyola": {
+    "summary": "自托管的团队项目知识库",
+    "input": "经人工审核的文档和检索问题",
+    "output": "语义搜索结果及共享知识",
+    "source": "https://github.com/ramith27/thaliyola",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "bex-co/open-accounting-bench": {
+    "summary": "测试 AI Agent 处理会计账本的能力",
+    "input": "测试任务、Agent 和 Beancount 账本",
+    "output": "自动验证的评测结果",
+    "source": "https://github.com/bex-co/open-accounting-bench",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "samsara0xgg/jarvis": {
+    "summary": "macOS 上具有长期上下文的语音助手",
+    "input": "语音问题及已连接的服务",
+    "output": "语音回复或工具操作结果",
+    "source": "https://github.com/samsara0xgg/Jarvis",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "aifromscratch66/skillsentra-for-chatgpt": {
+    "summary": "管理 ChatGPT 所用技能的生命周期",
+    "input": "技能文件和管理操作",
+    "output": "技能管理结果",
+    "source": "https://github.com/AIfromScratch66/SKillSentra-for-Chatgpt",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "alivirgo/major-ai-skills": {
+    "summary": "供多种编程助手安装的通用技能集",
+    "input": "产品或效率任务和所需技能",
+    "output": "安装后的技能与任务结果",
+    "source": "https://github.com/alivirgo/Major-AI-Skills",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "thecolliery/.github": {
+    "summary": "介绍面向编程 Agent 的工具系列",
+    "input": "希望了解的工具或工作规范",
+    "output": "工具入口、规范和基准信息",
+    "source": "https://github.com/TheColliery/.github",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "ephemeral6/ai-galgame": {
+    "summary": "在 Claude Code 中运行 AI 视觉小说",
+    "input": "故事包和玩家选择",
+    "output": "互动剧情与视觉小说体验",
+    "source": "https://github.com/Ephemeral6/ai-galgame",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "stephennmiller/taskgraph-ai": {
+    "summary": "把产品需求变成带依赖关系的开发任务",
+    "input": "产品需求文档",
+    "output": "有先后依赖的任务列表和执行状态",
+    "source": "https://github.com/stephennmiller/taskgraph-ai",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "gaius-codius/ostrakon": {
+    "summary": "收集工作中的想法并整理成 Agent 提示",
+    "input": "随手记下的想法和项目上下文",
+    "output": "分类后的想法与可执行提示",
+    "source": "https://github.com/gaius-codius/ostrakon",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "raiki61/claude-plugins": {
+    "summary": "通过独立上下文反复实现、审查和研究",
+    "input": "开发或研究任务",
+    "output": "审查记录及迭代结果",
+    "source": "https://github.com/raiki61/claude-plugins",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "byheaven/byheaven-skills": {
+    "summary": "用于代码与效率工作的 Agent 技能合集",
+    "input": "代码任务或日常工作需求",
+    "output": "对应技能的任务成果",
+    "source": "https://github.com/byheaven/byheaven-skills",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "caredhieacid/jensenmo-happy_coding_everyday": {
+    "summary": "指导编程 Agent 按良好工程习惯修改代码",
+    "input": "需求、故障和项目代码",
+    "output": "经检查的代码改动和说明",
+    "source": "https://github.com/caredhieacid/jensenmo-happy_coding_everyday",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "tidegap/tidegap": {
+    "summary": "把非紧急模型任务安排到电网更清洁的时段",
+    "input": "任务、截止时间及区域配置",
+    "output": "调度后的执行时间与任务结果",
+    "source": "https://github.com/tidegap/tidegap",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "dheerajjha/reviewer": {
+    "summary": "在本地像审 PR 一样审查 Agent 改动",
+    "input": "本地代码差异和人工批注",
+    "output": "带批注的审查内容及反馈给 Agent 的说明",
+    "source": "https://github.com/dheerajjha/reviewer",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "juanspz/agent-ready-index": {
+    "summary": "面向 Agent 的网站索引及 MCP 工具项目",
+    "input": "待索引网站或查询需求",
+    "output": "网站索引及查询结果，格式需查文档",
+    "source": "https://github.com/JuanSPZ/agent-ready-index",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "reefbarman/agentlink": {
+    "summary": "在 VS Code 中组织可控的编程 Agent",
+    "input": "项目、模型配置和编程指令",
+    "output": "代码差异、任务进度和审查结果",
+    "source": "https://github.com/reefbarman/agentlink",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "hermez-agency/ponos": {
+    "summary": "将任务交给隔离工作区中的编程 Agent",
+    "input": "任务单、仓库和必要的外部连接",
+    "output": "任务成果和独立代码改动",
+    "source": "https://github.com/hermez-agency/ponos",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "arthurc02/skillhub": {
+    "summary": "寻找、制作、试用和分享 Agent 技能的平台",
+    "input": "技能需求或待分享的技能",
+    "output": "技能条目和试用结果",
+    "source": "https://github.com/ArthurC02/SkillHub",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "mblauberg/provenant": {
+    "summary": "供 Claude 与 Codex 使用的开发流程执行框架",
+    "input": "开发任务、规则和项目上下文",
+    "output": "按规则执行的开发流程结果",
+    "source": "https://github.com/mblauberg/provenant",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "kinqsradio/orbyn-fullstack-skills": {
+    "summary": "覆盖全栈开发的工程技能集",
+    "input": "架构、接口、迁移或前端开发任务",
+    "output": "对应工程技能的输出",
+    "source": "https://github.com/kinqsradio/orbyn-fullstack-skills",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "zhang-jx00/jiangzuo": {
+    "summary": "指导 Agent 先理解、验证再交付的全栈技能",
+    "input": "需求、项目代码和上下文",
+    "output": "经验证的代码改动与文档",
+    "source": "https://github.com/Zhang-jx00/jiangzuo",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "classgrid/classgrid_platform_desktop": {
+    "summary": "可研究资料、分析文件和编辑仓库的桌面 Agent",
+    "input": "问题、文件、代码及已连接的工具",
+    "output": "研究分析、文件成果或仓库改动",
+    "source": "https://github.com/Classgrid/classgrid_platform_desktop",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "seotarek/orthotect": {
+    "summary": "面向编程 Agent 的接口工程和运行时检查架构",
+    "input": "接口设计、代码和检查规则",
+    "output": "接口约束及运行时检查结果",
+    "source": "https://github.com/seotarek/orthotect",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "completetech-skills/hatch-pet": {
+    "summary": "为 Codex 制作不同画风的动画宠物的技能",
+    "input": "角色描述或参考图",
+    "output": "适配宠物功能的动画素材",
+    "source": "https://github.com/CompleteTech-Skills/hatch-pet",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "ankush1982/ai-secure-by-design": {
+    "summary": "按适用规范为项目加入隐私与安全开发约束",
+    "input": "项目特征和适用规范选择",
+    "output": "开发检查规则及产品代码骨架",
+    "source": "https://github.com/ankush1982/ai-secure-by-design",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "atlas-x-ai/hermes-kanban-watch": {
+    "summary": "在 Claude Code 中查看 Hermes 看板工作进度",
+    "input": "Hermes 任务看板及工作状态",
+    "output": "只读的任务进度视图",
+    "source": "https://github.com/Atlas-X-AI/hermes-kanban-watch",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "wcfcarolina13/motion-studio": {
+    "summary": "通过代码制作带音乐的动态图形视频",
+    "input": "影片需求、画面代码及获授权音频",
+    "output": "可预览和渲染的动态图形影片",
+    "source": "https://github.com/wcfcarolina13/motion-studio",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "anandkaranubc/gitgoblin": {
+    "summary": "寻找可贡献的开源项目并协助形成 PR",
+    "input": "兴趣方向和项目待办",
+    "output": "贡献机会及相应代码改动",
+    "source": "https://github.com/anandkaranubc/gitgoblin",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "loosephoto/space-finder-mcp": {
+    "summary": "搜索天文、航天数据及相关多媒体",
+    "input": "天体、航天任务、发射或历史问题",
+    "output": "资料、媒体和相关事件信息",
+    "source": "https://github.com/loosephoto/space-finder-mcp",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "giantswarm/pro": {
+    "summary": "通过 MCP 管理 GitHub 项目",
+    "input": "项目管理查询或操作请求",
+    "output": "GitHub 项目数据和操作结果",
+    "source": "https://github.com/giantswarm/pro",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "jasp402/hypercodemotion-mcp": {
+    "summary": "通过结构化工具创建和检查动态图形",
+    "input": "JSON 动效构图及修改指令",
+    "output": "创建、校验或优化后的构图",
+    "source": "https://github.com/jasp402/HyperCodeMotion-MCP",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "makar52nn-crypto/x402-money-reactor": {
+    "summary": "提供按调用付费的 AI 数据接口",
+    "input": "接口请求及所需链上支付",
+    "output": "对应接口数据或代币安全分析",
+    "source": "https://github.com/makar52nn-crypto/x402-money-reactor",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "yashasm18/chaos-doctor": {
+    "summary": "用攻击和修复两个模型反复测试 Agent",
+    "input": "待测试 Agent 和测试配置",
+    "output": "故障发现、修复与测试记录",
+    "source": "https://github.com/Yashasm18/chaos-doctor",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "ragnarwestad/aide": {
+    "summary": "按规格文档组织 AI 编程工作",
+    "input": "规格、项目和所需技能",
+    "output": "开发任务及仪表盘中的执行结果",
+    "source": "https://github.com/ragnarwestad/aide",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "passioncode-ai/passioncode": {
+    "summary": "统一安装和更新 PassionCode 技能及插件",
+    "input": "安装命令和目标 Agent 环境",
+    "output": "成套安装或更新的技能插件",
+    "source": "https://github.com/passioncode-ai/passioncode",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "mikemoore1337/ai-development-toolkit": {
+    "summary": "可移植的 AI 开发技能和质量检查工具包",
+    "input": "开发需求、代码和检查任务",
+    "output": "开发成果及质量检查结果",
+    "source": "https://github.com/MikeMoore1337/ai-development-toolkit",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "mimukit/skills": {
+    "summary": "个人维护的可安装 Agent 技能合集",
+    "input": "所选技能及对应任务",
+    "output": "技能安装结果及任务成果",
+    "source": "https://github.com/mimukit/skills",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "darkmalan-1987/sparring-reason": {
+    "summary": "协助推理并提供质疑与来源核查的 AI 搭档",
+    "input": "想法、论证或问题",
+    "output": "推理反馈、质疑和来源信息",
+    "source": "https://github.com/Darkmalan-1987/sparring-reason",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "luxsolari/lux-swiss": {
+    "summary": "指导 Agent 使用严格双色的瑞士风格设计",
+    "input": "页面内容与设计需求",
+    "output": "统一双色风格的界面设计",
+    "source": "https://github.com/luxsolari/lux-swiss",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "seokpilyoon/adb-autolink": {
+    "summary": "在受信网络中连接 Android 无线调试工具",
+    "input": "Android 设备、网络及调试请求",
+    "output": "ADB 连接和调试操作结果",
+    "source": "https://github.com/SeokpilYoon/adb-autolink",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "musterd-io/musterd": {
+    "summary": "组织有明确成员和验收责任的 Agent 团队",
+    "input": "团队成员、任务和验收要求",
+    "output": "可追踪责任的工作成果",
+    "source": "https://github.com/musterd-io/musterd",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "iberi22/xavier": {
+    "summary": "为 Agent 提供向量记忆与知识图谱",
+    "input": "需要保存的知识或检索请求",
+    "output": "向量检索结果和知识关系",
+    "source": "https://github.com/iberi22/xavier",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "bogdanstancu1119-maker/psie-arca": {
+    "summary": "项目说明未提供清晰可验证的功能定义",
+    "input": "待阅读项目文档确认",
+    "output": "待阅读项目文档确认",
+    "source": "https://github.com/bogdanstancu1119-maker/psie-arca",
+    "basis": "仓库公开简介，输入输出为典型使用方式",
+    "pending": true
+  },
+  "xsoc-corp/openclaw-nie-guard": {
+    "summary": "为 Agent 框架设计加密信任与审计层",
+    "input": "访问请求、设备证明和策略",
+    "output": "权限判断、信任校验与审计记录",
+    "source": "https://github.com/xsoc-corp/openclaw-nie-guard",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "maya8237/meow": {
+    "summary": "基于 Claude Code 的轻量任务执行框架",
+    "input": "一个开发任务",
+    "output": "经验证的代码分支",
+    "source": "https://github.com/maya8237/MEOW",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "dancxjo/conduit": {
+    "summary": "跨设备运行带规划与恢复能力的软件任务",
+    "input": "任务、执行环境和规划配置",
+    "output": "执行结果、证据和恢复记录",
+    "source": "https://github.com/dancxjo/conduit",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "rsyyd/larecode": {
+    "summary": "终端中的开源 AI 编程 Agent",
+    "input": "代码项目和开发指令",
+    "output": "代码改动和执行反馈",
+    "source": "https://github.com/rsyyd/larecode",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "joshualeestone/kosmos": {
+    "summary": "管理自己的电脑上运行的 Agent",
+    "input": "Agent、任务和已有 AI 订阅",
+    "output": "Agent 管理界面与任务状态",
+    "source": "https://github.com/joshualeestone/kosmos",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "12345773/claude-minder": {
+    "summary": "管理 Claude 上下文记忆的工具",
+    "input": "会话记忆及同步或回退请求",
+    "output": "整理、同步或恢复后的记忆",
+    "source": "https://github.com/12345773/claude-minder",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "exactml/marginal": {
+    "summary": "结合整个代码库上下文审查 PR",
+    "input": "代码仓库和 PR 差异",
+    "output": "代码审查意见",
+    "source": "https://github.com/exactml/marginal",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "wss-m-nagata/public-skills": {
+    "summary": "用于发布公开 Agent 技能的仓库",
+    "input": "需要查找的技能",
+    "output": "公开的技能文件",
+    "source": "https://github.com/wss-m-nagata/public-skills",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "m4bwav/cinewright": {
+    "summary": "指导 AI 进行影片制作与视频导演的技能",
+    "input": "影片构思、素材和制作要求",
+    "output": "影片规划与视频制作成果",
+    "source": "https://github.com/m4bwav/cinewright",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "gurveers/learnings": {
+    "summary": "使用 Claude Code 开发 Android 的实践资料",
+    "input": "Android 项目及开发任务",
+    "output": "开发测试流程、经验和操作指引",
+    "source": "https://github.com/gurveers/learnings",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "ottuck/diagram-polish": {
+    "summary": "把简单图表整理成一致清晰的架构图",
+    "input": "JSON 图定义或待整理的图",
+    "output": "SVG 或 PNG 架构图",
+    "source": "https://github.com/ottuck/diagram-polish",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "veawho/via54socialroi": {
+    "summary": "分析社交媒体投放与电商搜索之间的效果",
+    "input": "社交平台、电商和营销数据",
+    "output": "ROI 与传播效果分析",
+    "source": "https://github.com/veawho/via54SocialROI",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "arm-pz/skills-site": {
+    "summary": "为技能目录生成可搜索的静态网站",
+    "input": "SKILL.md 技能文件和发布配置",
+    "output": "技能页面、目录索引及静态网站",
+    "source": "https://github.com/arm-pz/skills-site",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "full-aigc-plugins/pdfcraft-plugin": {
+    "summary": "使用本机工具检查、编辑和识别 PDF",
+    "input": "PDF 文件和处理要求",
+    "output": "检查结果、编辑后的文件或 OCR 文本",
+    "source": "https://github.com/full-aigc-plugins/pdfcraft-plugin",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "m4bwav/everlast": {
+    "summary": "保留跨模型、跨会话的编程经验知识层",
+    "input": "项目事实和会话经验",
+    "output": "可捕获、恢复和查询的长期知识",
+    "source": "https://github.com/m4bwav/everlast",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "rezzminator/sub-agent-compact": {
+    "summary": "按阈值压缩 Claude Code 子 Agent 上下文",
+    "input": "子 Agent 会话和压缩设置",
+    "output": "压缩后的上下文",
+    "source": "https://github.com/rezzminator/sub-agent-compact",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "tanishkkamra/claude-skills-kit": {
+    "summary": "为 Claude Code 提供访谈与技能编排命令",
+    "input": "需求、访谈回答或工作目标",
+    "output": "需求简报和技能编排结果",
+    "source": "https://github.com/TanishkKamra/claude-skills-kit",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "telmoni/skills": {
+    "summary": "教编程 Agent 使用 Telmoni 的技能集",
+    "input": "Telmoni 相关开发任务",
+    "output": "按技能流程完成的任务结果",
+    "source": "https://github.com/telmoni/skills",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "kolezka/self-improvement-loop": {
+    "summary": "从会话反思中提炼需人工审核的规则与技能",
+    "input": "工作会话和反复出现的经验",
+    "output": "待审核的技能、钩子或规则",
+    "source": "https://github.com/kolezka/self-improvement-loop",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "duchamp-app/duchamp": {
+    "summary": "为落地页与动效创作提供设计配方和素材",
+    "input": "页面风格、内容及创作需求",
+    "output": "设计配方、图像提示和动效方案",
+    "source": "https://github.com/duchamp-app/duchamp",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "youtoco/llm-relay-audit": {
+    "summary": "审计 AI API 转售服务是否与原厂接口一致",
+    "input": "转售接口、原厂接口和测试请求",
+    "output": "对比证据及审计报告",
+    "source": "https://github.com/YouToco/llm-relay-audit",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "m4bwav/chartwright": {
+    "summary": "选择并制作合适的数据图表",
+    "input": "数据、表达目标和渲染选项",
+    "output": "所选图表及渲染结果",
+    "source": "https://github.com/m4bwav/chartwright",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "kamenkurtev/ui-consistency": {
+    "summary": "让新页面沿用项目现有的界面风格",
+    "input": "现有页面和新增界面需求",
+    "output": "与现有设计一致的界面改动",
+    "source": "https://github.com/kamenkurtev/ui-consistency",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "m4bwav/everscout": {
+    "summary": "为指定主题寻找社区与信息源并持续观察",
+    "input": "主题和扫描设置",
+    "output": "经过核查的信息源、笔记与观察报告",
+    "source": "https://github.com/m4bwav/everscout",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "m4bwav/package-modernize": {
+    "summary": "帮助更新旧软件包并按检查流程发布",
+    "input": "旧软件包、现代化要求及发布配置",
+    "output": "更新后的包和检查结果",
+    "source": "https://github.com/m4bwav/package-modernize",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "m4bwav/obsidian-notes": {
+    "summary": "整理适合 Obsidian 与 GitHub 阅读的笔记",
+    "input": "Markdown 笔记和知识库",
+    "output": "检查、链接和索引后的笔记",
+    "source": "https://github.com/m4bwav/obsidian-notes",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "noahkiss/quadcam": {
+    "summary": "把 FPV 飞行眼镜录像整理成本机视频库",
+    "input": "DVR 视频片段",
+    "output": "按日期整理并校验的视频库",
+    "source": "https://github.com/noahkiss/quadcam",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "ashon/pacenote": {
+    "summary": "在 Slack 中接收并转交本机编程助手任务",
+    "input": "Slack 消息、任务历史和本机 Agent",
+    "output": "聊天回复及委派任务结果",
+    "source": "https://github.com/Ashon/pacenote",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "tourclaim/tourclaim-cli": {
+    "summary": "辅助处理信用卡旅行保险索赔的实验工具",
+    "input": "合成模式中的索赔材料和请求",
+    "output": "模拟审查结果",
+    "source": "https://github.com/tourclaim/tourclaim-cli",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "ambrosex/aiguanchao": {
+    "summary": "汇总 AI 新闻、日报和模型排行榜",
+    "input": "新闻来源和更新数据",
+    "output": "中文新闻摘要、日报和订阅内容",
+    "source": "https://github.com/AmbroseX/aiguanchao",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "perception-dynamics-inc/a11y-computer-use": {
+    "summary": "让 Agent 通过无障碍元素操作电脑",
+    "input": "任务与无障碍界面树",
+    "output": "界面操作结果及状态快照",
+    "source": "https://github.com/Perception-Dynamics-Inc/a11y-computer-use",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "marsaplatform/erx-mcp": {
+    "summary": "查询埃及公共事务相关资料",
+    "input": "研究问题和查询条件",
+    "output": "带来源的研究资料",
+    "source": "https://github.com/marsaplatform/erx-mcp",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "marsaplatform/malja-mcp": {
+    "summary": "通过 MCP 查询人道主义公开数据",
+    "input": "地区、主题和数据查询",
+    "output": "来自联合国等机构的公开数据",
+    "source": "https://github.com/marsaplatform/malja-mcp",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "aarbchen/signaltender-scraper": {
+    "summary": "查询美国政府 IT 采购招标与中标信息",
+    "input": "地区、采购关键词或接口查询",
+    "output": "招标、中标及承包信息",
+    "source": "https://github.com/aarbchen/signaltender-scraper",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "shmindmaster/subtext-scan": {
+    "summary": "检查文档中肉眼不容易发现的隐藏指令",
+    "input": "PDF、DOCX 或 HTML 文件",
+    "output": "隐藏文字和可疑指令检测结果",
+    "source": "https://github.com/shmindmaster/subtext-scan",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "benkrasin/ats-jobs-mcp": {
+    "summary": "查询多家企业招聘系统中的职位",
+    "input": "公司招聘页或职位关键词",
+    "output": "匹配的职位列表",
+    "source": "https://github.com/benkrasin/ats-jobs-mcp",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "yuanyuanma03/apple-notes-agent-skill": {
+    "summary": "让本机 Agent 操作 Apple 备忘录",
+    "input": "备忘录任务和相应访问权限",
+    "output": "备忘录内容或操作结果",
+    "source": "https://github.com/YuanyuanMa03/apple-notes-agent-skill",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "zhanglunet/livepowers": {
+    "summary": "按探索留证据、固化能力的方式组织 Agent 工作",
+    "input": "目标、领域信息和工作上下文",
+    "output": "工作证据、能力记录及验收结果",
+    "source": "https://github.com/zhanglunet/livepowers",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "mohammad-abbasi-sh/bidi-skills": {
+    "summary": "检查并修复波斯语等从右往左文本的格式",
+    "input": "含双向文字的文本",
+    "output": "修正方向、字符和数字格式后的文本",
+    "source": "https://github.com/mohammad-abbasi-sh/bidi-skills",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "meganemura/nukadoko": {
+    "summary": "用机器可读契约验证场景执行步骤",
+    "input": "Gherkin 或 Markdown 场景及契约",
+    "output": "执行步骤记录和契约检查结果",
+    "source": "https://github.com/meganemura/nukadoko",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "akshaydev17/ai-explainer-video": {
+    "summary": "把课程笔记制作成有旁白的动画讲解",
+    "input": "课程笔记目录",
+    "output": "系列动画讲解视频",
+    "source": "https://github.com/akshayDev17/ai-explainer-video",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "findskills/skillpi": {
+    "summary": "为编程助手发现经过筛选的技能",
+    "input": "技能需求和搜索条件",
+    "output": "推荐的技能条目",
+    "source": "https://github.com/Findskills/skillpi",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "longkum/trending-agent-skills": {
+    "summary": "每天整理 GitHub 热门技能与 AI 仓库",
+    "input": "GitHub 热门项目数据",
+    "output": "双语摘要和每日变化记录",
+    "source": "https://github.com/longkum/trending-agent-skills",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "everyinfra/.github": {
+    "summary": "介绍 EveryInfra 的开发者 API 和工具",
+    "input": "希望了解的开发能力",
+    "output": "工具、服务与集成入口",
+    "source": "https://github.com/everyinfra/.github",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "punpun1643/agents-skills": {
+    "summary": "面向文档和工作流的 Agent 技能集",
+    "input": "文档或流程任务",
+    "output": "对应技能处理后的成果",
+    "source": "https://github.com/Punpun1643/agents-skills",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "teeratp/next-steps-plus": {
+    "summary": "让 Claude Code 用户批量选择下一步提示",
+    "input": "候选后续任务和选择",
+    "output": "整理成编号列表的一组提示",
+    "source": "https://github.com/TeeratP/next-steps-plus",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "soffritto-technologies/chefs-table": {
+    "summary": "把 AI 正在构建的应用用户路径可视化",
+    "input": "应用页面及用户流程",
+    "output": "可缩放的用户旅程地图",
+    "source": "https://github.com/Soffritto-Technologies/chefs-table",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "alimohammadiamirhossein/deputy": {
+    "summary": "让主模型把部分任务交给较便宜的模型",
+    "input": "任务与模型分工配置",
+    "output": "子模型任务结果和主模型汇总",
+    "source": "https://github.com/alimohammadiamirhossein/deputy",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "surendharvr/sitemend": {
+    "summary": "检查代码改动是否破坏网站抓取与索引",
+    "input": "网站仓库或 PR",
+    "output": "带具体位置的 SEO 回归测试结果",
+    "source": "https://github.com/SurendharVr/sitemend",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "partme-ai/full-aigc-plugins": {
+    "summary": "面向多种 Agent 的多模态创作插件市场",
+    "input": "图像、视频、音频等创作需求",
+    "output": "可选插件和相应创作成果",
+    "source": "https://github.com/partme-ai/full-aigc-plugins",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "abmorrill4/gh-refs": {
+    "summary": "为 Claude Code 回复中的 GitHub 引用加悬浮信息卡",
+    "input": "回复中的 Issue 或 PR 引用",
+    "output": "对应 GitHub 信息的悬浮卡片",
+    "source": "https://github.com/abmorrill4/gh-refs",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "albertkellner/claude-code-mod-task-tree": {
+    "summary": "在 Claude Code 中展示当前会话任务树",
+    "input": "会话任务及执行关系",
+    "output": "任务树面板",
+    "source": "https://github.com/AlbertKellner/claude-code-mod-task-tree",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "rodrigobuko/gatekeeper-ai": {
+    "summary": "在提交 AI 代码前检查开发者是否理解改动",
+    "input": "AI 生成的代码和理解检查",
+    "output": "理解确认与交付检查结果",
+    "source": "https://github.com/rodrigobuko/gatekeeper-ai",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "tanbirramim/vibereel": {
+    "summary": "把编程助手工作会话制作成可分享短片",
+    "input": "Claude Code 或 Codex 会话",
+    "output": "已去除密钥的约 30 秒短片",
+    "source": "https://github.com/TanbirRamim/vibereel",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "m284743/shaniu": {
+    "summary": "与 BNB 智能链社区代币相关的 MCP 服务",
+    "input": "项目支持的链上查询或请求",
+    "output": "相关链上数据，具体操作见文档",
+    "source": "https://github.com/m284743/shaniu",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "hui-xu-ai/wensu": {
+    "summary": "为 Agent 检索中文文献",
+    "input": "中文文献主题和检索条件",
+    "output": "文献条目与来源信息，不下载全文",
+    "source": "https://github.com/hui-xu-ai/wensu",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "rezearcher/x402-data-api": {
+    "summary": "通过按次付费接口提供链上与安全数据",
+    "input": "数据查询和接口所需支付",
+    "output": "加密资产、链上或安全分析数据",
+    "source": "https://github.com/rezearcher/x402-data-api",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "jincheng3870682453-hash/dsh-doctor": {
+    "summary": "排查和修复 DeepSeek Harness 桌面运行故障",
+    "input": "安装环境、启动故障和日志",
+    "output": "诊断、修复记录及恢复结果",
+    "source": "https://github.com/jincheng3870682453-hash/dsh-doctor",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "agenttrust-ai/agenttrust": {
+    "summary": "在调用 Agent 服务前检查其可信性",
+    "input": "Agent 服务地址和检查请求",
+    "output": "端点验证、可靠性和信誉信息",
+    "source": "https://github.com/agenttrust-ai/agenttrust",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "noruzzamans/gslider-blocks": {
+    "summary": "为 WordPress 编辑器提供轮播与滑块组件",
+    "input": "图片、内容及轮播设置",
+    "output": "网站中的滑块或轮播区块",
+    "source": "https://github.com/noruzzamans/gslider-blocks",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "suyiiyii/alldayrec": {
+    "summary": "在自己的服务器保存全天录音并整理内容",
+    "input": "穿戴式设备音频",
+    "output": "转写、说话人识别及录音摘要",
+    "source": "https://github.com/suyiiyii/alldayrec",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "giantswarm/search-mcp": {
+    "summary": "查询 Giant Swarm 的文档、手册和内部资料",
+    "input": "搜索问题和可访问的资料源",
+    "output": "匹配的文档内容",
+    "source": "https://github.com/giantswarm/search-mcp",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "immutex/hvlab-mcp": {
+    "summary": "通过 CLI 和 MCP 控制 Hyper-V 实验环境",
+    "input": "虚拟机、环境配置和操作请求",
+    "output": "虚拟机操作结果及调试信息",
+    "source": "https://github.com/immutex/hvlab-mcp",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "dotfrankruan/workforce-orchestrator-mcp": {
+    "summary": "让 Codex 编排带依赖关系的多个开发任务",
+    "input": "任务图、预算、角色和仓库",
+    "output": "隔离工作区中的成果及验收记录",
+    "source": "https://github.com/dotfrankruan/workforce-orchestrator-mcp",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "api-evangelist/bluerock-security": {
+    "summary": "由第三方整理的 BlueRock Security API 资料",
+    "input": "希望了解的 API 或平台能力",
+    "output": "第三方整理的接口与平台说明",
+    "source": "https://github.com/api-evangelist/bluerock-security",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "whereissam/learn-agent-engineering-from-production": {
+    "summary": "通过真实产品代码学习 Agent 工程机制",
+    "input": "学习主题及示例代码",
+    "output": "逐步拆解、重建和测试的学习材料",
+    "source": "https://github.com/whereissam/learn-agent-engineering-from-production",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "jamescrowley321/codecite": {
+    "summary": "在本地索引代码和规格并返回引用依据",
+    "input": "代码与规格目录、查询问题",
+    "output": "附来源引用的检索结果",
+    "source": "https://github.com/jamescrowley321/codecite",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "armanalabsai/arlcoin.io": {
+    "summary": "按用量结算 AI 与计算服务的协议项目",
+    "input": "服务调用及结算信息",
+    "output": "协议约定的用量与链上结算结果",
+    "source": "https://github.com/armanalabsai/arlcoin.io",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "imtechboss/imtechboss": {
+    "summary": "个人技术、AI 与网络安全介绍仓库",
+    "input": "无需任务输入",
+    "output": "作者介绍与相关技术入口",
+    "source": "https://github.com/imtechboss/imtechboss",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "passioncode-ai/fabric-agent-adapter": {
+    "summary": "让 Agent 接入 Fabric 兼容协议",
+    "input": "Agent 实现、适配配置和测试",
+    "output": "适配层与兼容性测试结果",
+    "source": "https://github.com/passioncode-ai/fabric-agent-adapter",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "saphan-ai/quake-watch-ios": {
+    "summary": "演示地震预警应用的 iOS 客户端",
+    "input": "地震服务数据和用户设置",
+    "output": "iOS 地震信息与提醒界面",
+    "source": "https://github.com/saphan-ai/quake-watch-ios",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "saphan-ai/quake-watch-android": {
+    "summary": "演示地震预警应用的 Android 客户端",
+    "input": "地震服务数据和用户设置",
+    "output": "Android 地震信息与提醒界面",
+    "source": "https://github.com/saphan-ai/quake-watch-android",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "saphan-ai/quake-watch-server": {
+    "summary": "演示地震预警应用的服务端",
+    "input": "地震事件数据和通知配置",
+    "output": "客户端可读取的事件与预警",
+    "source": "https://github.com/saphan-ai/quake-watch-server",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "callsign-im/callsign-server": {
+    "summary": "供 AI Agent 互发消息的开放通信网络",
+    "input": "Agent 身份、消息和通信许可",
+    "output": "消息投递与可核验的记录",
+    "source": "https://github.com/callsign-im/callsign-server",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "api-evangelist/bluenote": {
+    "summary": "由第三方整理的 Bluenote 生命科学 AI 平台资料",
+    "input": "希望了解的 API 和平台能力",
+    "output": "第三方整理的接口与平台说明",
+    "source": "https://github.com/api-evangelist/bluenote",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "intigraph/shantytown": {
+    "summary": "轻量组织多个编程 Agent 执行工单",
+    "input": "开发工单、代码和 Agent",
+    "output": "工单执行结果",
+    "source": "https://github.com/intigraph/shantytown",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "techmitten/app-blips": {
+    "summary": "自托管的自然语言应用生成器",
+    "input": "用文字描述的应用想法",
+    "output": "可运行的应用与实时预览",
+    "source": "https://github.com/TechMitten/app-blips",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "farijarifriyanto-debug/bccli": {
+    "summary": "终端中的 AI 编程助手",
+    "input": "项目代码和开发任务",
+    "output": "代码改动及任务反馈",
+    "source": "https://github.com/farijarifriyanto-debug/bccli",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "flo5k5/neuron-times": {
+    "summary": "生成多语种 AI 新闻日报与周报",
+    "input": "AI 新闻素材和更新内容",
+    "output": "多语种日报和每周回顾",
+    "source": "https://github.com/Flo5k5/neuron-times",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "whizey/invoiceiq": {
+    "summary": "分析应收账款并预测逾期风险的业务工具",
+    "input": "发票、回款与业务流水",
+    "output": "对账面板、逾期预测及催收流程",
+    "source": "https://github.com/whizey/InvoiceIQ",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "rdavid/prompt": {
+    "summary": "指导模型保持代码改动一致且精简的提示文件",
+    "input": "提示文件、项目规则及开发任务",
+    "output": "受提示约束的模型回答与改动",
+    "source": "https://github.com/rdavid/prompt",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "izzyfrm/cat-news": {
+    "summary": "聚合开发者关注的 AI 新闻",
+    "input": "GitHub、模型平台和实验室博客内容",
+    "output": "整理后的 AI 新闻流",
+    "source": "https://github.com/izzyfrm/cat-news",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "ynewtime/markitai": {
+    "summary": "支持模型增强的 Markdown 转换工具",
+    "input": "原始文档和转换选项",
+    "output": "转换后的 Markdown 内容",
+    "source": "https://github.com/Ynewtime/markitai",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "react/react": {
+    "summary": "用组件构建网页和原生应用的用户界面库",
+    "input": "组件代码、数据和用户操作",
+    "output": "动态用户界面",
+    "domain": "web",
+    "source": "https://github.com/react/react",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "codecrafters-io/build-your-own-x": {
+    "summary": "通过从零重写常用技术学习编程的教程集",
+    "input": "选定的技术方向和练习代码",
+    "output": "自制技术原型及学习过程",
+    "domain": "learning",
+    "source": "https://github.com/codecrafters-io/build-your-own-x",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "sindresorhus/awesome": {
+    "summary": "汇集各领域精选资源目录的总索引",
+    "input": "想了解的主题",
+    "output": "对应主题的资源目录链接",
+    "domain": "learning",
+    "source": "https://github.com/sindresorhus/awesome",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "public-apis/public-apis": {
+    "summary": "免费公共 API 的分类目录",
+    "input": "想接入的数据或服务需求",
+    "output": "对应 API 的名称、地址和说明",
+    "domain": "devtools",
+    "source": "https://github.com/public-apis/public-apis",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "openclaw/openclaw": {
+    "summary": "可在多种平台执行任务的个人 AI 助手",
+    "input": "自然语言任务、工具和平台连接",
+    "output": "助手回答与实际任务结果",
+    "domain": "ai",
+    "source": "https://github.com/openclaw/openclaw",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "donnemartin/system-design-primer": {
+    "summary": "学习大型系统设计及准备面试的资料集",
+    "input": "系统设计主题或面试问题",
+    "output": "设计知识、示例解答和复习卡片",
+    "domain": "learning",
+    "source": "https://github.com/donnemartin/system-design-primer",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "nilbuild/developer-roadmap": {
+    "summary": "按开发岗位组织的互动学习路线图",
+    "input": "职业方向和当前知识水平",
+    "output": "学习路线、指南和相关资料",
+    "domain": "learning",
+    "source": "https://github.com/nilbuild/developer-roadmap",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "jwasham/coding-interview-university": {
+    "summary": "面向软件工程师的计算机基础与面试学习计划",
+    "input": "学习目标和练习进度",
+    "output": "知识清单、练习与复习安排",
+    "domain": "learning",
+    "source": "https://github.com/jwasham/coding-interview-university",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "vinta/awesome-python": {
+    "summary": "按用途整理 Python 库、框架和工具",
+    "input": "想用 Python 完成的任务",
+    "output": "适合该任务的项目链接",
+    "domain": "learning",
+    "source": "https://github.com/vinta/awesome-python",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "awesome-selfhosted/awesome-selfhosted": {
+    "summary": "可以部署在自己服务器上的应用目录",
+    "input": "所需应用功能",
+    "output": "对应自托管软件和部署入口",
+    "domain": "systems",
+    "source": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "obra/superpowers": {
+    "summary": "组织 AI 软件开发流程的技能框架",
+    "input": "产品想法、开发任务和代码",
+    "output": "按技能流程完成的方案、代码与检查结果",
+    "domain": "ai",
+    "source": "https://github.com/obra/superpowers",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "practical-tutorials/project-based-learning": {
+    "summary": "通过实际项目学习编程的教程目录",
+    "input": "编程语言和想做的项目",
+    "output": "循序完成项目的教程链接",
+    "domain": "learning",
+    "source": "https://github.com/practical-tutorials/project-based-learning",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "affaan-m/ecc": {
+    "summary": "优化编程 Agent 的技能、记忆与开发流程",
+    "input": "Agent 环境、开发任务和优化配置",
+    "output": "优化后的运行配置与任务结果",
+    "domain": "ai",
+    "source": "https://github.com/affaan-m/ECC",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "deepseek-ai/deepseek-harness": {
+    "summary": "以插件扩展能力的 DeepSeek Agent 执行环境",
+    "input": "任务、模型和插件配置",
+    "output": "Agent 任务成果及执行记录",
+    "domain": "ai",
+    "source": "https://github.com/deepseek-ai/deepseek-harness",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "multica-ai/andrej-karpathy-skills": {
+    "summary": "用一份规则文件改善 Claude Code 编程行为",
+    "input": "代码项目、任务和规则文件",
+    "output": "受规则约束的代码改动",
+    "domain": "ai",
+    "source": "https://github.com/multica-ai/andrej-karpathy-skills",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "ultraworkers/claw-code": {
+    "summary": "由 Agent 维护的 Rust 命令行 Agent 执行环境展示项目",
+    "input": "开发任务和模型、执行环境配置",
+    "output": "命令行 Agent 的执行过程与成果",
+    "domain": "ai",
+    "source": "https://github.com/ultraworkers/claw-code#readme",
+    "basis": "根据仓库 README 整理，输入输出为典型使用方式；未运行项目"
+  },
+  "dietrichgebert/ponytail": {
+    "summary": "指导编程 Agent 减少不必要实现的技能",
+    "input": "开发需求和代码上下文",
+    "output": "尽量精简的实现与建议",
+    "domain": "ai",
+    "source": "https://github.com/DietrichGebert/ponytail",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "garrytan/gstack": {
+    "summary": "覆盖规划、设计、开发和质检的 Claude Code 工具集",
+    "input": "产品需求、设计或开发任务",
+    "output": "对应角色的方案、代码及检查结果",
+    "domain": "ai",
+    "source": "https://github.com/garrytan/gstack",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "graphify-labs/graphify": {
+    "summary": "把代码库和文档变成可查询知识图谱",
+    "input": "代码、文档、数据库结构等文件",
+    "output": "可追溯关系来源的知识图谱",
+    "domain": "ai",
+    "source": "https://github.com/Graphify-Labs/graphify",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "voltagent/awesome-design-md": {
+    "summary": "整理品牌设计系统的 DESIGN.md 参考文件",
+    "input": "选定设计风格和项目需求",
+    "output": "可用于生成匹配界面的设计规范",
+    "domain": "web",
+    "source": "https://github.com/VoltAgent/awesome-design-md",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "juliusbrussee/caveman": {
+    "summary": "通过简短表达减少编程 Agent 输出的技能与代理",
+    "input": "模型会话和简洁表达要求",
+    "output": "更短的模型回答",
+    "domain": "ai",
+    "source": "https://github.com/JuliusBrussee/caveman",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "addyosmani/agent-skills": {
+    "summary": "面向工程实践的 AI 编程技能集",
+    "input": "开发需求和项目上下文",
+    "output": "按技能执行的代码与工程成果",
+    "domain": "ai",
+    "source": "https://github.com/addyosmani/agent-skills",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "paperclipai/paperclip": {
+    "summary": "管理工作中多个 Agent 的开源应用",
+    "input": "Agent、任务和工作配置",
+    "output": "Agent 分工、进度和工作成果",
+    "domain": "ai",
+    "source": "https://github.com/paperclipai/paperclip",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "nexu-io/open-design": {
+    "summary": "人与 AI 一起制作设计和内容的本地协作工作区",
+    "input": "设计需求、素材和团队反馈",
+    "output": "原型、网站、演示或其他创作成果",
+    "domain": "ai",
+    "source": "https://github.com/nexu-io/open-design",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "storytold/photocraft": {
+    "summary": "使用 Rust 编写的开源照片编辑器",
+    "input": "照片和编辑操作",
+    "output": "编辑后的照片",
+    "domain": "media",
+    "source": "https://github.com/storytold/photocraft",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "gathin23/cleanyourtv": {
+    "summary": "通过无线 ADB 整理 Android 或 Google TV 的工具",
+    "input": "电视设备连接和整理选项",
+    "output": "清理后的应用环境及新桌面",
+    "domain": "systems",
+    "source": "https://github.com/Gathin23/cleanyourtv",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "deepseek-ai/deepinfer": {
+    "summary": "用于大规模运行 DeepSeek 模型的推理框架",
+    "input": "模型、部署资源和推理请求",
+    "output": "模型推理结果",
+    "domain": "ai",
+    "source": "https://github.com/deepseek-ai/DeepInfer",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "wheresryan22/anatomy": {
+    "summary": "用图形解释机器和复杂系统的 Agent 技能",
+    "input": "待解释的机器、系统与画面要求",
+    "output": "交互等距 SVG 插图及可选三维效果",
+    "domain": "ai",
+    "source": "https://github.com/wheresryan22/anatomy",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "google-research/harness2": {
+    "summary": "在不改变模型权重的情况下迭代改进 Agent 执行环境的研究框架",
+    "input": "任务、基础模型、工具及执行配置",
+    "output": "改进后的执行配置与实验评估结果",
+    "domain": "ai",
+    "source": "https://github.com/google-research/harness2#readme",
+    "basis": "根据仓库 README 整理，输入输出为典型使用方式；未运行项目"
+  },
+  "storytold/pdfcraft": {
+    "summary": "使用 Rust 编写的 PDF 阅读与编辑器",
+    "input": "PDF 文件和阅读、修改操作",
+    "output": "阅读界面及修改后的 PDF",
+    "domain": "productivity",
+    "source": "https://github.com/storytold/pdfcraft",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "storytold/filmcraft": {
+    "summary": "使用 Rust 编写的非线性视频编辑器",
+    "input": "视频、音频和剪辑操作",
+    "output": "剪辑后的影片",
+    "domain": "media",
+    "source": "https://github.com/storytold/filmcraft",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "storytold/wordcraft": {
+    "summary": "使用 Rust 重新实现的文字处理应用",
+    "input": "文档内容和排版操作",
+    "output": "编辑、排版后的文档",
+    "domain": "productivity",
+    "source": "https://github.com/storytold/wordcraft",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "openai/math": {
+    "summary": "发布内部模型生成的数学论文与证明材料的研究资料库",
+    "input": "读者选择的数学主题或论文",
+    "output": "可查阅的论文、证明材料及部分形式化验证文件",
+    "domain": "learning",
+    "source": "https://github.com/openai/math#readme",
+    "basis": "根据仓库 README 整理，输入输出为典型使用方式；未运行项目"
+  },
+  "storytold/lightcraft": {
+    "summary": "使用 Rust 编写的非破坏式照片编辑器",
+    "input": "照片原片和调整参数",
+    "output": "保留原片的照片编辑成果",
+    "domain": "media",
+    "source": "https://github.com/storytold/lightcraft",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "storytold/vectorcraft": {
+    "summary": "使用 Rust 编写的矢量绘图工具",
+    "input": "图形、路径和绘图操作",
+    "output": "可编辑的矢量作品",
+    "domain": "media",
+    "source": "https://github.com/storytold/vectorcraft",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "tangency-labs/solidcraft": {
+    "summary": "开源参数化三维 CAD 设计应用",
+    "input": "尺寸、约束和建模操作",
+    "output": "参数化三维模型",
+    "domain": "media",
+    "source": "https://github.com/tangency-labs/solidcraft",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "rehan-remade/universal-modder": {
+    "summary": "协助 Agent 修改用户拥有的 PC 游戏的技能工具包",
+    "input": "游戏、修改目标及创作素材",
+    "output": "游戏 Mod、测试与展示材料",
+    "domain": "ai",
+    "source": "https://github.com/rehan-remade/universal-modder",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "storytold/effectcraft": {
+    "summary": "使用 Rust 编写的动态图形与合成工具",
+    "input": "图形、视频图层和合成操作",
+    "output": "动态图形及合成画面",
+    "domain": "media",
+    "source": "https://github.com/storytold/effectcraft",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "storytold/cadcraft": {
+    "summary": "使用 Rust 编写的 CAD 制图应用",
+    "input": "尺寸、几何对象和制图操作",
+    "output": "工程图及设计文件",
+    "domain": "media",
+    "source": "https://github.com/storytold/cadcraft",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "pengchujin/aerial-tv": {
+    "summary": "面向国产 Android 电视的简洁桌面",
+    "input": "电视应用和桌面操作",
+    "output": "无广告的电视主屏界面",
+    "domain": "systems",
+    "source": "https://github.com/pengchujin/aerial-tv",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "simbasjungles/free-my-tv": {
+    "summary": "为多种电视系统提供无广告主屏的工具",
+    "input": "支持的电视设备及桌面配置",
+    "output": "简洁电视主屏，可按项目说明撤销",
+    "domain": "systems",
+    "source": "https://github.com/simbasjungles/free-my-tv",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "xiaoyang111222/cn-math-taxonomy": {
+    "summary": "整理中小学学科知识点、先修关系与练习题",
+    "input": "年级、学科和练习作答",
+    "output": "知识关系、题目与前置知识诊断",
+    "domain": "learning",
+    "source": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "joasasantos/rea-prompts": {
+    "summary": "辅助使用 REA 分析软件的提示词合集",
+    "input": "软件分析目标及对应提示",
+    "output": "供 Agent 使用的逆向分析任务指令",
+    "domain": "ai",
+    "source": "https://github.com/JoasASantos/REA-Prompts",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "ethanarbuckle/fairplay-decrypt": {
+    "summary": "研究离线处理 FairPlay 加密 IPA 的工具",
+    "input": "适用的 IPA 文件和项目要求的密钥材料",
+    "output": "解密处理结果，能力与条件以文档为准",
+    "domain": "devtools",
+    "source": "https://github.com/EthanArbuckle/fairplay-decrypt",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "ikow/php2shell-poc": {
+    "summary": "PHP 漏洞研究与检测规则仓库",
+    "input": "受授权的测试环境或待检查流量",
+    "output": "研究验证结果及检测规则",
+    "domain": "devtools",
+    "source": "https://github.com/ikow/php2shell-poc",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "alchaincyf/huashu-motion": {
+    "summary": "让 Agent 根据画面反馈制作产品宣传片",
+    "input": "产品内容、画面要求及修改意见",
+    "output": "带配乐的产品宣传视频",
+    "domain": "ai",
+    "source": "https://github.com/alchaincyf/huashu-motion",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "humblemuzzu/dumbtv": {
+    "summary": "通过 ADB 整理 Fire TV 的广告与桌面环境",
+    "input": "Fire TV 连接及所选设置",
+    "output": "整理后的环境和开源桌面",
+    "domain": "systems",
+    "source": "https://github.com/humblemuzzu/dumbtv",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "ansub/tv-detox": {
+    "summary": "为旧 Android 电视提供轻量桌面与整理提示",
+    "input": "电视设备和整理任务",
+    "output": "轻量无广告桌面及配置结果",
+    "domain": "systems",
+    "source": "https://github.com/Ansub/tv-detox",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "9bie/php2shell-bypass-aslr-exp": {
+    "summary": "PHP 漏洞利用条件的研究验证项目",
+    "input": "受授权的实验环境",
+    "output": "研究验证结果",
+    "domain": "devtools",
+    "source": "https://github.com/9bie/php2shell-bypass-aslr-exp",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "openai/php2shell-checker": {
+    "summary": "根据网站头信息或本机 PHP 版本判断补丁状态",
+    "input": "网站地址或本机 PHP 版本",
+    "output": "版本是否满足补丁要求的判断，不执行漏洞探测",
+    "domain": "devtools",
+    "source": "https://github.com/openai/php2shell-checker#readme",
+    "basis": "根据仓库 README 整理，输入输出为典型使用方式；未运行项目"
+  },
+  "wesbos/3d-model-anything": {
+    "summary": "用手机扫描资料重建可编辑的房间模型",
+    "input": "iPhone 激光雷达数据和照片",
+    "output": "可在浏览器查看的 Three.js 房间模型",
+    "domain": "media",
+    "source": "https://github.com/wesbos/3d-model-anything",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "xevrion/hatchzip": {
+    "summary": "边释放压缩包占用空间边解压的大文件工具",
+    "input": "ZIP、7z、tar 或分卷压缩文件",
+    "output": "解压后的文件及减少的临时空间占用",
+    "domain": "productivity",
+    "source": "https://github.com/xevrion/hatchzip",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "oosexgang/hackios-xnu-kernel": {
+    "summary": "研究在指定 Android 硬件或模拟器运行 XNU 内核的项目",
+    "input": "支持的硬件或 QEMU、内核与系统配置",
+    "output": "实验系统启动结果，支持范围以 README 为准",
+    "domain": "systems",
+    "source": "https://github.com/oosexgang/hackios-xnu-kernel#readme",
+    "basis": "根据仓库 README 整理，输入输出为典型使用方式；未运行项目"
+  },
+  "colinhacks/reylo": {
+    "summary": "把 SQL 文件直接导入 TypeScript 并推断类型",
+    "input": "SQL 文件与 TypeScript 项目",
+    "output": "带完整类型推断的 SQL 调用接口",
+    "domain": "devtools",
+    "source": "https://github.com/colinhacks/reylo",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "appariciojunior/video-editor-skills": {
+    "summary": "教 Claude Code 在达芬奇中完成初剪的技能",
+    "input": "视频素材、转写与剪辑要求",
+    "output": "初剪、字幕、动效和导出视频",
+    "domain": "ai",
+    "source": "https://github.com/appariciojunior/video-editor-skills",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "egorbo/blazingfastdotnet": {
+    "summary": "整理 .NET 程序性能优化技巧",
+    "input": "待优化的代码和性能问题",
+    "output": "优化思路、诊断和基准相关建议",
+    "domain": "learning",
+    "source": "https://github.com/EgorBo/BlazingFastDotnet",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "dex-tool-best/.github": {
+    "summary": "README 自述为链上交易跟单工具的介绍与下载页",
+    "input": "README 所称的钱包、交易与策略配置",
+    "output": "README 所称的跟单交易和通知；未实际验证",
+    "domain": "other",
+    "source": "https://github.com/dex-tool-best/.github#readme",
+    "basis": "根据仓库 README 整理，输入输出为典型使用方式；未运行项目"
+  },
+  "aotoycffyxns/delta": {
+    "summary": "README 自述为运行 Roblox 脚本的执行器",
+    "input": "游戏环境和 Lua 脚本",
+    "output": "README 所称的游戏内脚本执行结果；未实际验证",
+    "domain": "games",
+    "source": "https://github.com/aotoycffyxns/delta#readme",
+    "basis": "根据仓库 README 整理，输入输出为典型使用方式；未运行项目"
+  },
+  "df-tools-bn/.github": {
+    "summary": "README 自述为扫描去中心化交易所价差的工具介绍页",
+    "input": "行情、交易配置和策略参数",
+    "output": "README 所称的价差扫描与交易结果；未实际验证",
+    "domain": "other",
+    "source": "https://github.com/df-tools-bn/.github#readme",
+    "basis": "根据仓库 README 整理，输入输出为典型使用方式；未运行项目"
+  },
+  "tytpaskanvdc/cross-exchange-arbitrage-bot-pc-desktop": {
+    "summary": "README 自述为跨交易所价差扫描与执行工具",
+    "input": "交易所行情和交易配置",
+    "output": "README 所称的价差及交易记录；未实际验证",
+    "domain": "other",
+    "source": "https://github.com/tytpaskanvdc/cross-exchange-arbitrage-bot-pc-desktop#readme",
+    "basis": "根据仓库 README 整理，输入输出为典型使用方式；未运行项目"
+  },
+  "onchain-trading-bot/.github": {
+    "summary": "README 自述为集成多种链上交易策略的工具介绍页",
+    "input": "钱包、行情和策略配置",
+    "output": "README 所称的交易记录及通知；未实际验证",
+    "domain": "other",
+    "source": "https://github.com/onchain-trading-bot/.github#readme",
+    "basis": "根据仓库 README 整理，输入输出为典型使用方式；未运行项目"
+  },
+  "xynbspqmochf/.github": {
+    "summary": "README 自述为筛选和追踪链上钱包的工具介绍页",
+    "input": "链上钱包数据与筛选条件",
+    "output": "README 所称的钱包评分、持仓和提醒；未实际验证",
+    "domain": "other",
+    "source": "https://github.com/xynbspqmochf/.github#readme",
+    "basis": "根据仓库 README 整理，输入输出为典型使用方式；未运行项目"
+  },
+  "akhiranandan-04/neverlose": {
+    "summary": "关于 CS:GO 第三方工具的非官方社区说明站，仓库不含程序源码",
+    "input": "读者选择的配置与使用问题",
+    "output": "社区说明、界面概念和外部分发链接",
+    "domain": "games",
+    "source": "https://github.com/akhiranandan-04/neverlose#readme",
+    "basis": "根据仓库 README 整理，输入输出为典型使用方式；未运行项目"
+  },
+  "onchain-whale-tracker-pc-desktop/.github": {
+    "summary": "README 自述为链上交易工具介绍页，内容与仓库名不完全对应",
+    "input": "README 所称的钱包、行情和策略配置",
+    "output": "README 所称的交易与通知；实际功能未验证",
+    "domain": "other",
+    "source": "https://github.com/onchain-whale-tracker-pc-desktop/.github#readme",
+    "basis": "根据仓库 README 整理，输入输出为典型使用方式；未运行项目"
+  },
+  "ravensclawx/hblauncher": {
+    "summary": "SmileBASIC 自制程序启动器及 GPU 应用开发资料",
+    "input": "自制程序和开发配置",
+    "output": "程序启动结果及 SDK 示例",
+    "domain": "games",
+    "source": "https://github.com/ravensclawx/HBLauncher",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "ivarvong/lantern": {
+    "summary": "把代码执行过程做成可逐步播放的动画讲解",
+    "input": "TypeScript 代码和讲解内容",
+    "output": "可逐步演示的 SVG 动画",
+    "domain": "devtools",
+    "source": "https://github.com/ivarvong/lantern",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "verity-mods/verity-enhanced": {
+    "summary": "Minecraft Verity 模组的非官方增强版",
+    "input": "支持版本的游戏及模组配置",
+    "output": "新增剧情场景与游戏体验",
+    "domain": "games",
+    "source": "https://github.com/verity-mods/verity-enhanced",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "hiyfoeorihly/ram-purge": {
+    "summary": "用于 Windows 内存占用管理的工具",
+    "input": "清理指令或设定阈值",
+    "output": "内存管理操作及状态变化",
+    "domain": "systems",
+    "source": "https://github.com/hiyfoeorihly/ram-purge",
+    "basis": "仓库公开简介，输入输出为典型使用方式"
+  },
+  "jchumcrfbluw/roblox-solara-executor-pc-desktop": {
+    "summary": "README 自述为 Roblox Lua 脚本执行器的介绍与下载页",
+    "input": "游戏环境和 Lua 脚本",
+    "output": "README 所称的游戏内执行结果；未实际验证",
+    "domain": "games",
+    "source": "https://github.com/jchumcrfbluw/roblox-solara-executor-pc-desktop#readme",
+    "basis": "根据仓库 README 整理，输入输出为典型使用方式；未运行项目"
+  },
+  "microsoft/vscode": {
+    "summary": "代码编辑器，可通过扩展支持多种语言",
+    "input": "代码文件、项目和编辑操作",
+    "output": "编辑后的代码及调试结果",
+    "domain": "devtools",
+    "source": "https://github.com/microsoft/vscode",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "neovim/neovim": {
+    "summary": "可定制的终端代码编辑器",
+    "input": "文本、代码和编辑命令",
+    "output": "编辑后的文件",
+    "domain": "devtools",
+    "source": "https://github.com/neovim/neovim",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "git/git": {
+    "summary": "管理代码版本与多人协作的版本控制系统",
+    "input": "文件改动和版本管理命令",
+    "output": "提交历史、分支和合并结果",
+    "domain": "devtools",
+    "source": "https://github.com/git/git",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "astral-sh/uv": {
+    "summary": "快速管理 Python 包、依赖和运行环境",
+    "input": "Python 项目和依赖配置",
+    "output": "可复现的环境、依赖及运行结果",
+    "domain": "devtools",
+    "source": "https://github.com/astral-sh/uv",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "oven-sh/bun": {
+    "summary": "集成运行、打包和测试的 JavaScript 工具链",
+    "input": "JavaScript 或 TypeScript 代码",
+    "output": "程序运行、打包或测试结果",
+    "domain": "devtools",
+    "source": "https://github.com/oven-sh/bun",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "rust-lang/rust": {
+    "summary": "强调性能和内存安全的编程语言",
+    "input": "Rust 源代码和编译配置",
+    "output": "编译后的程序及诊断信息",
+    "domain": "devtools",
+    "source": "https://github.com/rust-lang/rust",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "golang/go": {
+    "summary": "用于开发服务和工具的 Go 编程语言",
+    "input": "Go 源代码",
+    "output": "编译后的程序和运行结果",
+    "domain": "devtools",
+    "source": "https://github.com/golang/go",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "facebook/react": {
+    "summary": "用组件构建网页和应用界面的开发库",
+    "input": "组件代码、数据和用户操作",
+    "output": "动态用户界面",
+    "domain": "web",
+    "source": "https://github.com/facebook/react",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "vuejs/core": {
+    "summary": "渐进式的网页用户界面开发框架",
+    "input": "页面组件、数据和交互逻辑",
+    "output": "可交互的网页界面",
+    "domain": "web",
+    "source": "https://github.com/vuejs/core",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "vercel/next.js": {
+    "summary": "基于 React 构建完整网站的框架",
+    "input": "页面组件、路由和服务端逻辑",
+    "output": "可部署的网站与接口",
+    "domain": "web",
+    "source": "https://github.com/vercel/next.js",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "vitejs/vite": {
+    "summary": "前端开发服务器和构建工具",
+    "input": "前端源代码和构建配置",
+    "output": "开发预览及生产静态文件",
+    "domain": "web",
+    "source": "https://github.com/vitejs/vite",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "tailwindlabs/tailwindcss": {
+    "summary": "用实用样式类快速设计页面的 CSS 框架",
+    "input": "页面标记、样式类和设计配置",
+    "output": "页面所需的 CSS 样式",
+    "domain": "web",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "postgres/postgres": {
+    "summary": "开源关系数据库",
+    "input": "表结构、数据和 SQL 查询",
+    "output": "存储的数据与查询结果",
+    "domain": "data",
+    "source": "https://github.com/postgres/postgres",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "redis/redis": {
+    "summary": "用于缓存、队列等场景的内存数据存储",
+    "input": "键值数据和读写命令",
+    "output": "快速读取的数据与操作结果",
+    "domain": "data",
+    "source": "https://github.com/redis/redis",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "duckdb/duckdb": {
+    "summary": "可嵌入程序的分析型数据库",
+    "input": "CSV、Parquet 等数据和 SQL",
+    "output": "数据分析查询结果",
+    "domain": "data",
+    "source": "https://github.com/duckdb/duckdb",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "clickhouse/clickhouse": {
+    "summary": "面向大规模数据分析的列式数据库",
+    "input": "事件数据、表结构和 SQL",
+    "output": "聚合统计与分析查询结果",
+    "domain": "data",
+    "source": "https://github.com/ClickHouse/ClickHouse",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "pandas-dev/pandas": {
+    "summary": "Python 中清洗和分析表格数据的工具库",
+    "input": "表格数据和处理代码",
+    "output": "清洗、汇总或转换后的数据表",
+    "domain": "data",
+    "source": "https://github.com/pandas-dev/pandas",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "kubernetes/kubernetes": {
+    "summary": "部署和管理容器应用的编排平台",
+    "input": "容器镜像、集群及部署配置",
+    "output": "运行中的服务和集群状态",
+    "domain": "systems",
+    "source": "https://github.com/kubernetes/kubernetes",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "docker/compose": {
+    "summary": "用一份配置启动多个容器服务",
+    "input": "Compose 配置与容器镜像",
+    "output": "互相连接的容器应用环境",
+    "domain": "systems",
+    "source": "https://github.com/docker/compose",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "caddyserver/caddy": {
+    "summary": "支持自动 HTTPS 的网站与反向代理服务器",
+    "input": "域名、网站文件或上游服务配置",
+    "output": "可访问的网站与代理入口",
+    "domain": "systems",
+    "source": "https://github.com/caddyserver/caddy",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "prometheus/prometheus": {
+    "summary": "收集和查询系统、应用监控指标",
+    "input": "指标端点和采集规则",
+    "output": "时序指标查询与告警信息",
+    "domain": "systems",
+    "source": "https://github.com/prometheus/prometheus",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "grafana/grafana": {
+    "summary": "把监控和业务数据展示成仪表盘",
+    "input": "数据源、查询与面板配置",
+    "output": "可交互的数据看板",
+    "domain": "systems",
+    "source": "https://github.com/grafana/grafana",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "syncthing/syncthing": {
+    "summary": "在自己的多台设备间同步文件",
+    "input": "需要同步的目录和设备配置",
+    "output": "各设备中同步后的文件",
+    "domain": "productivity",
+    "source": "https://github.com/syncthing/syncthing",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "appflowy-io/appflowy": {
+    "summary": "开源的文档、任务与知识管理工作区",
+    "input": "笔记、文档和项目资料",
+    "output": "可整理与协作的个人或团队工作区",
+    "domain": "productivity",
+    "source": "https://github.com/AppFlowy-IO/AppFlowy",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "immich-app/immich": {
+    "summary": "在自己服务器上管理照片和视频",
+    "input": "手机或电脑中的照片、视频",
+    "output": "可浏览、检索和备份的媒体库",
+    "domain": "media",
+    "source": "https://github.com/immich-app/immich",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "yt-dlp/yt-dlp": {
+    "summary": "下载多个视频网站上的公开或获授权媒体",
+    "input": "媒体网页地址和下载选项",
+    "output": "下载的视频、音频或字幕文件",
+    "domain": "media",
+    "source": "https://github.com/yt-dlp/yt-dlp",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "ffmpeg/ffmpeg": {
+    "summary": "转换和处理音视频的命令行工具集",
+    "input": "音视频文件及处理参数",
+    "output": "转换、剪辑或编码后的媒体文件",
+    "domain": "media",
+    "source": "https://github.com/ffmpeg/ffmpeg",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "godotengine/godot": {
+    "summary": "开发二维和三维游戏的开源引擎",
+    "input": "游戏场景、脚本与美术资源",
+    "output": "可运行或导出的游戏",
+    "domain": "games",
+    "source": "https://github.com/godotengine/godot",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "freecodecamp/freecodecamp": {
+    "summary": "通过课程与实践学习编程的开源平台",
+    "input": "学习选择和练习代码",
+    "output": "练习反馈及课程学习进度",
+    "domain": "learning",
+    "source": "https://github.com/freeCodeCamp/freeCodeCamp",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "ebookfoundation/free-programming-books": {
+    "summary": "整理免费编程书籍和课程资源的目录",
+    "input": "学习主题或编程语言",
+    "output": "相关书籍和课程链接",
+    "domain": "learning",
+    "source": "https://github.com/EbookFoundation/free-programming-books",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  }
+}

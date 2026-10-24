@@ -1,0 +1,5 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {range,rank} from '../dist/ranking.js';
+test('Beijing day boundaries',()=>{assert.deepEqual(range('day','2026-10-23'),[Date.parse('2026-10-22T16:00Z'),Date.parse('2026-10-23T16:00Z')])});
+test('Monday and year crossing',()=>{assert.equal(new Date(range('week','2026-01-01')[0]).toISOString(),'2025-12-28T16:00:00.000Z')});
+test('quarter end is exclusive',()=>{const [a,b]=range('quarter','2026-12-31');assert.equal(new Date(a).toISOString(),'2026-09-30T16:00:00.000Z');assert.equal(new Date(b).toISOString(),'2026-12-31T16:00:00.000Z')});
+test('new projects ordered by total stars, not age',()=>{const rs=[{full_name:'a',created_at:'2026-10-02',stars:90,category:'skills'},{full_name:'b',created_at:'2026-10-03',stars:200,category:'skills'},{full_name:'c',created_at:'2025-01-01',stars:999}];assert.deepEqual(rank(rs,{period:'month',date:'2026-10-23'}).map(x=>x.full_name),['b','a']);assert.equal(rank(rs,{period:'all',date:'2026-10-23'})[0].full_name,'c')});
