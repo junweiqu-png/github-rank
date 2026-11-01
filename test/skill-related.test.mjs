@@ -21,9 +21,20 @@ test('The catalog-to-project join supplies both type membership and expansion re
  assert.equal(view.skill_count,1);assert.equal(view.skills[0].name,'new-task');
  assert.equal(rank([view],{date:'2026-11-01',category:'skills'}).length,1);
  assert.equal(rank([view],{date:'2026-11-01',category:'plugins'}).length,1);
+ assert.equal(rank([view],{date:'2026-11-01',category:'skills',q:'new-task'}).length,1);
  const historical=repositoryView(repo,{skills,includeSkills:false});
  assert.equal(historical.skill_count,0);
  assert.equal(rank([historical],{date:'2026-11-01',category:'skills'}).length,0);
+});
+
+test('Search candidates enter Skills only after a valid file is found; an empty full scan is distinguished',()=>{
+ const repo={id:8,full_name:'candidate/tool',category:'skills',skill_candidate:true,created_at:'2026-01-01',stars:2};
+ const pending=repositoryView(repo);
+ assert.equal(pending.skill_verification,'pending');assert.equal(rank([pending],{date:'2026-11-01',category:'skills'}).length,0);
+ const empty=repositoryView(repo,{scans:[{id:8,complete:true,skill_count:0}]});
+ assert.equal(empty.skill_verification,'none');assert.equal(rank([empty],{date:'2026-11-01',category:'skills'}).length,0);
+ const old=repositoryView({...repo,category:'projects',types:['projects','skills']},{includeSkills:false});
+ assert.equal(rank([old],{date:'2026-11-01',category:'skills'}).length,1);
 });
 
 test('Skill parent membership follows repository identity across rename, not reused names',()=>{

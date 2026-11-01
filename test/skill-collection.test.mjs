@@ -80,3 +80,16 @@ test('A failed empty-looking scan retains old skills; only a complete empty tree
  const saved=JSON.parse(await readFile(new URL('skills.json',dataRoot),'utf8'));
  assert.deepEqual(saved.skills,[]);
 });
+
+test('Fair passes finish a large repository and a newly discovered candidate using raw files and cached inventories',async t=>{
+ const candidate={id:2,full_name:'unknown/publisher',category:'projects',skill_candidate:true,stars:4};
+ const dataRoot=await fixtureRoot(t,{skills:[],repositories:[]}),calls=[],rawCalls=[];
+ const heads=new Map([repoA,candidate].map(r=>[String(r.id),{id:r.id,full_name:r.full_name,commit_sha:'pinned',default_branch:'main'}]));
+ const result=await collectSkills({repositories:[repoA,candidate],dataRoot,heads,passes:4,perRepositoryFileReads:1,maxFileReads:10,discoveryComplete:true,
+  api:async path=>{calls.push(path);if(!path.includes('/git/trees/pinned?recursive=1'))throw Error('Only tree calls use REST');const count=path.includes(repoA.full_name)?3:1;return {tree:Array.from({length:count},(_,i)=>({path:String(i)+'/SKILL.md',type:'blob',mode:'100644',sha:'blob-'+i})),truncated:false}},
+  rawText:async(r,path,ref)=>{rawCalls.push([r.id,path,ref]);return '---\nname: skill-'+path[0]+'\ndescription: A valid skill\n---'}
+ });
+ assert.equal(calls.length,2);assert.equal(rawCalls.length,4);assert.equal(result.skills.length,4);
+ assert.equal(result.coverage.candidate_repositories,2);assert.equal(result.coverage.complete_repositories,2);
+ assert.equal(result.coverage.pending_repositories,0);assert.equal(result.coverage.complete,true);assert.deepEqual(result.errors,[]);
+});

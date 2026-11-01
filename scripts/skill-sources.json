@@ -1,4 +1,11 @@
 {
   "repositories": ["anthropics/skills", "mattpocock/skills", "vercel-labs/skills", "vercel-labs/agent-browser"],
-  "topics": ["agent-skills", "claude-skills", "agent-skill"]
+  "topics": ["agent-skills", "claude-skills", "agent-skill", "claude-code-skills", "skills"],
+  "queries": [
+    "topic:agent-skills fork:false", "topic:agent-skill fork:false",
+    "topic:claude-skills fork:false", "topic:claude-code-skills fork:false", "topic:skills fork:false",
+    "skills in:name fork:false", "skill in:name fork:false",
+    "\"SKILL.md\" in:readme fork:false", "\"agentskills.io\" in:readme fork:false",
+    "\"agent skills\" in:description fork:false", "\"claude skills\" in:description fork:false"
+  ]
 }

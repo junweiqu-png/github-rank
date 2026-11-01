@@ -44,8 +44,8 @@ function metadata(source){
  * previousSkills must contain the previous observations for this repository.
  * An incomplete scan may add or refresh records, but never deletes old records.
  */
-export async function discoverRepositorySkills(repo,{getTree,getText},previousSkills=[]){
- const errors=[],files=new Map(),fresh=new Map();
+export async function discoverRepositorySkills(repo,{getTree,getText,maxFileReads=MAX_SKILL_FILES,maxTreeRequests=MAX_TREE_REQUESTS,concurrency=6,deferredPaths=new Set()},previousSkills=[],previousScan={}){
+ const errors=[],files=new Map(),fresh=new Map(),pendingTrees=[];
  const old=Array.isArray(previousSkills)?previousSkills:[];
  const ref=repo.commit_sha||repo.default_branch||'main';
  const observedAt=repo.observed_at||new Date().toISOString();
@@ -64,7 +64,7 @@ export async function discoverRepositorySkills(repo,{getTree,getText},previousSk
  }
 
  async function readTree(treeRef,recursive){
-  if(++treeRequests>MAX_TREE_REQUESTS)throw Error('Git tree request budget exceeded');
+  if(++treeRequests>maxTreeRequests)throw Error('Git tree request budget exceeded');
   const result=await getTree(repo,treeRef,recursive);
   if(!result||!Array.isArray(result.tree))throw Error('Invalid Git tree response');
   return result;
@@ -72,15 +72,19 @@ export async function discoverRepositorySkills(repo,{getTree,getText},previousSk
 
  try{
   if(repo.id===undefined||typeof repo.full_name!=='string')throw Error('Repository id and full_name are required');
-  const recursive=await readTree(ref,true);
+  const sameRevision=previousScan.commit_sha===ref&&Array.isArray(previousScan.inventory);
+  const resumeTrees=sameRevision&&previousScan.pending_trees?.length;
+  const cachedInventory=sameRevision&&previousScan.inventory_complete;
+  const recursive=cachedInventory||resumeTrees?{tree:previousScan.inventory,truncated:!!resumeTrees}:await readTree(ref,true);
   addEntries(recursive);
   if(recursive.truncated===true){
-   files.clear();
+   if(!resumeTrees)files.clear();
    // A recursive Git Tree is not paginated. Re-fetch each non-recursive tree
    // so a truncated list cannot silently be treated as the complete inventory.
-   const queue=[{ref,prefix:'',ancestors:new Set()}];
+   const queue=resumeTrees?previousScan.pending_trees.map(t=>({...t,ancestors:new Set(t.ancestors||[])})):[{ref,prefix:'',ancestors:new Set()}];
    for(let cursor=0;cursor<queue.length;cursor++){
     const current=queue[cursor];
+    if(treeRequests>=maxTreeRequests){pendingTrees.push(...queue.slice(cursor).map(t=>({...t,ancestors:[...t.ancestors]})));errors.push('Git tree request budget exceeded; subtree queue saved');break}
     try{
      const tree=await readTree(current.ref,false);
      addEntries(tree,current.prefix);
@@ -94,20 +98,27 @@ export async function discoverRepositorySkills(repo,{getTree,getText},previousSk
      }
     }catch(error){
      errors.push('Tree scan failed at '+(current.prefix||'/')+': '+error.message);
-     if(treeRequests>=MAX_TREE_REQUESTS)break;
+     pendingTrees.push({...current,ancestors:[...current.ancestors]});
+     if(treeRequests>=maxTreeRequests){pendingTrees.push(...queue.slice(cursor+1).map(t=>({...t,ancestors:[...t.ancestors]})));break}
     }
    }
   }
  }catch(error){errors.push('Repository tree scan failed: '+error.message)}
 
- let fileCount=0;
- for(const entry of [...files.values()].sort((a,b)=>a.path.localeCompare(b.path))){
-  if(++fileCount>MAX_SKILL_FILES){errors.push('SKILL.md file budget exceeded');break}
+ const inventoryComplete=errors.length===0;
+ const invalidByPath=new Map((previousScan.file_states||[]).filter(s=>s.status==='invalid').map(s=>[s.path,s]));
+ const fileStates=[];let fileReads=0,pending=0;
+ async function processFile(entry){
   try{
    const previous=previousByPath.get(entry.path);
    const cached=typeof entry.sha==='string'&&entry.sha.length>0&&previous?.blob_sha===entry.sha?validMetadata(previous):null;
+   if(!cached&&deferredPaths.has(entry.path)){pending++;errors.push('SKILL.md deferred after an earlier read failure: '+entry.path);return}
+   const invalid=invalidByPath.get(entry.path);
+   if(!cached&&entry.sha&&invalid?.blob_sha===entry.sha){fileStates.push(invalid);return}
+   if(!cached&&fileReads>=maxFileReads){pending++;return}
+   if(!cached)fileReads++;
    const fields=cached||metadata(await getText(repo,entry.path,ref));
-   if(!fields)continue;
+   if(!fields){fileStates.push({path:entry.path,blob_sha:entry.sha,status:'invalid'});return}
    const sourceUrl='https://github.com/'+repo.full_name+'/blob/'+encodeURIComponent(ref)+'/'+entry.path.split('/').map(encodeURIComponent).join('/');
    fresh.set(entry.path,{
     id:String(repo.id)+':'+entry.path,
@@ -125,14 +136,16 @@ export async function discoverRepositorySkills(repo,{getTree,getText},previousSk
     first_seen_at:previous?.first_seen_at||previous?.observed_at||observedAt,
     stale:false,
    });
-  }catch(error){errors.push('SKILL.md read failed at '+entry.path+': '+error.message)}
+  }catch(error){pending++;errors.push('SKILL.md read failed at '+entry.path+': '+error.message)}
  }
-
- const complete=errors.length===0;
+ const entries=[...files.values()].sort((a,b)=>a.path.localeCompare(b.path));let cursor=0;
+ await Promise.all(Array.from({length:Math.max(1,Math.min(12,concurrency))},async()=>{while(cursor<entries.length)await processFile(entries[cursor++])}));
+ if(pending&&fileReads>=maxFileReads)errors.push('Metadata file budget reached; '+pending+' files remain in the checkpoint');
+ const complete=inventoryComplete&&pending===0&&errors.length===0;
  if(!complete){
   for(const previous of old){
    if(typeof previous.path==='string'&&!fresh.has(previous.path))fresh.set(previous.path,{...previous,stale:true});
   }
  }
- return {skills:[...fresh.values()].sort((a,b)=>a.path.localeCompare(b.path)),complete,errors};
+ return {skills:[...fresh.values()].sort((a,b)=>a.path.localeCompare(b.path)),complete,errors,commit_sha:ref,inventory_complete:inventoryComplete,inventory:[...files.values()].map(e=>({path:e.path,sha:e.sha,type:'blob',mode:e.mode||'100644'})),pending_trees:pendingTrees,file_states:fileStates,metadata_pending:pending,file_reads:fileReads};
 }

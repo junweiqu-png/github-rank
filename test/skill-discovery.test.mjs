@@ -87,3 +87,23 @@ test('An empty complete scan removes old data, while size-budget failures do not
  const empty=await discoverRepositorySkills(repo,reader([],{}),[old]);assert.equal(empty.complete,true);assert.deepEqual(empty.skills,[]);
  const oversized=await discoverRepositorySkills(repo,reader([blob('a/SKILL.md')],{'a/SKILL.md':'x'.repeat(1024*1024+1)}),[old]);assert.equal(oversized.complete,false);assert.equal(oversized.skills[0].stale,true);
 });
+
+test('A metadata checkpoint resumes beyond the limit and caches invalid frontmatter by blob',async()=>{
+ const entries=['a','b','c','d'].map(n=>blob(n+'/SKILL.md',n));
+ const calls=[];const source={getTree:async()=>({tree:entries,truncated:false}),getText:async(_r,path)=>{calls.push(path);return path.startsWith('a/')?'# no frontmatter':text(path[0])},maxFileReads:2};
+ const first=await discoverRepositorySkills(repo,source);
+ assert.equal(first.complete,false);assert.equal(first.metadata_pending,2);assert.equal(first.inventory_complete,true);
+ const next=await discoverRepositorySkills(repo,{...source,getTree:async()=>{throw Error('Unchanged inventory should be reused')}},first.skills,first);
+ assert.equal(next.complete,true);assert.equal(next.skills.length,3);assert.equal(next.metadata_pending,0);
+ assert.deepEqual(calls,['a/SKILL.md','b/SKILL.md','c/SKILL.md','d/SKILL.md']);
+});
+
+test('A truncated tree resumes queued subtrees after a tree budget instead of rereading the same prefix forever',async()=>{
+ const calls=[];
+ const source={maxTreeRequests:2,getTree:async(_r,ref,recursive)=>{calls.push([ref,recursive]);if(recursive)return {tree:[],truncated:true};if(ref===repo.commit_sha)return {tree:[{path:'a',type:'tree',sha:'a-tree'},{path:'b',type:'tree',sha:'b-tree'}]};return {tree:[blob('SKILL.md',ref)]}},getText:async()=>text('new-skill')};
+ const first=await discoverRepositorySkills(repo,source);
+ assert.equal(first.complete,false);assert.equal(first.pending_trees.length,2);
+ const next=await discoverRepositorySkills(repo,source,first.skills,first);
+ assert.equal(next.complete,true);assert.equal(next.skills.length,2);assert.deepEqual(next.pending_trees,[]);
+ assert.deepEqual(calls,[[repo.commit_sha,true],[repo.commit_sha,false],['a-tree',false],['b-tree',false]]);
+});
