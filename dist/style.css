@@ -13,4 +13,5 @@ header{height:52px;padding:0 max(20px,calc((100vw - 1160px)/2));font-size:13px}m
 
 
 #skill-controls{margin:10px 0;color:var(--muted);font-size:12px}.skill-path{font-size:10px;overflow-wrap:anywhere}.missing-metric{font-size:11px;font-weight:400;color:var(--muted)}.skills-view .project .summary{overflow-wrap:anywhere}
+.project .related-link{font-size:11px;font-weight:500;color:var(--green);line-height:1.8}.scope-note{line-height:1.8;overflow-wrap:anywhere}.scope-note button{margin-left:8px;border:1px solid var(--line);border-radius:4px;background:white;font-size:11px;padding:4px 8px}
 

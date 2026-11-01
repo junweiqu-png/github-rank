@@ -47,6 +47,7 @@ jobs:
       - name: Install metadata parser
         run: npm ci --ignore-scripts
       - name: Collect public GitHub metadata
+        if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[skip collect]')
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: node scripts/collect.mjs
