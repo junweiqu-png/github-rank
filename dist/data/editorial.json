@@ -2304,5 +2304,13 @@
     "domain": "learning",
     "source": "https://github.com/EbookFoundation/free-programming-books",
     "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "vercel-labs/agent-browser": {
+    "summary": "供 AI Agent 浏览和操作网页的命令行工具与技能",
+    "input": "网页地址和浏览器操作指令",
+    "output": "网页信息、截图及操作结果",
+    "domain": "ai",
+    "source": "https://github.com/vercel-labs/agent-browser",
+    "basis": "仓库公开文档，输入输出为典型使用方式"
   }
 }
