@@ -1,6 +1,6 @@
-import {rank,range} from './ranking.js';
-import {domains,types,typesOf,repositoryView} from './catalog.js';
-import {skillsInRepository,searchSkills,sortSkills} from './skills.js';
+import {rank,range} from './ranking.js?v=20261101-types';
+import {domains,types,typesOf,repositoryView} from './catalog.js?v=20261101-types';
+import {skillsInRepository,searchSkills,sortSkills} from './skills.js?v=20261101-types';
 const $=s=>document.querySelector(s);
 const local=d=>new Date(d).toLocaleDateString('sv-SE',{timeZone:'Asia/Shanghai'});
 const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

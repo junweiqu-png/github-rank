@@ -1,6 +1,6 @@
 export const domains={ai:'AI',devtools:'开发工具',web:'网站与前端',data:'数据库与数据',systems:'系统与运维',productivity:'办公与效率',media:'影音与创作',learning:'学习资料',games:'游戏',other:'其他'};
 export const types={projects:'应用 / 框架',skills:'Skill 相关仓库',plugins:'插件',mcp:'MCP 服务',collections:'合集目录'};
-import {skillsInRepository} from './skills.js';
+import {skillsInRepository} from './skills.js?v=20261101-types';
 // A tool can also publish skills. Keep its primary type and add the verified relation.
 export function typesOf(r){return [...new Set([r.category||'projects',...(r.skill_count>0?['skills']:[])])]}
 export function repositoryView(r,{editorial={},skills=[],includeSkills=true}={}){

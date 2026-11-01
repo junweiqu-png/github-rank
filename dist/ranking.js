@@ -1,4 +1,4 @@
-import {typesOf} from './catalog.js';
+import {typesOf} from './catalog.js?v=20261101-types';
 export function range(period,date){
  const d=new Date(date+'T00:00:00+08:00');if(Number.isNaN(+d))throw Error('日期无效');
  const wall=new Date(+d+28800000); let y=wall.getUTCFullYear(),m=wall.getUTCMonth(),day=wall.getUTCDate();
