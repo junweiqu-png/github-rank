@@ -2,7 +2,8 @@ import {mkdir,readFile,writeFile,rename} from 'node:fs/promises';
 import {discoverRepositorySkills} from './lib/skill-discovery.mjs';
 const root=new URL('../dist/data/',import.meta.url);
 export function isSkillCandidate(r,previous=[]){return r.category==='skills'||previous.some(s=>String(s.repository_id)===String(r.id))||/(^|[-_/])skills?($|[-_/])/i.test(r.full_name)||/SKILL\.md|\bagent skills?\b/i.test(r.description||'')||(r.topics||[]).some(t=>/^(agent-skills?|claude-skills|skills|claude-code-skills)$/.test(t))}
-export async function collectSkills({api,repositories,limit=80,maxFileReads=700}){
+export async function collectSkills({api,repositories,limit=80,maxFileReads=700,dataRoot=root}){
+ const root=dataRoot;
  let previous={skills:[],repositories:[]};try{previous=JSON.parse(await readFile(new URL('skills.json',root),'utf8'))}catch{}
  const copy=JSON.parse(await readFile(new URL('skill-copy.json',import.meta.url),'utf8'));
  const sources=JSON.parse(await readFile(new URL('skill-sources.json',import.meta.url),'utf8'));
