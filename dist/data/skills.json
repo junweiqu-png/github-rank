@@ -1,0 +1,1318 @@
+{
+  "updated_at": "2026-11-01T01:50:48.639Z",
+  "source": "GitHub SKILL.md frontmatter",
+  "grain": "skill",
+  "skills": [
+    {
+      "id": "1148788086:skills/engineering/ask-matt/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/ask-matt/SKILL.md",
+      "directory": "skills/engineering/ask-matt",
+      "blob_sha": "4bfeeb61dae548b8b7754c4fba7bd40ab3926099",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "ask-matt",
+      "description": "Ask which skill or flow fits your situation. A router over the skills in this repo.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/ask-matt/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Ask which skill or flow fits your situation. A router over the skills in this repo.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/engineering/code-review/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/code-review/SKILL.md",
+      "directory": "skills/engineering/code-review",
+      "blob_sha": "83183e0ad36fd0eef25d37c7e483284b7e34c1f0",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "code-review",
+      "description": "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes: Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\".",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/code-review/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes: Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\".",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/engineering/codebase-design/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/codebase-design/SKILL.md",
+      "directory": "skills/engineering/codebase-design",
+      "blob_sha": "3f63c8146dd2604b419c929e9876b90c30d410e9",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "codebase-design",
+      "description": "Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code more testable or AI-navigable, or when another skill needs the deep-module vocabulary.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/codebase-design/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code more testable or AI-navigable, or when another skill needs the deep-module vocabulary.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/engineering/diagnosing-bugs/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/diagnosing-bugs/SKILL.md",
+      "directory": "skills/engineering/diagnosing-bugs",
+      "blob_sha": "d039541ddd1c46e6ddbd662fe99d49b686fc5e12",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "diagnosing-bugs",
+      "description": "Diagnosis loop for hard bugs and performance regressions. Use when the user says \"diagnose\"/\"debug this\", or reports something broken/throwing/failing/slow.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/diagnosing-bugs/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Diagnosis loop for hard bugs and performance regressions. Use when the user says \"diagnose\"/\"debug this\", or reports something broken/throwing/failing/slow.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/engineering/domain-modeling/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/domain-modeling/SKILL.md",
+      "directory": "skills/engineering/domain-modeling",
+      "blob_sha": "a4438c6879c517d1a08e2b5fbca049b632688dfe",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "domain-modeling",
+      "description": "Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a GLOSSARY.md, or recording or editing an ADR.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/domain-modeling/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a GLOSSARY.md, or recording or editing an ADR.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/engineering/grill-with-docs/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/grill-with-docs/SKILL.md",
+      "directory": "skills/engineering/grill-with-docs",
+      "blob_sha": "62b9efb6f991d1b229adee7506962f13ced0c499",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "grill-with-docs",
+      "description": "A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/grill-with-docs/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "结合代码和文档追问需求，并保留设计记录",
+      "input": "已有项目、文档和待讨论的方案",
+      "output": "澄清后的方案、项目上下文与决策记录",
+      "translation_status": "curated",
+      "official_install_url": "https://www.skills.sh/mattpocock/skills/grill-with-docs",
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/engineering/implement-spec/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/implement-spec/SKILL.md",
+      "directory": "skills/engineering/implement-spec",
+      "blob_sha": "73d36c23958bd04423ba3ded1c90ff0d0b858b72",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "implement-spec",
+      "description": "Implement the result of /to-spec and /to-tickets in code.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/implement-spec/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Implement the result of /to-spec and /to-tickets in code.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/engineering/implement/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/implement/SKILL.md",
+      "directory": "skills/engineering/implement",
+      "blob_sha": "bd49e472984c7b99aac40286fdae749bb955a842",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "implement",
+      "description": "Implement a piece of work based on a spec or set of tickets.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/implement/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Implement a piece of work based on a spec or set of tickets.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/engineering/improve-codebase-architecture/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/improve-codebase-architecture/SKILL.md",
+      "directory": "skills/engineering/improve-codebase-architecture",
+      "blob_sha": "f1eabb568464f03ae79a3346fc1918fdde6d8285",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "improve-codebase-architecture",
+      "description": "Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/improve-codebase-architecture/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "检查代码库结构，寻找可改进的架构边界",
+      "input": "现有代码库",
+      "output": "架构问题与可实施的改进候选",
+      "translation_status": "curated",
+      "official_install_url": "https://www.skills.sh/mattpocock/skills/improve-codebase-architecture",
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/engineering/pr/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/pr/SKILL.md",
+      "directory": "skills/engineering/pr",
+      "blob_sha": "84dd4fb2f068e9f6282690235d20dd505b418119",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "pr",
+      "description": "Use when writing a PR body.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/pr/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Use when writing a PR body.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/engineering/prototype/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/prototype/SKILL.md",
+      "directory": "skills/engineering/prototype",
+      "blob_sha": "a0044501fe0d385b4d8575b610188ede9b236ccf",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "prototype",
+      "description": "Build a throwaway prototype to answer a design question. Use when the user wants to sanity-check whether a state model or logic feels right, or explore what a UI should look like.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/prototype/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Build a throwaway prototype to answer a design question. Use when the user wants to sanity-check whether a state model or logic feels right, or explore what a UI should look like.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/engineering/research/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/research/SKILL.md",
+      "directory": "skills/engineering/research",
+      "blob_sha": "ffc9eb89849cc4cf74962ce93d786ffd17c6a5dc",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "research",
+      "description": "Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/research/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/engineering/retro/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/retro/SKILL.md",
+      "directory": "skills/engineering/retro",
+      "blob_sha": "12149acf2dd23b4514dec57b04a6293eaa1352fa",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "retro",
+      "description": "Conduct a retrospective on a coding session.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/retro/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Conduct a retrospective on a coding session.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/engineering/setup-matt-pocock-skills/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
+      "directory": "skills/engineering/setup-matt-pocock-skills",
+      "blob_sha": "2df0b07981718fa5d9a51526dfbcaee87e3a543d",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "setup-matt-pocock-skills",
+      "description": "Configure this repo for the engineering skills: set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skills.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/setup-matt-pocock-skills/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "配置 Matt Pocock 技能工作流所需的项目约定",
+      "input": "项目和所用的任务管理方式",
+      "output": "工作流所需的配置与目录约定",
+      "translation_status": "curated",
+      "official_install_url": "https://www.skills.sh/mattpocock/skills/setup-matt-pocock-skills",
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/engineering/tdd/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/tdd/SKILL.md",
+      "directory": "skills/engineering/tdd",
+      "blob_sha": "01eadaa34e7c9a63a67d6dc3cce1cc81b0e49985",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "tdd",
+      "description": "Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions \"red-green-refactor\", or wants integration tests.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/tdd/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "用测试驱动开发流程实现或修复功能",
+      "input": "要实现的行为、代码和测试环境",
+      "output": "先测试再实现的代码与验证结果",
+      "translation_status": "curated",
+      "official_install_url": "https://www.skills.sh/mattpocock/skills/tdd",
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/engineering/to-spec/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/to-spec/SKILL.md",
+      "directory": "skills/engineering/to-spec",
+      "blob_sha": "3f52599ae2a4347aee5a07432c2707518e691a7f",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "to-spec",
+      "description": "Turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/to-spec/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/engineering/to-tickets/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/to-tickets/SKILL.md",
+      "directory": "skills/engineering/to-tickets",
+      "blob_sha": "9b77a01db9460c99c22d03c910c349f890f12c0e",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "to-tickets",
+      "description": "Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker (edges as text in one file per ticket locally, or native blocking links on a real tracker).",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/to-tickets/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker (edges as text in one file per ticket locally, or native blocking links on a real tracker).",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/engineering/triage/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/triage/SKILL.md",
+      "directory": "skills/engineering/triage",
+      "blob_sha": "3fd5617e906cf9b71a6b17424791adb905fc248b",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "triage",
+      "description": "Move issues and external PRs through a state machine of triage roles, categorise, verify, grill if needed, and write agent-ready briefs.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/triage/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "整理收到的 Issue 和需求，判断后续处理方式",
+      "input": "原始故障报告、Issue 或功能请求",
+      "output": "分类、补充信息及可执行的后续任务",
+      "translation_status": "curated",
+      "official_install_url": "https://www.skills.sh/mattpocock/skills/triage",
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/engineering/wayfinder/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/wayfinder/SKILL.md",
+      "directory": "skills/engineering/wayfinder",
+      "blob_sha": "975d6bf9c0a49d18a651f3335e0b4dcf8650fe31",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "wayfinder",
+      "description": "Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/wayfinder/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/engineering/wizard/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/wizard/SKILL.md",
+      "directory": "skills/engineering/wizard",
+      "blob_sha": "c4294ad8298b9b95fc727496b1b802b1f7363fba",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "wizard",
+      "description": "Generate an interactive bash wizard that walks a human through steps only they can perform. Use when provisioning infrastructure, setting up credentials or CI secrets, walking an unfamiliar third-party dashboard, or running a one-off migration or cutover. Don't invoke this for steps the agent can perform itself.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/wizard/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Generate an interactive bash wizard that walks a human through steps only they can perform. Use when provisioning infrastructure, setting up credentials or CI secrets, walking an unfamiliar third-party dashboard, or running a one-off migration or cutover. Don't invoke this for steps the agent can perform itself.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/in-progress/chief-of-staff/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/in-progress/chief-of-staff/SKILL.md",
+      "directory": "skills/in-progress/chief-of-staff",
+      "blob_sha": "22f0b6626f07bfdfa78b70d006742dfa2260e9c4",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "chief-of-staff",
+      "description": "Pursue a long-running goal in a single session by co-ordinating subagents.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/in-progress/chief-of-staff/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Pursue a long-running goal in a single session by co-ordinating subagents.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/in-progress/claude-handoff/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/in-progress/claude-handoff/SKILL.md",
+      "directory": "skills/in-progress/claude-handoff",
+      "blob_sha": "77f82fc59c89c3a83ed5a92521dc2869f0533724",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "claude-handoff",
+      "description": "Hand the current conversation off to a fresh background agent that picks up the work immediately.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/in-progress/claude-handoff/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Hand the current conversation off to a fresh background agent that picks up the work immediately.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/in-progress/loop-me/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/in-progress/loop-me/SKILL.md",
+      "directory": "skills/in-progress/loop-me",
+      "blob_sha": "e58a474ca80feffdeb28842bc3bdee37da6510e7",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "loop-me",
+      "description": "Grill me about specs for the workflows I want to build, within this workspace.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/in-progress/loop-me/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Grill me about specs for the workflows I want to build, within this workspace.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/in-progress/setup-ts-deep-modules/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/in-progress/setup-ts-deep-modules/SKILL.md",
+      "directory": "skills/in-progress/setup-ts-deep-modules",
+      "blob_sha": "7e30047eaeda175de5d93886596a37baf365bb90",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "setup-ts-deep-modules",
+      "description": "Wire dependency-cruiser into a TypeScript repo so each package is a deep module, with implementation hidden in subfolders and reachable only through its entry-point files. User-invoked.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/in-progress/setup-ts-deep-modules/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Wire dependency-cruiser into a TypeScript repo so each package is a deep module, with implementation hidden in subfolders and reachable only through its entry-point files. User-invoked.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/in-progress/writing-beats/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/in-progress/writing-beats/SKILL.md",
+      "directory": "skills/in-progress/writing-beats",
+      "blob_sha": "3d3b25b605491adc5c62ae5423127717a94b9632",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "writing-beats",
+      "description": "Writing, exploit; assemble raw material into a journey of beats, grounding each term before a beat leans on it.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/in-progress/writing-beats/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Writing, exploit; assemble raw material into a journey of beats, grounding each term before a beat leans on it.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/in-progress/writing-fragments/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/in-progress/writing-fragments/SKILL.md",
+      "directory": "skills/in-progress/writing-fragments",
+      "blob_sha": "c7c889b880cf9c8d289119dea5ff240641b615ca",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "writing-fragments",
+      "description": "Writing, explore: mine raw fragments, no structure yet.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/in-progress/writing-fragments/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Writing, explore: mine raw fragments, no structure yet.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/in-progress/writing-shape/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/in-progress/writing-shape/SKILL.md",
+      "directory": "skills/in-progress/writing-shape",
+      "blob_sha": "02f2866d13e72504e010f2ad3458eb9b36b876db",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "writing-shape",
+      "description": "Writing, exploit: shape raw material into an article, paragraph by paragraph.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/in-progress/writing-shape/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Writing, exploit: shape raw material into an article, paragraph by paragraph.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/misc/git-guardrails-claude-code/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/misc/git-guardrails-claude-code/SKILL.md",
+      "directory": "skills/misc/git-guardrails-claude-code",
+      "blob_sha": "58bcdd875b164093b95f436fa32a65c6cb5eb572",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "git-guardrails-claude-code",
+      "description": "Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, branch -D, etc.) before they execute. Use when user wants to prevent destructive git operations, add git safety hooks, or block git push/reset in Claude Code.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/misc/git-guardrails-claude-code/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, branch -D, etc.) before they execute. Use when user wants to prevent destructive git operations, add git safety hooks, or block git push/reset in Claude Code.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/misc/migrate-to-shoehorn/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/misc/migrate-to-shoehorn/SKILL.md",
+      "directory": "skills/misc/migrate-to-shoehorn",
+      "blob_sha": "ae4f965e204fc93cedbc4e2c306e92829d93f800",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "migrate-to-shoehorn",
+      "description": "Migrate test files from `as` type assertions to @total-typescript/shoehorn. Use when user mentions shoehorn, wants to replace `as` in tests, or needs partial test data.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/misc/migrate-to-shoehorn/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Migrate test files from `as` type assertions to @total-typescript/shoehorn. Use when user mentions shoehorn, wants to replace `as` in tests, or needs partial test data.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/misc/scaffold-exercises/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/misc/scaffold-exercises/SKILL.md",
+      "directory": "skills/misc/scaffold-exercises",
+      "blob_sha": "d87df28e7d8abb4e57ecc6e47d71c274d16054c7",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "scaffold-exercises",
+      "description": "Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold exercises, create exercise stubs, or set up a new course section.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/misc/scaffold-exercises/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold exercises, create exercise stubs, or set up a new course section.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/misc/setup-pre-commit/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/misc/setup-pre-commit/SKILL.md",
+      "directory": "skills/misc/setup-pre-commit",
+      "blob_sha": "1b9708168263067adb4684d06ebb8f4ccfe9682c",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "setup-pre-commit",
+      "description": "Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit-time formatting/typechecking/testing.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/misc/setup-pre-commit/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit-time formatting/typechecking/testing.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/productivity/grill-me/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/productivity/grill-me/SKILL.md",
+      "directory": "skills/productivity/grill-me",
+      "blob_sha": "3947ff9c4ad980d14fc07fccbf659d47c114e81d",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "grill-me",
+      "description": "A relentless interview to sharpen a plan or design.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/productivity/grill-me/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "通过连续追问把想法和需求问清楚",
+      "input": "一个想法、计划或尚不清晰的需求",
+      "output": "经过追问明确的需求与决策",
+      "translation_status": "curated",
+      "official_install_url": "https://www.skills.sh/mattpocock/skills/grill-me",
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/productivity/grilling/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/productivity/grilling/SKILL.md",
+      "directory": "skills/productivity/grilling",
+      "blob_sha": "d2f09a18e6a6c65c55f1271ba08dfeaf06f0bed3",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "grilling",
+      "description": "Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/productivity/grilling/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/productivity/handoff/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/productivity/handoff/SKILL.md",
+      "directory": "skills/productivity/handoff",
+      "blob_sha": "a224edc643a20ddb989f9bca1547440169159810",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "handoff",
+      "description": "Compact the current conversation into a handoff document for another agent to pick up.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/productivity/handoff/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "整理当前进度，供新的会话接续工作",
+      "input": "当前任务、已完成工作和未解决问题",
+      "output": "可供新会话使用的交接文档",
+      "translation_status": "curated",
+      "official_install_url": "https://www.skills.sh/mattpocock/skills/handoff",
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/productivity/teach/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/productivity/teach/SKILL.md",
+      "directory": "skills/productivity/teach",
+      "blob_sha": "493fa3bae0dada971c4dfb965790e56920b1dced",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "teach",
+      "description": "Teach the user a new skill or concept, within this workspace.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/productivity/teach/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Teach the user a new skill or concept, within this workspace.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/productivity/to-questionnaire/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/productivity/to-questionnaire/SKILL.md",
+      "directory": "skills/productivity/to-questionnaire",
+      "blob_sha": "dadd0c00d6a350acaa15bb9ca1b96b20ead684ca",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "to-questionnaire",
+      "description": "Turn a decision you can't fully answer into a questionnaire for someone else to fill in.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/productivity/to-questionnaire/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Turn a decision you can't fully answer into a questionnaire for someone else to fill in.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/productivity/wait-what/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/productivity/wait-what/SKILL.md",
+      "directory": "skills/productivity/wait-what",
+      "blob_sha": "9b15cd1a7dda0854ca093e29e3e0de57e241b2ac",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "wait-what",
+      "description": "Stop. That last message did not land: re-pitch it.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/productivity/wait-what/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Stop. That last message did not land: re-pitch it.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1148788086:skills/productivity/writing-for-agents/SKILL.md",
+      "repository_id": 1148788086,
+      "repository": "mattpocock/skills",
+      "path": "skills/productivity/writing-for-agents/SKILL.md",
+      "directory": "skills/productivity/writing-for-agents",
+      "blob_sha": "a37608daf6e835e767deecfb498facecaaba82ba",
+      "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "name": "writing-for-agents",
+      "description": "Writing documents for agents. Use when creating or editing skills, or modifying AGENTS.md or CLAUDE.md.",
+      "source_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/productivity/writing-for-agents/SKILL.md",
+      "repository_url": "https://github.com/mattpocock/skills",
+      "observed_at": "2026-11-01T01:50:33.016Z",
+      "first_seen_at": "2026-11-01T01:50:33.016Z",
+      "stale": false,
+      "summary": "Writing documents for agents. Use when creating or editing skills, or modifying AGENTS.md or CLAUDE.md.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1061953414:skills/academy-guide/SKILL.md",
+      "repository_id": 1061953414,
+      "repository": "anthropics/skills",
+      "path": "skills/academy-guide/SKILL.md",
+      "directory": "skills/academy-guide",
+      "blob_sha": "cefeaeb20cc29a803af0335d7c7155b066d8770f",
+      "revision": "ca45fc496a3436251f191354091d557da31c15b5",
+      "name": "academy-guide",
+      "description": "Stop and check this skill before finishing any reply to a question about how to use Claude or a Claude product — it recommends matching courses, tutorials, and use cases from Claude Academy (academy.claude.com), Anthropic's learning hub. Trigger on: \"how do I\", \"how can I\", \"getting started with\", \"what can Claude do\", \"teach me\", \"learn to use\"; questions about artifacts, projects, skills, plugins, connectors, MCP; requests about rolling Claude out to a team, class, or organization; and any ask for training materials, onboarding content, or learning resources. Use it when the user is learning how to use a feature or product — not when they are mid-task and just want the task done. This skill composes with other skills: after consulting product documentation to answer how a Claude feature works, also check here for a matching course or tutorial — a docs-grounded answer and an Academy recommendation belong together. Only recommend on a strong match; never invent Academy content.",
+      "source_url": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/skills/academy-guide/SKILL.md",
+      "repository_url": "https://github.com/anthropics/skills",
+      "observed_at": "2026-11-01T01:50:45.899Z",
+      "first_seen_at": "2026-11-01T01:50:45.899Z",
+      "stale": false,
+      "summary": "Stop and check this skill before finishing any reply to a question about how to use Claude or a Claude product — it recommends matching courses, tutorials, and use cases from Claude Academy (academy.claude.com), Anthropic's learning hub. Trigger on: \"how do I\", \"how can I\", \"getting started with\", \"what can Claude do\", \"teach me\", \"learn to use\"; questions about artifacts, projects, skills, plugins, connectors, MCP; requests about rolling Claude out to a team, class, or organization; and any ask for training materials, onboarding content, or learning resources. Use it when the user is learning how to use a feature or product — not when they are mid-task and just want the task done. This skill composes with other skills: after consulting product documentation to answer how a Claude feature works, also check here for a matching course or tutorial — a docs-grounded answer and an Academy recommendation belong together. Only recommend on a strong match; never invent Academy content.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1061953414:skills/algorithmic-art/SKILL.md",
+      "repository_id": 1061953414,
+      "repository": "anthropics/skills",
+      "path": "skills/algorithmic-art/SKILL.md",
+      "directory": "skills/algorithmic-art",
+      "blob_sha": "634f6fa42e4e697fa6afd293acd7fb8246574876",
+      "revision": "ca45fc496a3436251f191354091d557da31c15b5",
+      "name": "algorithmic-art",
+      "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.",
+      "source_url": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/skills/algorithmic-art/SKILL.md",
+      "repository_url": "https://github.com/anthropics/skills",
+      "observed_at": "2026-11-01T01:50:45.899Z",
+      "first_seen_at": "2026-11-01T01:50:45.899Z",
+      "stale": false,
+      "summary": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1061953414:skills/brand-guidelines/SKILL.md",
+      "repository_id": 1061953414,
+      "repository": "anthropics/skills",
+      "path": "skills/brand-guidelines/SKILL.md",
+      "directory": "skills/brand-guidelines",
+      "blob_sha": "47c72c607bdb5dd81bdea5de2b5e4f3992a5fd59",
+      "revision": "ca45fc496a3436251f191354091d557da31c15b5",
+      "name": "brand-guidelines",
+      "description": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.",
+      "source_url": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/skills/brand-guidelines/SKILL.md",
+      "repository_url": "https://github.com/anthropics/skills",
+      "observed_at": "2026-11-01T01:50:45.899Z",
+      "first_seen_at": "2026-11-01T01:50:45.899Z",
+      "stale": false,
+      "summary": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1061953414:skills/canvas-design/SKILL.md",
+      "repository_id": 1061953414,
+      "repository": "anthropics/skills",
+      "path": "skills/canvas-design/SKILL.md",
+      "directory": "skills/canvas-design",
+      "blob_sha": "9f63fee82de84cd4230e1d0e322247b61eb4c94c",
+      "revision": "ca45fc496a3436251f191354091d557da31c15b5",
+      "name": "canvas-design",
+      "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.",
+      "source_url": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/skills/canvas-design/SKILL.md",
+      "repository_url": "https://github.com/anthropics/skills",
+      "observed_at": "2026-11-01T01:50:45.899Z",
+      "first_seen_at": "2026-11-01T01:50:45.899Z",
+      "stale": false,
+      "summary": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    },
+    {
+      "id": "1061953414:skills/discernment-nudge/SKILL.md",
+      "repository_id": 1061953414,
+      "repository": "anthropics/skills",
+      "path": "skills/discernment-nudge/SKILL.md",
+      "directory": "skills/discernment-nudge",
+      "blob_sha": "49ebbcad692ffdf70e518087468609a5c4ab9e22",
+      "revision": "ca45fc496a3436251f191354091d557da31c15b5",
+      "name": "discernment-nudge",
+      "description": "After you give a substantive answer or draft that the user may act on — advice or recommendations, drafted artifacts such as goals, plans, pitches, proposals, or emails, estimates or projections, analysis or interpretation of data, factual claims they may rely on, or a multi-step argument — invoke this skill BEFORE finalizing your reply and then, if it applies, append 2-3 short follow-up questions, each tied to something specific in what you just produced, that help the user check key facts, probe the reasoning or assumptions, and notice missing context. Do this at most once per conversation. Skip it when the user asked a trivial how-to or simple lookup, wants a purely educational explanation, asked you only to format, convert, or assemble a file from content they provided, is writing code they will run, is doing creative writing or casual chat, or already asked you to double-check, cite, or review — the skill file explains these boundaries and the exact output format.",
+      "source_url": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/skills/discernment-nudge/SKILL.md",
+      "repository_url": "https://github.com/anthropics/skills",
+      "observed_at": "2026-11-01T01:50:45.899Z",
+      "first_seen_at": "2026-11-01T01:50:45.899Z",
+      "stale": false,
+      "summary": "After you give a substantive answer or draft that the user may act on — advice or recommendations, drafted artifacts such as goals, plans, pitches, proposals, or emails, estimates or projections, analysis or interpretation of data, factual claims they may rely on, or a multi-step argument — invoke this skill BEFORE finalizing your reply and then, if it applies, append 2-3 short follow-up questions, each tied to something specific in what you just produced, that help the user check key facts, probe the reasoning or assumptions, and notice missing context. Do this at most once per conversation. Skip it when the user asked a trivial how-to or simple lookup, wants a purely educational explanation, asked you only to format, convert, or assemble a file from content they provided, is writing code they will run, is doing creative writing or casual chat, or already asked you to double-check, cite, or review — the skill file explains these boundaries and the exact output format.",
+      "input": "具体输入和前置条件见技能文档",
+      "output": "具体交付内容见技能文档",
+      "translation_status": "original",
+      "official_install_url": null,
+      "metrics": {
+        "installs": {
+          "source": "skills.sh",
+          "value": null,
+          "status": "not_connected",
+          "observed_at": null
+        }
+      }
+    }
+  ],
+  "repositories": [
+    {
+      "id": 1148788086,
+      "repository": "mattpocock/skills",
+      "checked_at": "2026-11-01T01:50:45.335Z",
+      "complete": true,
+      "skill_count": 38,
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d"
+    },
+    {
+      "id": 1061953414,
+      "repository": "anthropics/skills",
+      "checked_at": "2026-11-01T01:50:48.454Z",
+      "complete": false,
+      "skill_count": 5,
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5"
+    },
+    {
+      "id": 1132001614,
+      "repository": "vercel-labs/agent-browser",
+      "checked_at": "2026-11-01T01:50:48.639Z",
+      "complete": false,
+      "skill_count": 0
+    },
+    {
+      "id": 1134543109,
+      "repository": "vercel-labs/skills",
+      "checked_at": "2026-11-01T01:50:48.639Z",
+      "complete": false,
+      "skill_count": 0
+    }
+  ],
+  "coverage": {
+    "candidate_repositories": 4,
+    "attempted_this_run": 4,
+    "complete_this_run": 1,
+    "pending_this_run": 3,
+    "complete": false
+  },
+  "metrics": {
+    "installs": {
+      "source": "skills.sh",
+      "status": "not_connected",
+      "definition": "平台安装统计，不是 GitHub 通用安装次数"
+    }
+  },
+  "errors": [
+    "anthropics/skills: SKILL.md read failed at skills/doc-coauthoring/SKILL.md: 本次技能文件读取预算已用完，后续条目下次继续",
+    "anthropics/skills: SKILL.md read failed at skills/docx/SKILL.md: 本次技能文件读取预算已用完，后续条目下次继续",
+    "anthropics/skills: SKILL.md read failed at skills/frontend-design/SKILL.md: 本次技能文件读取预算已用完，后续条目下次继续",
+    "anthropics/skills: SKILL.md read failed at skills/internal-comms/SKILL.md: 本次技能文件读取预算已用完，后续条目下次继续",
+    "anthropics/skills: SKILL.md read failed at skills/mcp-builder/SKILL.md: 本次技能文件读取预算已用完，后续条目下次继续",
+    "anthropics/skills: SKILL.md read failed at skills/pdf/SKILL.md: 本次技能文件读取预算已用完，后续条目下次继续",
+    "anthropics/skills: SKILL.md read failed at skills/pptx/SKILL.md: 本次技能文件读取预算已用完，后续条目下次继续",
+    "anthropics/skills: SKILL.md read failed at skills/skill-creator/SKILL.md: 本次技能文件读取预算已用完，后续条目下次继续",
+    "anthropics/skills: SKILL.md read failed at skills/slack-gif-creator/SKILL.md: 本次技能文件读取预算已用完，后续条目下次继续",
+    "anthropics/skills: SKILL.md read failed at skills/theme-factory/SKILL.md: 本次技能文件读取预算已用完，后续条目下次继续",
+    "anthropics/skills: SKILL.md read failed at skills/web-artifacts-builder/SKILL.md: 本次技能文件读取预算已用完，后续条目下次继续",
+    "anthropics/skills: SKILL.md read failed at skills/webapp-testing/SKILL.md: 本次技能文件读取预算已用完，后续条目下次继续",
+    "anthropics/skills: SKILL.md read failed at skills/xlsx/SKILL.md: 本次技能文件读取预算已用完，后续条目下次继续",
+    "anthropics/skills: SKILL.md read failed at template/SKILL.md: 本次技能文件读取预算已用完，后续条目下次继续",
+    "vercel-labs/agent-browser: GitHub 403: repos/vercel-labs/agent-browser",
+    "vercel-labs/skills: API 配额已用完"
+  ]
+}

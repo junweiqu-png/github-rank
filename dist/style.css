@@ -11,3 +11,6 @@ header{height:52px;padding:0 max(20px,calc((100vw - 1160px)/2));font-size:13px}m
 
 .metric-note{font-size:11px;line-height:1.7;color:#5c6d60;margin:10px 0 14px}#views{align-items:center;flex-wrap:wrap;margin:0 0 8px}#views>a{font-size:11px;color:var(--green);margin-left:auto}.skills-view .table-head{grid-template-columns:1fr 140px}.skills-view .table-head span:last-child{display:none}.skills-view .row{grid-template-columns:40px minmax(0,1fr) 140px}.skill-name{font-weight:600;font-size:15px;color:var(--green)}.source-link{font-size:11px;font-weight:400;color:var(--green)}[hidden]{display:none!important}@media(max-width:750px){#views>a{margin-left:0;width:100%;padding:4px 0}.skills-view .row{grid-template-columns:20px minmax(0,1fr) 100px}.skills-view .table-head{grid-template-columns:1fr 100px}.skill-name{font-size:13px}}
 
+
+#skill-controls{margin:10px 0;color:var(--muted);font-size:12px}.skill-path{font-size:10px;overflow-wrap:anywhere}.missing-metric{font-size:11px;font-weight:400;color:var(--muted)}.skills-view .project .summary{overflow-wrap:anywhere}
+

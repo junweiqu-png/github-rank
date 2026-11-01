@@ -1,1 +1,1 @@
-{"name":"skill-atlas","private":true,"type":"module","scripts":{"collect":"node scripts/collect.mjs","test":"node --test","start":"node scripts/serve.mjs"}}
+{"name":"skill-atlas","private":true,"type":"module","scripts":{"collect":"node scripts/collect.mjs","test":"node --test","start":"node scripts/serve.mjs"},"dependencies":{"yaml":"^2.9.1"}}

@@ -1,0 +1,4 @@
+{
+  "repositories": ["anthropics/skills", "mattpocock/skills", "vercel-labs/skills", "vercel-labs/agent-browser"],
+  "topics": ["agent-skills", "claude-skills", "agent-skill"]
+}

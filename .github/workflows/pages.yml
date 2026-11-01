@@ -44,6 +44,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: Install metadata parser
+        run: npm ci --ignore-scripts
       - name: Collect public GitHub metadata
         env:
           GITHUB_TOKEN: ${{ github.token }}
@@ -76,3 +78,4 @@ jobs:
       - uses: actions/configure-pages@v5
       - id: deployment
         uses: actions/deploy-pages@v4
+

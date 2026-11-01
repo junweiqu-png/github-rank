@@ -3,6 +3,7 @@
 <main><section id="board"><div class="section-head"><div><h1>已收录仓库 Star 榜 <span id="resultCount"></span></h1></div><label class="search"><span>⌕</span><input id="search" type="search" placeholder="搜索项目、技能名、中文用途" aria-label="搜索项目"></label></div>
 <div id="views" class="areas"><button data-view="repositories" class="active" aria-pressed="true">仓库 Star 榜</button><button data-view="skills" aria-pressed="false">单个 Skill 目录</button><a href="https://www.skills.sh/" target="_blank" rel="noopener">Skill 安装榜（skills.sh）↗</a></div>
 <p class="metric-note">这里的 Star 属于整个 GitHub 仓库，≠ 单个 Skill 的安装次数。当前是已收录项目榜单，尚未覆盖 GitHub 全站。</p>
+<div id="skill-controls" hidden><label>技能排序 <select id="skill-sort"><option value="name">名称</option><option value="repository">所属仓库</option><option value="installs" disabled>skills.sh 安装量（未接入）</option></select></label><p class="metric-note">技能来自仓库内 SKILL.md 自动扫描，不限固定名单。GitHub 没有通用安装次数；skills.sh 安装量是独立来源，目前未接入，缺失不计为 0，也不拿仓库 Star 代替。</p></div>
 <div id="repository-controls">
 <div class="periods" id="periods"><button data-period="all" class="active">累计总榜</button><button data-period="year">年榜</button><button data-period="quarter">季度榜</button><button data-period="month">月榜</button><button data-period="week">周榜</button><button data-period="day">日榜</button></div>
 <div id="areas" class="areas"><button data-area="all" class="active">全部项目</button><button data-area="ai">AI 项目</button><button data-area="other">其他领域</button></div>

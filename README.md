@@ -4,7 +4,13 @@
 
 主榜按 **整个 GitHub 仓库的 Star** 排名，不是单个 Skill 的安装量榜，尚未覆盖 GitHub 全站。发现策略是种子仓库加各创建周期最多 100 个搜索结果。
 
-“单个 Skill 目录”补录了 find-skills、grill-me 等十项技能，展示各自的中文用途、输入输出和所属仓库，供独立搜索；目录不是安装量 TOP10，也不重复计入父仓库的 Star。单个 Skill 的安装次数请到 [skills.sh 官方安装榜](https://www.skills.sh/) 查看。该指标来自 skills CLI 安装遥测，与 GitHub Star 不可直接比较。
+“单个 Skill 目录”现在通过 GitHub 文件树自动发现根目录及任意嵌套路径的合法 `SKILL.md`，读取 YAML 名称与描述后生成 `dist/data/skills.json`。它不再有固定十项名单，新仓库、新技能会按同一流程进入目录。以仓库 ID + 文件路径标识技能，同名或同仓多项不合并。
+
+安装量维度明确标为 **skills.sh 安装量**，不叫 GitHub 安装次数。GitHub 没有通用仓库安装统计；当前未接入受支持的 skills.sh 认证源，值保持 null 并显示“未接入”，排序入口禁用，不拿 Star、下载或克隆次数填充。
+
+仓库源配置在 `scripts/skill-sources.json`，并通过 Topic、仓库名、描述和历史发现进入候选。每轮最多处理 80 个候选、700 个需要重读的正文，按扫描时间轮转；完整扫描前优先处理初始主源。文件内容 hash 不变时不重读。截断会遍历子树，失败保留旧记录，只有完整成功才能确认删除。页面公开候选/本轮完成数量和旧记录状态，不宣称全站完整。
+
+`scripts/skill-copy.json` 只提供部分已核对的中文说明，不参与发现；未整理的描述显示原文及文档入口，不编造输入输出。根因与回归证据见 [技能发现修复](analysis/2026-11-01-discovery-root-cause.md)。
 
 官方安装数据 API 需要受支持的身份认证，当前没有将它作为匿名接口接入，也没有硬编码旧截图数字。详细对账见 [指标核查记录](analysis/2026-11-01-metric-audit.md)。
 
@@ -12,9 +18,10 @@
 
 ## 运行
 
-需要 Node.js 22+，无第三方运行依赖。
+需要 Node.js 22+。YAML 解析采用锁定依赖，静态页面仍可独立运行。
 
 ```sh
+npm ci --ignore-scripts
 npm run collect
 npm test
 npm start
@@ -33,7 +40,9 @@ npm start
 - `dist/data/latest.json` 为最新观测数据；每日北京时间第一次成功采集生成不可覆盖的 `dist/data/history/YYYY-MM-DD.json`。
 - 请求失败保留旧记录及原始采集时间；完全没有新数据时退出失败，不覆盖最新版本。
 
-## 独立公开部署（最终目标）
+## 独立公开部署
+
+当前地址：https://junweiqu-png.github.io/github-rank/ 。
 
 网站运行不需要 GPT、OpenAI API 或访客登录。将本目录放到专用公开 GitHub 仓库的 main 分支，在仓库 Settings → Pages 中将 Source 设为 GitHub Actions。
 
@@ -42,10 +51,6 @@ npm start
 工作流仅写入自身仓库的数据文件和 Pages，不包含 GPT 依赖。首次启用需仓库管理员允许 Actions 写入、选择 Pages 的 Actions 发布源。发布后要确认第一次 Actions 任务成功和 Pages 地址可访问，之后才能声称自动更新已启用。
 
 参考：[GitHub Pages 官方自定义工作流文档](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。
-
-## 临时验收站
-
-`.openai/hosting.json` 记录先前 Sites 验收站的身份，只用于更新原先已打开的验收地址。其私有访问不代表独立公开部署已经完成。不得为方便验收更改共享权限，独立部署也不覆盖无关的现有 GitHub 项目。
 
 ## 数据来源与验证限制
 

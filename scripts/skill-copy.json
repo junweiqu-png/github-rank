@@ -1,0 +1,62 @@
+{
+  "vercel-labs/skills:find-skills": {
+    "summary": "帮 Agent 查找并安装所需技能",
+    "input": "想完成的任务或技能需求",
+    "output": "匹配的技能及安装方式",
+    "official_install_url": "https://www.skills.sh/vercel-labs/skills/find-skills"
+  },
+  "mattpocock/skills:grill-me": {
+    "summary": "通过连续追问把想法和需求问清楚",
+    "input": "一个想法、计划或尚不清晰的需求",
+    "output": "经过追问明确的需求与决策",
+    "official_install_url": "https://www.skills.sh/mattpocock/skills/grill-me"
+  },
+  "mattpocock/skills:grill-with-docs": {
+    "summary": "结合代码和文档追问需求，并保留设计记录",
+    "input": "已有项目、文档和待讨论的方案",
+    "output": "澄清后的方案、项目上下文与决策记录",
+    "official_install_url": "https://www.skills.sh/mattpocock/skills/grill-with-docs"
+  },
+  "mattpocock/skills:improve-codebase-architecture": {
+    "summary": "检查代码库结构，寻找可改进的架构边界",
+    "input": "现有代码库",
+    "output": "架构问题与可实施的改进候选",
+    "official_install_url": "https://www.skills.sh/mattpocock/skills/improve-codebase-architecture"
+  },
+  "vercel-labs/agent-browser:agent-browser": {
+    "summary": "让 Agent 浏览、点击和操作网页",
+    "input": "网址和浏览器操作任务",
+    "output": "网页信息、截图或操作结果",
+    "official_install_url": "https://www.skills.sh/vercel-labs/agent-browser/agent-browser"
+  },
+  "mattpocock/skills:tdd": {
+    "summary": "用测试驱动开发流程实现或修复功能",
+    "input": "要实现的行为、代码和测试环境",
+    "output": "先测试再实现的代码与验证结果",
+    "official_install_url": "https://www.skills.sh/mattpocock/skills/tdd"
+  },
+  "mattpocock/skills:setup-matt-pocock-skills": {
+    "summary": "配置 Matt Pocock 技能工作流所需的项目约定",
+    "input": "项目和所用的任务管理方式",
+    "output": "工作流所需的配置与目录约定",
+    "official_install_url": "https://www.skills.sh/mattpocock/skills/setup-matt-pocock-skills"
+  },
+  "anthropics/skills:frontend-design": {
+    "summary": "指导 Agent 制作有设计感的前端界面",
+    "input": "页面用途、内容与设计要求",
+    "output": "前端界面设计与实现代码",
+    "official_install_url": "https://www.skills.sh/anthropics/skills/frontend-design"
+  },
+  "mattpocock/skills:handoff": {
+    "summary": "整理当前进度，供新的会话接续工作",
+    "input": "当前任务、已完成工作和未解决问题",
+    "output": "可供新会话使用的交接文档",
+    "official_install_url": "https://www.skills.sh/mattpocock/skills/handoff"
+  },
+  "mattpocock/skills:triage": {
+    "summary": "整理收到的 Issue 和需求，判断后续处理方式",
+    "input": "原始故障报告、Issue 或功能请求",
+    "output": "分类、补充信息及可执行的后续任务",
+    "official_install_url": "https://www.skills.sh/mattpocock/skills/triage"
+  }
+}
