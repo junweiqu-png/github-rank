@@ -85,7 +85,8 @@ for(const r of repositories){const current=heads.get(String(r.id));if(current)Ob
 const probes=await probeUnlabelledSkillRepositories({api,repositories,heads,
  previousState:await readJson('skill-probe-state.json',null),
  isCandidate:r=>isSkillCandidate(r,previousSkills.skills),
- maxRepositories:Number(process.env.UNLABELLED_SKILL_PROBE_REPOS)||64});
+ maxRepositories:Number(process.env.UNLABELLED_SKILL_PROBE_REPOS)||512,
+ maxConcurrent:Number(process.env.UNLABELLED_SKILL_PROBE_CONCURRENCY)||8});
 await writeJson('skill-probe-state.json',probes.state);
 errors.push(...probes.errors.map(e=>'普通仓库 Skill 探测：'+e));
 console.log(JSON.stringify({phase:'unlabelled-skill-probe',...probes.coverage}));

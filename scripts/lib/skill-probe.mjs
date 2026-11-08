@@ -3,7 +3,7 @@ import {discoverRepositorySkills} from './skill-discovery.mjs';
 // Probe a bounded sample of ordinary repositories, including those whose names,
 // descriptions and Topics never mention Skills. This is not a fixed allowlist.
 export async function probeUnlabelledSkillRepositories({
- api,repositories,heads=new Map(),previousState=null,maxRepositories=64,
+ api,repositories,heads=new Map(),previousState=null,maxRepositories=512,maxConcurrent=8,
  now=new Date(),isCandidate=()=>false,maxTreeRequests=8,
 }={}){
  if(typeof api!=='function'||!Array.isArray(repositories))throw TypeError('Repositories and GitHub API are required');
@@ -24,10 +24,28 @@ export async function probeUnlabelledSkillRepositories({
   if(old?.sha===sha&&old.status==='incomplete'&&ts-Date.parse(old.checked_at)<20*3600*1000){retry.push({repo,sha});continue}
   unseen.push({repo,sha,previous:old});
  }
- unseen.sort((a,b)=>Number(!!a.previous)-Number(!!b.previous)||b.repo.stars-a.repo.stars||String(a.repo.id).localeCompare(String(b.repo.id)));
- let probed=0,detected=0;
- for(const {repo,sha} of unseen.slice(0,Math.max(0,Math.floor(maxRepositories)))){
-  const id=String(repo.id);probed++;
+ // Retry old incomplete scans first; otherwise fresh arrivals can starve them.
+ unseen.sort((a,b)=>Number(!!b.previous)-Number(!!a.previous)||b.repo.stars-a.repo.stars||String(a.repo.id).localeCompare(String(b.repo.id)));
+ const capacity=Math.max(0,Math.floor(maxRepositories));
+ const domains=new Map();
+ for(const entry of unseen){
+  const name=typeof entry.repo.domain==='string'?entry.repo.domain:'uncategorized';
+  if(!domains.has(name))domains.set(name,[]);
+  domains.get(name).push(entry);
+ }
+ // Reserve a fair domain sample first, then fill remaining slots by the
+ // global priority order. No hardcoded repo names, topics or owner lists.
+ const fair=Math.max(1,Math.min(8,Math.floor(capacity/(Math.max(1,domains.size)*2))));
+ const chosen=[],selected=new Set();
+ const pick=entry=>{const id=String(entry.repo.id);if(chosen.length<capacity&&!selected.has(id)){chosen.push(entry);selected.add(id)}};
+ for(const group of domains.values())for(const entry of group.slice(0,fair))pick(entry);
+ for(const entry of unseen)pick(entry);
+ let probed=0,detected=0,cursor=0,rateLimited=false;
+ const concurrent=Math.max(1,Math.min(12,Math.floor(maxConcurrent)||1));
+ const worker=async()=>{
+  while(cursor<chosen.length&&!rateLimited){
+   const {repo,sha}=chosen[cursor++];
+   const id=String(repo.id);probed++;
   try{
    const prior=entries.get(id);
    const scan=await discoverRepositorySkills({...repo,commit_sha:sha},{
@@ -47,9 +65,10 @@ export async function probeUnlabelledSkillRepositories({
   }catch(error){
    entries.set(id,{id,sha,status:'incomplete',has_skill_file:false,checked_at:date.toISOString()});
    errors.push(repo.full_name+': '+error.message);
-   if(error.code==='RATE_LIMIT')break;
+   if(error.code==='RATE_LIMIT')rateLimited=true;
   }
- }
+ }};
+ await Promise.all(Array.from({length:Math.min(chosen.length,concurrent)},worker));
  const pending=unseen.length-probed+retry.length+withoutRevision;
  return {state:{version:1,entries:[...entries.values()]},
   coverage:{unlabelled:unseen.length+retry.length+cached+withoutRevision,cached,previously_detected:positive,probed_this_run:probed,detected_this_run:detected,pending,incomplete:errors.length,complete:pending===0&&errors.length===0},
