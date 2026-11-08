@@ -7,6 +7,7 @@ export function collectionDue({eventName,updatedAt,status,now=new Date()}){
  if(!Number.isFinite(last)||!Number.isFinite(time))return true;
  const discovery=status?.discovery||{},skills=status?.skills||{};
  const incomplete=discovery.general?.complete===false
+  ||discovery.recent?.complete===false
   ||discovery.skills?.complete===false
   ||discovery.unlabelled_skill_probes?.complete===false
   ||skills.complete===false;

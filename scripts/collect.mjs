@@ -5,6 +5,7 @@ import {readmeEditorial} from './readme-editorial.mjs';
 import {domainOf,repositoryView,typesOf} from '../dist/catalog.js';
 import {collectSkills,isSkillCandidate} from './collect-skills.mjs';
 import {discoverRepositories} from './lib/repository-discovery.mjs';
+import {recentProjectScopes} from './recent-projects.mjs';
 import {probeUnlabelledSkillRepositories} from './lib/skill-probe.mjs';
 import {createGithubClient} from './lib/github-client.mjs';
 const root=new URL('../dist/data/',import.meta.url);
@@ -56,6 +57,13 @@ const generalDiscovery=await discoverRepositories({api,queries:generalQueries,
 for(const r of generalDiscovery.repositories)merge(r);
 await writeJson('general-discovery-state.json',generalDiscovery.state);
 errors.push(...generalDiscovery.errors.map(e=>'通用项目发现：'+e));
+// Deep-paginate current and previous calendar months before the slower all-history queue.
+const recentDiscovery=await discoverRepositories({api,queries:recentProjectScopes(new Date()),
+ previousState:await readJson('recent-discovery-state.json',null),
+ maxRequests:Number(process.env.RECENT_DISCOVERY_REQUESTS)||45});
+for(const r of recentDiscovery.repositories)merge(r);
+await writeJson('recent-discovery-state.json',recentDiscovery.state);
+errors.push(...recentDiscovery.errors.map(e=>'近期项目发现：'+e));
 const sources=JSON.parse(await readFile(new URL('skill-sources.json',import.meta.url),'utf8'));
 const discovery=await discoverRepositories({api,queries:sources.queries,previousState:await readJson('discovery-state.json',null),maxRequests:Number(process.env.DISCOVERY_REQUESTS)||60});
 for(const r of discovery.repositories)merge(r,true);
@@ -65,7 +73,7 @@ for(const name of new Set([...sources.repositories,...general.map(r=>r.name)])){
  const known=named.get(name.toLowerCase());if(known){if(sources.repositories.includes(name))known.skill_candidate=true;continue}
  try{merge(await api('repos/'+name),sources.repositories.includes(name))}catch(e){errors.push(name+': '+e.message)}
 }
-console.log(JSON.stringify({phase:'discovery',repositories:byId.size,general:generalDiscovery.coverage,skills:discovery.coverage}));
+console.log(JSON.stringify({phase:'discovery',repositories:byId.size,general:generalDiscovery.coverage,recent:recentDiscovery.coverage,skills:discovery.coverage}));
 const repositories=[...byId.values()],heads=await client.resolveHeads(repositories);
 for(const r of repositories){const current=heads.get(String(r.id));if(current)Object.assign(r,current)}
 // Sample otherwise unlabelled repositories without depending on naming/Topics.
@@ -81,9 +89,9 @@ const skills=await collectSkills({api,rawText,heads,repositories,priorityReposit
 const groups=new Map();for(const skill of skills.skills){const id=String(skill.repository_id);if(!groups.has(id))groups.set(id,[]);groups.get(id).push(skill)}
 const scans=new Map(skills.repositories.map(s=>[String(s.id),s]));
 for(const r of repositories){const scan=scans.get(String(r.id)),view=repositoryView(r,{skills:groups.get(String(r.id))||[],scans:scan?[scan]:[]});r.types=typesOf(view);r.skill_count=view.skill_count;r.skill_verification=view.skill_verification}
-const data={updated_at:new Date().toISOString(),coverage:'全领域创建周期搜索，Skills 多路检索、自动分页与时间分片；只对已收录仓库排名，非全量 GitHub。',metric:{name:'GitHub repository stars',grain:'repository',notComparableWith:'skills.sh skill installs'},discovery:{resultsPerQuery:100,periodQueries:6,complete:generalDiscovery.coverage.complete&&discovery.coverage.complete,general:generalDiscovery.coverage,skills:discovery.coverage,unlabelled_skill_probes:probes.coverage},errors,repositories};
+const data={updated_at:new Date().toISOString(),coverage:'全领域创建周期搜索，Skills 多路检索、自动分页与时间分片；只对已收录仓库排名，非全量 GitHub。',metric:{name:'GitHub repository stars',grain:'repository',notComparableWith:'skills.sh skill installs'},discovery:{resultsPerQuery:100,periodQueries:6,complete:generalDiscovery.coverage.complete&&recentDiscovery.coverage.complete&&discovery.coverage.complete,general:generalDiscovery.coverage,recent:recentDiscovery.coverage,skills:discovery.coverage,unlabelled_skill_probes:probes.coverage},errors,repositories};
 await writeJson('latest.json',data);
 try{await writeFile(new URL(`history/${day}.json`,root),JSON.stringify(data),{flag:'wx'})}catch(e){if(e.code!=='EEXIST')throw e}
 let days=await readJson('history/index.json',[]);if(!days.includes(day))days.push(day);await writeJson('history/index.json',days.sort().reverse());
-await writeJson('collection-status.json',{updated_at:data.updated_at,discovery:{general:generalDiscovery.coverage,skills:discovery.coverage,unlabelled_skill_probes:probes.coverage},skills:skills.coverage,requests:client.stats});
+await writeJson('collection-status.json',{updated_at:data.updated_at,discovery:{general:generalDiscovery.coverage,recent:recentDiscovery.coverage,skills:discovery.coverage,unlabelled_skill_probes:probes.coverage},skills:skills.coverage,requests:client.stats});
 console.log(JSON.stringify({phase:'finished',repositories:repositories.length,verifiedSkillRepositories:repositories.filter(r=>r.types.includes('skills')).length,skills:skills.skills.length,coverage:skills.coverage,requests:client.stats.requests}));

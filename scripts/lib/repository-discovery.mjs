@@ -3,6 +3,16 @@ const SEARCH_LIMIT=1000;
 const FIRST_SECOND=Date.parse('2008-01-01T00:00:00Z')/1000;
 const iso=seconds=>new Date(seconds*1000).toISOString().replace('.000Z','Z');
 const second=value=>Date.parse(value)/1000;
+// A calendar window belongs to a query's identity, but must not be sent
+// twice as competing GitHub "created:" qualifiers.
+const CREATION_WINDOW=/(?:^|\s)created:(\d{4}-\d{2}-\d{2})\.\.(\d{4}-\d{2}-\d{2})(?=\s|$)/;
+function scopeFor(query,maxEnd){
+ const found=query.match(CREATION_WINDOW);
+ if(!found)return {start:FIRST_SECOND,end:maxEnd,search:query};
+ const start=second(found[1]+'T00:00:00Z'),end=second(found[2]+'T23:59:59Z');
+ if(!Number.isFinite(start)||!Number.isFinite(end)||start>end)throw TypeError('Invalid creation-window query: '+query);
+ return {start:Math.max(FIRST_SECOND,start),end:Math.min(maxEnd,end),search:query.replace(found[0],' ').trim()};
+}
 
 function validTask(task,queries){
  return task&&queries.has(task.query)&&Number.isInteger(second(task.start))&&Number.isInteger(second(task.end))&&second(task.start)<=second(task.end)&&Number.isInteger(task.page)&&task.page>=1&&task.page<=SEARCH_LIMIT/PAGE_SIZE;
@@ -30,7 +40,8 @@ export async function discoverRepositories({api,queries,previousState=null,maxRe
  const sources=[...new Set(queries.map(q=>q.trim()))],sourceSet=new Set(sources);
  const timestamp=new Date(now);if(!Number.isFinite(+timestamp))throw new TypeError('Invalid discovery time');
  const end=Math.max(FIRST_SECOND,Math.floor(Date.UTC(timestamp.getUTCFullYear(),timestamp.getUTCMonth(),timestamp.getUTCDate()+1)/1000)-1);
- const initial=query=>({query,start:iso(FIRST_SECOND),end:iso(end),page:1});
+ const windows=new Map(sources.map(query=>[query,scopeFor(query,end)]));
+ const initial=query=>({query,start:iso(windows.get(query).start),end:iso(windows.get(query).end),page:1});
  const budget=Number.isFinite(maxRequests)?Math.max(0,Math.floor(maxRequests)):120;
  const usable=previousState?.version===1&&previousState.complete===false&&Array.isArray(previousState.queries)&&Array.isArray(previousState.pending)&&previousState.pending.every(task=>validTask(task,new Set(previousState.queries)));
  let queue,started;
@@ -43,7 +54,7 @@ export async function discoverRepositories({api,queries,previousState=null,maxRe
  const repositories=new Map(),retry=[],errors=[];let requests=0;
  while(queue.length&&requests<budget){
   const task=queue.shift();requests++;
-  const q=`${task.query} created:${task.start}..${task.end}`;
+  const q=`${windows.get(task.query).search} created:${task.start}..${task.end}`;
   try{
    const result=await api('search/repositories?q='+encodeURIComponent(q)+'&sort=stars&order=desc&per_page='+PAGE_SIZE+'&page='+task.page);
    if(!result||!Array.isArray(result.items)||!Number.isInteger(result.total_count)||result.total_count<0)throw Error('Invalid repository search response');
