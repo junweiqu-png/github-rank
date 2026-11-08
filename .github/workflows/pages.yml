@@ -20,16 +20,19 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - id: check
-        name: Update only when three days have elapsed
+        name: Resume pending scans daily; refresh complete catalogs every three days
         env:
           EVENT_NAME: ${{ github.event_name }}
         run: |
           node --input-type=module <<'NODE'
           import { readFileSync, appendFileSync } from 'node:fs';
-          const last = Date.parse(JSON.parse(readFileSync('dist/data/latest.json', 'utf8')).updated_at);
-          const due = process.env.EVENT_NAME !== 'schedule' || !Number.isFinite(last) || Date.now() - last >= 3 * 24 * 60 * 60 * 1000;
+          import { collectionDue } from './scripts/collection-cadence.mjs';
+          const latest = JSON.parse(readFileSync('dist/data/latest.json', 'utf8'));
+          let status = null;
+          try { status = JSON.parse(readFileSync('dist/data/collection-status.json', 'utf8')) } catch {}
+          const due = collectionDue({eventName:process.env.EVENT_NAME,updatedAt:latest.updated_at,status});
           appendFileSync(process.env.GITHUB_OUTPUT, 'due=' + due + '\n');
-          console.log(due ? 'Update is due' : 'Less than three days since last update; skipping');
+          console.log(due ? 'Collection is due' : 'Collection not yet due; skipping');
           NODE
   build:
     needs: cadence
