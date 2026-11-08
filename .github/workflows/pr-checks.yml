@@ -1,0 +1,27 @@
+name: Pull request checks
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+      - name: Check JavaScript syntax
+        run: |
+          node --check scripts/collect.mjs
+          node --check scripts/collect-skills.mjs
+          node --check scripts/verify-output.mjs
+      - name: Run regression tests
+        run: node --test
+      - name: Verify generated data and required repositories
+        run: node scripts/verify-output.mjs

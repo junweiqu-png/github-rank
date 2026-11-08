@@ -1,4 +1,5 @@
 import {mkdir,readFile,writeFile,rename} from 'node:fs/promises';
+import {gzipSync,gunzipSync} from 'node:zlib';
 import {discoverRepositorySkills} from './lib/skill-discovery.mjs';
 const root=new URL('../dist/data/',import.meta.url);
 export function isSkillCandidate(r,previous=[]){return r.skill_candidate===true||r.category==='skills'||previous.some(s=>String(s.repository_id)===String(r.id))||/(^|[-_/])skills?($|[-_/])/i.test(r.full_name)||/SKILL\.md|\bagent skills?\b/i.test(r.description||'')||(r.topics||[]).some(t=>/^(agent-skills?|claude-skills|skills|claude-code-skills)$/.test(t))}
@@ -6,8 +7,12 @@ export function isSkillCandidate(r,previous=[]){return r.skill_candidate===true|
 export async function collectSkills({api,repositories,limit=Infinity,maxFileReads=30000,perRepositoryFileReads=256,passes=1,rawText,heads=new Map(),priorityRepositoryIds=[],discoveryComplete=false,dataRoot=root}){
  const root=dataRoot;
  let previous={skills:[],repositories:[]};try{previous=JSON.parse(await readFile(new URL('skills.json',root),'utf8'))}catch{}
+ // Public catalog excludes file inventories; lossless scan checkpoints are gzip-compressed.
+ // Recover legacy embedded state when upgrading a site published before this change.
+ let checkpoint;try{checkpoint=JSON.parse(gunzipSync(await readFile(new URL('scan-checkpoint.json.gz',root))).toString('utf8'))}catch{}
  const copy=JSON.parse(await readFile(new URL('skill-copy.json',import.meta.url),'utf8'));
- const scans=new Map(previous.repositories.map(r=>[String(r.id),r]));
+ const storedScans=Array.isArray(checkpoint?.repositories)?checkpoint.repositories:previous.repositories;
+ const scans=new Map(storedScans.map(r=>[String(r.id),r]));
  const priority=new Set(priorityRepositoryIds.map(String));
  const candidates=repositories.filter(r=>isSkillCandidate(r,previous.skills));
  candidates.sort((a,b)=>Number(priority.has(String(b.id)))-Number(priority.has(String(a.id)))||Number(scans.get(String(a.id))?.complete===true)-Number(scans.get(String(b.id))?.complete===true)||(Date.parse(scans.get(String(a.id))?.checked_at)||0)-(Date.parse(scans.get(String(b.id))?.checked_at)||0)||b.stars-a.stars);
@@ -15,9 +20,19 @@ export async function collectSkills({api,repositories,limit=Infinity,maxFileRead
  const errorsById=new Map(),attempted=new Set(),completed=new Set(),deferredById=new Map();let reads=0,quotaStopped=false,processed=0;
  function dataset(){
   const relevant=candidates.map(r=>scans.get(String(r.id))).filter(Boolean),done=relevant.filter(r=>r.complete).length;
-  return {updated_at:new Date().toISOString(),source:'GitHub SKILL.md frontmatter',grain:'skill',skills:[...skills.values()],repositories:[...scans.values()],coverage:{candidate_repositories:candidates.length,scanned_repositories:relevant.length,complete_repositories:done,pending_repositories:candidates.length-done,failed_repositories:relevant.filter(r=>r.failed).length,tree_indexed_repositories:relevant.filter(r=>r.inventory_complete||r.complete).length,pending_files:relevant.reduce((n,r)=>n+(r.metadata_pending||0),0),attempted_this_run:attempted.size,complete_this_run:completed.size,file_reads_this_run:reads,discovery_complete:discoveryComplete,complete:discoveryComplete&&done===candidates.length},metrics:{installs:{source:'skills.sh',status:'not_connected',definition:'平台安装统计，不是 GitHub 通用安装次数'}},errors:[...errorsById.values()].flat().slice(0,200)};
+  return {updated_at:new Date().toISOString(),source:'GitHub SKILL.md frontmatter',grain:'skill',skills:[...skills.values()],repositories:[...scans.values()].map(({inventory,pending_trees,file_states,...publicScan})=>publicScan),coverage:{candidate_repositories:candidates.length,scanned_repositories:relevant.length,complete_repositories:done,pending_repositories:candidates.length-done,failed_repositories:relevant.filter(r=>r.failed).length,tree_indexed_repositories:relevant.filter(r=>r.inventory_complete||r.complete).length,pending_files:relevant.reduce((n,r)=>n+(r.metadata_pending||0),0),attempted_this_run:attempted.size,complete_this_run:completed.size,file_reads_this_run:reads,discovery_complete:discoveryComplete,complete:discoveryComplete&&done===candidates.length},metrics:{installs:{source:'skills.sh',status:'not_connected',definition:'平台安装统计，不是 GitHub 通用安装次数'}},errors:[...errorsById.values()].flat().slice(0,200)};
  }
- async function persist(){const data=dataset();await mkdir(root,{recursive:true});await writeFile(new URL('skills.tmp',root),JSON.stringify(data,null,2));await rename(new URL('skills.tmp',root),new URL('skills.json',root));return data}
+ async function persist(){
+  const data=dataset();await mkdir(root,{recursive:true});
+  const compressed=gzipSync(Buffer.from(JSON.stringify({version:1,repositories:[...scans.values()]})),{level:4});
+  // GitHub rejects individual Git blobs larger than 100 MiB; fail before committing.
+  if(compressed.byteLength>90*1024*1024)throw Error('Skill scan checkpoint exceeds safe Git size');
+  await writeFile(new URL('scan-checkpoint.json.gz.tmp',root),compressed);
+  await rename(new URL('scan-checkpoint.json.gz.tmp',root),new URL('scan-checkpoint.json.gz',root));
+  await writeFile(new URL('skills.tmp',root),JSON.stringify(data));
+  await rename(new URL('skills.tmp',root),new URL('skills.json',root));
+  return data
+ }
  for(let pass=0;pass<passes;pass++){
   let work=0;
   for(const original of selected){
