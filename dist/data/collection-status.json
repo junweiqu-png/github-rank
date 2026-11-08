@@ -1,0 +1,82 @@
+{
+  "updated_at": "2026-11-08T12:48:36.787Z",
+  "discovery": {
+    "general": {
+      "queries": 9,
+      "completed_queries": 3,
+      "pending_queries": 6,
+      "pending_partitions": 16,
+      "requests_this_run": 30,
+      "repositories_this_run": 1764,
+      "complete": false,
+      "scope": "configured repository searches, not all of GitHub"
+    },
+    "skills": {
+      "queries": 11,
+      "completed_queries": 0,
+      "pending_queries": 11,
+      "pending_partitions": 34,
+      "requests_this_run": 60,
+      "repositories_this_run": 1793,
+      "complete": false,
+      "scope": "configured repository searches, not all of GitHub"
+    }
+  },
+  "skills": {
+    "candidate_repositories": 1919,
+    "scanned_repositories": 186,
+    "complete_repositories": 177,
+    "pending_repositories": 1742,
+    "failed_repositories": 0,
+    "tree_indexed_repositories": 185,
+    "pending_files": 11494,
+    "attempted_this_run": 167,
+    "complete_this_run": 159,
+    "file_reads_this_run": 6000,
+    "discovery_complete": false,
+    "complete": false
+  },
+  "requests": {
+    "requests": {
+      "core": 169,
+      "search": 96,
+      "raw": 6000,
+      "graphql": 84
+    },
+    "retries": 0,
+    "core": {
+      "remaining": 4829,
+      "limit": 5000,
+      "reset": 1794144988
+    },
+    "search": {
+      "remaining": 14,
+      "limit": 30,
+      "reset": 1794141697
+    },
+    "graphql": {
+      "remaining": 4975,
+      "limit": 5000,
+      "reset": 1794145294
+    },
+    "heads": {
+      "requested": 4181,
+      "resolved": 4042,
+      "rejected": 0,
+      "failed_batches": 0,
+      "fallback": 139,
+      "errors": [
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data"
+      ]
+    }
+  }
+}

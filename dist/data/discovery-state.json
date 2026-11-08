@@ -1,0 +1,225 @@
+{
+  "version": 1,
+  "queries": [
+    "topic:agent-skills fork:false",
+    "topic:agent-skill fork:false",
+    "topic:claude-skills fork:false",
+    "topic:claude-code-skills fork:false",
+    "topic:skills fork:false",
+    "skills in:name fork:false",
+    "skill in:name fork:false",
+    "\"SKILL.md\" in:readme fork:false",
+    "\"agentskills.io\" in:readme fork:false",
+    "\"agent skills\" in:description fork:false",
+    "\"claude skills\" in:description fork:false"
+  ],
+  "cycle_started_at": "2026-11-08T12:38:22.250Z",
+  "cycle_completed_at": null,
+  "complete": false,
+  "pending": [
+    {
+      "query": "topic:agent-skills fork:false",
+      "start": "2022-02-21T06:00:00Z",
+      "end": "2024-07-01T02:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "topic:agent-skills fork:false",
+      "start": "2024-07-01T03:00:00Z",
+      "end": "2026-11-08T23:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "topic:agent-skill fork:false",
+      "start": "2022-02-21T06:00:00Z",
+      "end": "2024-07-01T02:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "topic:agent-skill fork:false",
+      "start": "2024-07-01T03:00:00Z",
+      "end": "2026-11-08T23:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "topic:claude-skills fork:false",
+      "start": "2022-02-21T06:00:00Z",
+      "end": "2024-07-01T02:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "topic:claude-skills fork:false",
+      "start": "2024-07-01T03:00:00Z",
+      "end": "2026-11-08T23:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "topic:claude-code-skills fork:false",
+      "start": "2022-02-21T06:00:00Z",
+      "end": "2024-07-01T02:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "topic:claude-code-skills fork:false",
+      "start": "2024-07-01T03:00:00Z",
+      "end": "2026-11-08T23:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "topic:skills fork:false",
+      "start": "2017-06-05T12:00:00Z",
+      "end": "2022-02-21T05:59:59Z",
+      "page": 2
+    },
+    {
+      "query": "topic:skills fork:false",
+      "start": "2022-02-21T06:00:00Z",
+      "end": "2024-07-01T02:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "topic:skills fork:false",
+      "start": "2024-07-01T03:00:00Z",
+      "end": "2026-11-08T23:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "skills in:name fork:false",
+      "start": "2012-09-17T18:00:00Z",
+      "end": "2015-01-26T14:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "skills in:name fork:false",
+      "start": "2015-01-26T15:00:00Z",
+      "end": "2017-06-05T11:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "skills in:name fork:false",
+      "start": "2017-06-05T12:00:00Z",
+      "end": "2019-10-14T08:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "skills in:name fork:false",
+      "start": "2019-10-14T09:00:00Z",
+      "end": "2022-02-21T05:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "skills in:name fork:false",
+      "start": "2022-02-21T06:00:00Z",
+      "end": "2024-07-01T02:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "skills in:name fork:false",
+      "start": "2024-07-01T03:00:00Z",
+      "end": "2026-11-08T23:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "skill in:name fork:false",
+      "start": "2008-01-01T00:00:00Z",
+      "end": "2012-09-17T17:59:59Z",
+      "page": 2
+    },
+    {
+      "query": "skill in:name fork:false",
+      "start": "2012-09-17T18:00:00Z",
+      "end": "2015-01-26T14:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "skill in:name fork:false",
+      "start": "2015-01-26T15:00:00Z",
+      "end": "2017-06-05T11:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "skill in:name fork:false",
+      "start": "2017-06-05T12:00:00Z",
+      "end": "2019-10-14T08:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "skill in:name fork:false",
+      "start": "2019-10-14T09:00:00Z",
+      "end": "2022-02-21T05:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "skill in:name fork:false",
+      "start": "2022-02-21T06:00:00Z",
+      "end": "2024-07-01T02:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "skill in:name fork:false",
+      "start": "2024-07-01T03:00:00Z",
+      "end": "2026-11-08T23:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "\"SKILL.md\" in:readme fork:false",
+      "start": "2008-01-01T00:00:00Z",
+      "end": "2017-06-05T11:59:59Z",
+      "page": 3
+    },
+    {
+      "query": "\"SKILL.md\" in:readme fork:false",
+      "start": "2017-06-05T12:00:00Z",
+      "end": "2022-02-21T05:59:59Z",
+      "page": 2
+    },
+    {
+      "query": "\"SKILL.md\" in:readme fork:false",
+      "start": "2022-02-21T06:00:00Z",
+      "end": "2024-07-01T02:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "\"SKILL.md\" in:readme fork:false",
+      "start": "2024-07-01T03:00:00Z",
+      "end": "2026-11-08T23:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "\"agentskills.io\" in:readme fork:false",
+      "start": "2022-02-21T06:00:00Z",
+      "end": "2024-07-01T02:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "\"agentskills.io\" in:readme fork:false",
+      "start": "2024-07-01T03:00:00Z",
+      "end": "2026-11-08T23:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "\"agent skills\" in:description fork:false",
+      "start": "2022-02-21T06:00:00Z",
+      "end": "2024-07-01T02:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "\"agent skills\" in:description fork:false",
+      "start": "2024-07-01T03:00:00Z",
+      "end": "2026-11-08T23:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "\"claude skills\" in:description fork:false",
+      "start": "2022-02-21T06:00:00Z",
+      "end": "2024-07-01T02:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "\"claude skills\" in:description fork:false",
+      "start": "2024-07-01T03:00:00Z",
+      "end": "2026-11-08T23:59:59Z",
+      "page": 1
+    }
+  ]
+}

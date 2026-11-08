@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "queries": [
+    "stars:>=100 fork:false",
+    "topic:osint stars:>=100 fork:false",
+    "topic:video-editing stars:>=100 fork:false",
+    "topic:desktop-automation stars:>=100 fork:false",
+    "topic:ai-agent stars:>=100 fork:false",
+    "topic:mcp stars:>=100 fork:false",
+    "topic:education stars:>=100 fork:false",
+    "topic:media-player stars:>=100 fork:false",
+    "topic:automation stars:>=100 fork:false"
+  ],
+  "cycle_started_at": "2026-11-08T12:36:49.533Z",
+  "cycle_completed_at": null,
+  "complete": false,
+  "pending": [
+    {
+      "query": "topic:mcp stars:>=100 fork:false",
+      "start": "2022-02-21T06:00:00Z",
+      "end": "2026-11-08T23:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "topic:education stars:>=100 fork:false",
+      "start": "2008-01-01T00:00:00Z",
+      "end": "2026-11-08T23:59:59Z",
+      "page": 3
+    },
+    {
+      "query": "topic:automation stars:>=100 fork:false",
+      "start": "2008-01-01T00:00:00Z",
+      "end": "2017-06-05T11:59:59Z",
+      "page": 2
+    },
+    {
+      "query": "topic:automation stars:>=100 fork:false",
+      "start": "2017-06-05T12:00:00Z",
+      "end": "2022-02-21T05:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "topic:automation stars:>=100 fork:false",
+      "start": "2022-02-21T06:00:00Z",
+      "end": "2026-11-08T23:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2008-01-01T00:00:00Z",
+      "end": "2010-05-10T20:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2010-05-10T21:00:00Z",
+      "end": "2012-09-17T17:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2012-09-17T18:00:00Z",
+      "end": "2015-01-26T14:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2015-01-26T15:00:00Z",
+      "end": "2017-06-05T11:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2017-06-05T12:00:00Z",
+      "end": "2019-10-14T08:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2019-10-14T09:00:00Z",
+      "end": "2022-02-21T05:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2022-02-21T06:00:00Z",
+      "end": "2024-07-01T02:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2024-07-01T03:00:00Z",
+      "end": "2026-11-08T23:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "topic:osint stars:>=100 fork:false",
+      "start": "2008-01-01T00:00:00Z",
+      "end": "2026-11-08T23:59:59Z",
+      "page": 4
+    },
+    {
+      "query": "topic:ai-agent stars:>=100 fork:false",
+      "start": "2022-02-21T06:00:00Z",
+      "end": "2024-07-01T02:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "topic:ai-agent stars:>=100 fork:false",
+      "start": "2024-07-01T03:00:00Z",
+      "end": "2026-11-08T23:59:59Z",
+      "page": 1
+    }
+  ]
+}
