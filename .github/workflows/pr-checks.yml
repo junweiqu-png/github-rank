@@ -23,5 +23,5 @@ jobs:
           node --check scripts/verify-output.mjs
       - name: Run regression tests
         run: node --test
-      - name: Verify generated data and required repositories
+      - name: Verify generated data integrity
         run: node scripts/verify-output.mjs
