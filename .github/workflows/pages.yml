@@ -54,6 +54,9 @@ jobs:
         run: node scripts/collect.mjs
       - name: Verify rankings and catalog
         run: node --test
+      - name: Validate data size, checkpoints and required project coverage
+        if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[skip collect]')
+        run: node scripts/verify-output.mjs
       - name: Keep data and daily snapshots in Git
         run: |
           git config user.name 'github-actions[bot]'
@@ -80,4 +83,3 @@ jobs:
       - uses: actions/configure-pages@v5
       - id: deployment
         uses: actions/deploy-pages@v4
-
