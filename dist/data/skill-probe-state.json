@@ -1837,6 +1837,1912 @@
       "inventory_complete": true,
       "inventory": [],
       "pending_trees": []
+    },
+    {
+      "id": "231283452",
+      "sha": "701b901a0f1ba3d0b390d9cdf63d112e25abac4b",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "612354784",
+      "sha": "998200491327347eed85f007e4de7a1a7c871453",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "965415649",
+      "sha": "748ab55ca7de0b647d9a7a9d9a8e70e00f28666d",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "561730219",
+      "sha": "a2b1e4e5c4b9b7bb876aed91a5ca1e5a8aefe776",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "112507086",
+      "sha": "bd756f8b2283a38560efe83cb30af38324d4e9e9",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "20580498",
+      "sha": "6dabbdc67bca2a1c0519234773cf7f088cdb3c7f",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "299354207",
+      "sha": "1ff458bdf38d5765a19e380b37c97c70659b231f",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "585146387",
+      "sha": "8ab27715521cbd4f87ae6886cd989cbb678f6de7",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "29028775",
+      "sha": "f480836ad8e56ac53499c81f7cf0a186159711e5",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "1197515131",
+      "sha": "fcc70284932276d085f01ef9f83edde90b1258cb",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "55076063",
+      "sha": "440486fd08b0a0d9ad9a041a0bb234dcdf65dee2",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "9384267",
+      "sha": "ef2710fa6c10fe56365a9949fa783d26ca1499e5",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "27193779",
+      "sha": "82940d6fa5586774b0890574a0ddec7ba5e4fd3f",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "655806940",
+      "sha": "79a4334e158147d4f36c27d805e0cb163c1e445b",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "724712",
+      "sha": "54d0b7edad511e84181ad50ec8413ef10f93b367",
+      "status": "incomplete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": false,
+      "inventory": [],
+      "pending_trees": [
+        {
+          "ref": "aa4e0945b1fb91a3f43cf4451715e824349962f6",
+          "prefix": ".github/ISSUE_TEMPLATE/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "6df3fcb39d29f2e0b043f00d7f04361341273faa"
+          ]
+        },
+        {
+          "ref": "be0aba3e6af42bf0714db9d737567a1a20f04c0a",
+          "prefix": ".github/workflows/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "6df3fcb39d29f2e0b043f00d7f04361341273faa"
+          ]
+        },
+        {
+          "ref": "cee7049ac488b9d7b6c6ca5a6428978f5b583586",
+          "prefix": "compiler/rustc/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "c89a30bcc26530d4bbc20e596ff6ec918ba79039",
+          "prefix": "compiler/rustc_abi/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "f94a92fadebdbdf6ffd32941b31a6c4ad3009bc3",
+          "prefix": "compiler/rustc_arena/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "93d7c1e5496a5585bd426284ccff79bbcf000f61",
+          "prefix": "compiler/rustc_ast/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "47358d0cc42ee5655e0fcdc40d870e1cb74e823f",
+          "prefix": "compiler/rustc_ast_ir/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "3777fd9c02def61c9da9e33746dceca5a7f3ed3b",
+          "prefix": "compiler/rustc_ast_lowering/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "38e71b0c80683e88d7e9ad5de3a0d072ce32eca7",
+          "prefix": "compiler/rustc_ast_passes/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "c80a562481ffef64bfc4acca4abfbe5de1bcc43a",
+          "prefix": "compiler/rustc_ast_pretty/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "a4faf4f0aa27b5064d8ecbd1101391db752fabf6",
+          "prefix": "compiler/rustc_attr_ir/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "9d2bb0b1afb8e98b0cee35a0d1d955c5bdae32a7",
+          "prefix": "compiler/rustc_attr_parsing/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "a0568ff7ca2ae55c775d578954b824dd3281ffb8",
+          "prefix": "compiler/rustc_baked_icu_data/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "cf6c46789e0a9734e6a2ab901d09aaf82d06c37b",
+          "prefix": "compiler/rustc_borrowck/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "9ba10f194e8c475c89767a1b4fec767ec6bd5adf",
+          "prefix": "compiler/rustc_builtin_macros/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "351b3f0bd09415676f1de45dbba25f0e2b869966",
+          "prefix": "compiler/rustc_codegen_cranelift/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "18b1e3d544fdc45d0031bfc00aadccbf176d0fb3",
+          "prefix": "compiler/rustc_codegen_gcc/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "360594a359ec89002e2c800018b63680194000d8",
+          "prefix": "compiler/rustc_codegen_llvm/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "426fdcd5547e562219bf64f29192eb043b0dcbf1",
+          "prefix": "compiler/rustc_codegen_ssa/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "b491f05bc0eadcf38d123f05dd12de2b12d0230b",
+          "prefix": "compiler/rustc_const_eval/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "0e02503be6d20c839879e2261b105bc03a1790b6",
+          "prefix": "compiler/rustc_crate_store/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "0ac9e92cf115787706bf081b025632d00c5a7727",
+          "prefix": "compiler/rustc_data_structures/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "da480493a117a82eb779e91c766bd94fab5f7d67",
+          "prefix": "compiler/rustc_driver/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "404cd25bc69d17a85abfcc99f93e182ef0f4d7b0",
+          "prefix": "compiler/rustc_driver_impl/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "58a6bb7c9a85179ae1bf4356e64965085a2fb554",
+          "prefix": "compiler/rustc_error_codes/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "ab093074019f3441da6be01002edb610a9586efd",
+          "prefix": "compiler/rustc_error_messages/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "d71b01e7b7d83642254d0bb72b166f1ee76e2a3c",
+          "prefix": "compiler/rustc_errors/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "5e86e48518b1f72125f5cc742d7ff1f15e1b058f",
+          "prefix": "compiler/rustc_expand/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "98413c26f21c98a3beaa5a70f9c6383fe3881379",
+          "prefix": "compiler/rustc_expand_queries/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "47e8bd2f617ec8a40412532365c7171c0fefcddb",
+          "prefix": "compiler/rustc_feature/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "5a69e3f2cc77cdafef18d0b47165bc2e7a580d20",
+          "prefix": "compiler/rustc_fs_util/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "45565ce8389912b5e5eda46dbb25da887480a770",
+          "prefix": "compiler/rustc_graphviz/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "f1b8c6fec1a9cc1eb445417ff7f2c27414940050",
+          "prefix": "compiler/rustc_hashes/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "8f484e04efd5c2fcbf3f47fcc05580b28f55f8ba",
+          "prefix": "compiler/rustc_hir/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "34eff30fb27812f91ddb28d0b981913edd6545db",
+          "prefix": "compiler/rustc_hir_analysis/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "326b7adec01a8582ffffe5475943ecf9d00641f6",
+          "prefix": "compiler/rustc_hir_id/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "e03fdcf51fc20847af65cf3ab8a512bf09ba68f6",
+          "prefix": "compiler/rustc_hir_pretty/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "cd188cbbfb62da64583fe1dd50bf6bf233593e29",
+          "prefix": "compiler/rustc_hir_typeck/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "034a37f43a45acf7cecd788a9f8fbced465bff9c",
+          "prefix": "compiler/rustc_incremental/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "e85dccc04dc9d006520063abd50845aacf0cddd3",
+          "prefix": "compiler/rustc_index/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "0b0cacfea29d952b960af4079f994d31c6f4527e",
+          "prefix": "compiler/rustc_index_macros/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "4e28f9405d00a72ddfc4c2a8c079f28d9b345861",
+          "prefix": "compiler/rustc_infer/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "e36463317cab1f5944aa71a14e673317032663f3",
+          "prefix": "compiler/rustc_interface/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "4f99ba413ed13dd4c47b73968e51b59a40cd607f",
+          "prefix": "compiler/rustc_lexer/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "8c91c593df5519a29a5417ef1da497dd36991861",
+          "prefix": "compiler/rustc_lint/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "e18ec7e2ae13710b38b7f2816184901ab5c249c9",
+          "prefix": "compiler/rustc_lint_defs/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "f2759e467849b2781a34a86f453040c6bbed3681",
+          "prefix": "compiler/rustc_llvm/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "3fb144838a6f3f9210cfc81ba0d6a34ec7de328e",
+          "prefix": "compiler/rustc_log/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "fad552cb0f59b70f60a01e0800f5d9a672b58166",
+          "prefix": "compiler/rustc_macros/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "79736122f91a3f671028330bc6a490295374fe43",
+          "prefix": "compiler/rustc_metadata/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "3391a20a87e970000f41c78ce696052099232b2f",
+          "prefix": "compiler/rustc_middle/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "48af0381a3f8094f8463794bbd08c97f09ce261d",
+          "prefix": "compiler/rustc_mir_build/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "c61e00af6c41f11392c4534325707981d2ba9290",
+          "prefix": "compiler/rustc_mir_dataflow/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "ce1d8db6738e2fd7504508019c0d7d23630fea28",
+          "prefix": "compiler/rustc_mir_transform/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "5b644cd2dbb1879976cc483fb49c97972a76ccaf",
+          "prefix": "compiler/rustc_monomorphize/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "5b7dd5539cb48bcf1cc86f11075f8b30f93d794a",
+          "prefix": "compiler/rustc_next_trait_solver/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "ae3b9fbada10a99398597a96f6a2dedc2f6fd0e6",
+          "prefix": "compiler/rustc_parse/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "834e1332d5f408fd23b4cab67137cd3234fd324c",
+          "prefix": "compiler/rustc_parse_format/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "db767645e7f297780478d2790ec2e9936c0b875d",
+          "prefix": "compiler/rustc_passes/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "dcfa260588400895e3e00c3c042e66866f3455c7",
+          "prefix": "compiler/rustc_pattern_analysis/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "253709cc63aa14794b185350b081064535e59999",
+          "prefix": "compiler/rustc_privacy/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "bb4eecd87fdc62fe91be501d4377319e37a6396b",
+          "prefix": "compiler/rustc_proc_macro/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "0110a16b6ee33be7384e57b6af29c7ba9f27e5b2",
+          "prefix": "compiler/rustc_public/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "5c3f0dbd4e6b1451e844fee6f26af1a25b7f2235",
+          "prefix": "compiler/rustc_public_bridge/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "075f2685a6ec221a6038f00ee845980aef8388b8",
+          "prefix": "compiler/rustc_query_impl/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "73441dbd946da26f2a8ba0b9cadac2face32e8f5",
+          "prefix": "compiler/rustc_resolve/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "b0a693571c15fe93798c3694942c73acece1433f",
+          "prefix": "compiler/rustc_sanitizers/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "85b61ff29336ae041c9952cd3f9132a6c80d2f1e",
+          "prefix": "compiler/rustc_serialize/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "5fa063d808eb5d32b49da8458df58417a8335e87",
+          "prefix": "compiler/rustc_session/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "7d2be1a7f7ed0459ee2bf89d763336017056d0ef",
+          "prefix": "compiler/rustc_span/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "4273978efa2057b094c0a24cfd465229207e930a",
+          "prefix": "compiler/rustc_structures/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "bc0e641a43ccd3fc7b0f482e5e94110520a364fd",
+          "prefix": "compiler/rustc_symbol_mangling/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "eeee1a8284d50196e8d64c65882c9279aa730625",
+          "prefix": "compiler/rustc_target/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "e85237f68bfd9499b616dbf7709df6fc244d58ec",
+          "prefix": "compiler/rustc_thread_pool/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "d7e0a53593ac358a0377d3c36fb41ad0230952af",
+          "prefix": "compiler/rustc_trait_selection/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "50c79d4e5dc3e65f44f3bd972bae8357dcdd0140",
+          "prefix": "compiler/rustc_traits/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "9a3eb422d3bd20fb0c09308d29d018d886474ed0",
+          "prefix": "compiler/rustc_transmute/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "b13b6d9fda00a7077c32ff7e3d1d2de00779f5b6",
+          "prefix": "compiler/rustc_ty_utils/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "5cb9ae34bada68dcc55852ddc503558627d8ad08",
+          "prefix": "compiler/rustc_ty_walk/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "4724f134a010a087be13570038b9171b99e9dfb7",
+          "prefix": "compiler/rustc_type_ir/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "8d5a446ab93ede5a1c1178d38fcacda15670b676",
+          "prefix": "compiler/rustc_type_ir_macros/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "fc0f12f26efe77809d884aafcd6d3423e5937cfb",
+          "prefix": "compiler/rustc_windows_rc/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "17861c12f35ea7238105b4d0eb03a1935ff608b5"
+          ]
+        },
+        {
+          "ref": "bb15daa09bce140f5ff9b276dfec952f622af0ec",
+          "prefix": "library/alloc/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "e07717485f5ab688a5ccd93a4e3589a83c59253a",
+          "prefix": "library/alloctests/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "a93d4ddb12bdebf1889ca51bfd16ae707c3699a0",
+          "prefix": "library/compiler-builtins/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "fbf5fe469355a375545e2537c29e2b4f75a728a1",
+          "prefix": "library/core/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "e7c34712ecae7f1ed82969ec0b29efb7c9af7465",
+          "prefix": "library/coretests/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "722a46e3870e7c0a1cb6426d2c3274b945933b35",
+          "prefix": "library/panic_abort/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "9ade5d4f2cb4857fd14b5048ff5e473827bb687c",
+          "prefix": "library/panic_unwind/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "7c101d81794464d15c939d67f6face364f584b3c",
+          "prefix": "library/portable-simd/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "17d9957e0388108156aae0bfd4955cb934227217",
+          "prefix": "library/proc_macro/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "5c642218af1dc44ee3d4a98e20a03c7ae36dbb76",
+          "prefix": "library/profiler_builtins/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "97427fb1ddf523c8cb706654f1623435222aa0b4",
+          "prefix": "library/rtstartup/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "029f3bf01b98d322083e7875b2f22612b85b8886",
+          "prefix": "library/rustc-std-workspace-alloc/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "efc7a5cddc6c461564dcb6bf6987b6504fc0c792",
+          "prefix": "library/rustc-std-workspace-core/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "59a09eaf554a0cb7fcec429ef0369345e8c48c6d",
+          "prefix": "library/rustc-std-workspace-std/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "7010e5d42176195344296c4bc06c64db27d90db6",
+          "prefix": "library/std/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "7891acf3af89353387f8fa7fe6751c49abfc97c2",
+          "prefix": "library/std_detect/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "3185bfb7069d077f433fc4ef3bf4abc9704e7edd",
+          "prefix": "library/stdarch/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "b224c43df450c0047e0109c2cd6df05f0a9eaa91",
+          "prefix": "library/sysroot/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "8283ffb0d885b69a86e1a94ce94b62bb6fc390c9",
+          "prefix": "library/test/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "3f161ad9cb66271c754cdad0a26e5b409d0d6cc8",
+          "prefix": "library/unwind/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "a69a01648d1c04ed39d568af0b49a7d16c82ddbf",
+          "prefix": "library/windows-sys/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "2b3f7ce86b2e74117d2e0ea34dbec1e4b660536c",
+          "prefix": "library/windows_link/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "cbc6c17f3d56788d06b25c066c6809d32214be72"
+          ]
+        },
+        {
+          "ref": "95743e45d2df74cb11f10c1be297dbeee521ad6f",
+          "prefix": "src/bootstrap/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c2a4410f86db2cf0509b01549f6a4a2eb8e4f171"
+          ]
+        },
+        {
+          "ref": "e2461a12ed1d69ee49ad9b9ba25037700ccfcba8",
+          "prefix": "src/build_helper/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c2a4410f86db2cf0509b01549f6a4a2eb8e4f171"
+          ]
+        },
+        {
+          "ref": "ae7a1aa424e3c099d233c962f54561b46371b085",
+          "prefix": "src/ci/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c2a4410f86db2cf0509b01549f6a4a2eb8e4f171"
+          ]
+        },
+        {
+          "ref": "7d87e457b7e9a2a36448f989b9f06acc0062e6a3",
+          "prefix": "src/doc/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c2a4410f86db2cf0509b01549f6a4a2eb8e4f171"
+          ]
+        },
+        {
+          "ref": "8167a4b7ca5f42a28d7ffdbd3adf9460fd1a5f81",
+          "prefix": "src/etc/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c2a4410f86db2cf0509b01549f6a4a2eb8e4f171"
+          ]
+        },
+        {
+          "ref": "3b260406ac76f0bc40d28f835c55ab07cdfc792a",
+          "prefix": "src/librustdoc/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c2a4410f86db2cf0509b01549f6a4a2eb8e4f171"
+          ]
+        },
+        {
+          "ref": "78a2ef6f567af3943c9ef6ebd65610955577b307",
+          "prefix": "src/rustc-std-workspace/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c2a4410f86db2cf0509b01549f6a4a2eb8e4f171"
+          ]
+        },
+        {
+          "ref": "a2a3989eb079b765f3e9b771d2388df4455ba7fc",
+          "prefix": "src/rustdoc-json-types/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c2a4410f86db2cf0509b01549f6a4a2eb8e4f171"
+          ]
+        },
+        {
+          "ref": "1d132487fcfacfb1f03de6bdd237f10afb5085aa",
+          "prefix": "src/shim_utils/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c2a4410f86db2cf0509b01549f6a4a2eb8e4f171"
+          ]
+        },
+        {
+          "ref": "966ab201fb166cf415372d1d9d8b248c1631eca8",
+          "prefix": "src/tools/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c2a4410f86db2cf0509b01549f6a4a2eb8e4f171"
+          ]
+        },
+        {
+          "ref": "8403addead1fe7de4870de7316674d4a3308e343",
+          "prefix": "tests/assembly-gcc/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "3027f75408279986c86cf05853760a39726e4f5a",
+          "prefix": "tests/assembly-llvm/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "f8c159380849f597c0ec54108c449a4ff0b3421f",
+          "prefix": "tests/auxiliary/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "7facf05ad84dac10fcf47f837d8fb82e0ff26a19",
+          "prefix": "tests/build-std/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "2767949102c7c297a77de9b17733f829cf94c8e9",
+          "prefix": "tests/codegen-llvm/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "3c12dca38692bb16dbb72e906731c269d1cd4e1a",
+          "prefix": "tests/codegen-units/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "bbbf2215832cb2ac8d177406bc6dccec0b195db6",
+          "prefix": "tests/coverage-run-rustdoc/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "cf5ca8481e56a9f2cebf3516749e50c438bea7e9",
+          "prefix": "tests/coverage/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "6a6324eb9f140286b65cae8a7d885eed370f1e81",
+          "prefix": "tests/crashes/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "c4b8bcac074a88c9e223f1a7059c0648d92dee9b",
+          "prefix": "tests/debuginfo/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "6ab3b0e56c400b72dc840f13416172b348147808",
+          "prefix": "tests/incremental/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "ca72b01aeabd9a6ae37b609af37740e83eb4cbf8",
+          "prefix": "tests/mir-opt/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "42b4a0ec46a7c6fe86f2bd0c440a89e14d2bbf16",
+          "prefix": "tests/pretty/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "0fe6d2b55fbdef7073ab2c895cc7a9f2e3b0e317",
+          "prefix": "tests/run-make-cargo/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "197984ac5094fbee188a50904181495188e2c76b",
+          "prefix": "tests/run-make/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "4024c498747e7abcc89b15882b15b55d23b6f7b6",
+          "prefix": "tests/rustdoc-gui/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "249aefacbb253b2fec57f99946b27e53daf05029",
+          "prefix": "tests/rustdoc-html/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "6044e0ac23104c84c2b01deda7672ff7385f6113",
+          "prefix": "tests/rustdoc-js-std/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "cf77204ea2c4e5c24c7511c507a87d86ad60a64e",
+          "prefix": "tests/rustdoc-js/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "4aaf00176d05fe2fcf2721e53e21fd97a87faaf4",
+          "prefix": "tests/rustdoc-json/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "fa81c7caba82a802e3733a8ce2f4a200ad44fe85",
+          "prefix": "tests/rustdoc-ui/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "5fc21926a0b682242fe0d038e78b784106cd5421",
+          "prefix": "tests/ui-fulldeps/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        },
+        {
+          "ref": "961c0f74f6b5779800707fcbad76d8ec8a297c8c",
+          "prefix": "tests/ui/",
+          "ancestors": [
+            "54d0b7edad511e84181ad50ec8413ef10f93b367",
+            "c7c362879dd603fb6561ea6fcf6b4848de3e861f"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "909213664",
+      "sha": "9fa1196fffbcfd9de5146d2dd2869df84ab99838",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "1035029907",
+      "sha": "5ea81d2cd9bb997774b49e379aa5bc496fdfeb6c",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "881458615",
+      "sha": "b49a68e4060acb226da8f784194fef301c53a6d7",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "199570071",
+      "sha": "f07e3dc41511a196f8ab563bcd2a16d1310ca8dd",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "15634981",
+      "sha": "c51ff06e8836a70ea905701c081bf94124dcd6ce",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "14098069",
+      "sha": "cc1108ac90f53a1fd4f773b61f5c6b91b91389ca",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "1183888342",
+      "sha": "60aee85d9182f602af45cf5f6facae7257670061",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "455229168",
+      "sha": "87ef895041e160aef4f61f2d7af1ad3f8e38827d",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "1201173969",
+      "sha": "1e91f1306d602d4ca23618701b1185575ae1869b",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "63539055",
+      "sha": "3335c21c6afe49e24cff1e0ab03a5a754ea061bc",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "576201",
+      "sha": "9c4515e66f479864e39b72f29e10260821576b4a",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "214587193",
+      "sha": "dc73b346c1f37eaae9e529fae81a4307b78fefe6",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "943149",
+      "sha": "db118c93a429e82b83f091dbaa18fd0a82c06130",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "196701619",
+      "sha": "2e23492ab9bcec06bab041e0e47447aaa0da298c",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "537603333",
+      "sha": "86098128c0b4f24f0e2aa2994de830614b474227",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "20929025",
+      "sha": "f7973164a5f079a2d8b88d0fdb39347222549124",
+      "status": "incomplete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": false,
+      "inventory": [],
+      "pending_trees": [
+        {
+          "ref": "f1e20d1ba91485c47e24b639ac3ce65854ecb00b",
+          "prefix": ".github/ISSUE_TEMPLATE/",
+          "ancestors": [
+            "f7973164a5f079a2d8b88d0fdb39347222549124",
+            "47d5b862ac26bff0e7e920fd2230705998fb10d3"
+          ]
+        },
+        {
+          "ref": "c5cc229da3563f2438f3d4111f95c3f7aafc4069",
+          "prefix": ".github/actions/",
+          "ancestors": [
+            "f7973164a5f079a2d8b88d0fdb39347222549124",
+            "47d5b862ac26bff0e7e920fd2230705998fb10d3"
+          ]
+        },
+        {
+          "ref": "be86e81d11161979b7d93e64b69bdbf40ae84cbc",
+          "prefix": ".github/agents/",
+          "ancestors": [
+            "f7973164a5f079a2d8b88d0fdb39347222549124",
+            "47d5b862ac26bff0e7e920fd2230705998fb10d3"
+          ]
+        },
+        {
+          "ref": "f7b98eb30aab64eefc364435f7b4ed63b4112937",
+          "prefix": ".github/codeql/",
+          "ancestors": [
+            "f7973164a5f079a2d8b88d0fdb39347222549124",
+            "47d5b862ac26bff0e7e920fd2230705998fb10d3"
+          ]
+        },
+        {
+          "ref": "9d386c8b4286e7bc0f16fc3f5a60831a9bdc60b3",
+          "prefix": ".github/skills/",
+          "ancestors": [
+            "f7973164a5f079a2d8b88d0fdb39347222549124",
+            "47d5b862ac26bff0e7e920fd2230705998fb10d3"
+          ]
+        },
+        {
+          "ref": "fb6463f9dd49a81670634d18883b8541407a58df",
+          "prefix": ".github/workflows/",
+          "ancestors": [
+            "f7973164a5f079a2d8b88d0fdb39347222549124",
+            "47d5b862ac26bff0e7e920fd2230705998fb10d3"
+          ]
+        },
+        {
+          "ref": "45a5ec8a2d05d2ddb6eca7624a854204ecdcb6ad",
+          "prefix": "packages/typescript-wasip1-wasm/",
+          "ancestors": [
+            "f7973164a5f079a2d8b88d0fdb39347222549124",
+            "fe87aa37656075f28c894581a665a54ab8b114ed"
+          ]
+        },
+        {
+          "ref": "2a0f121ec892d4a0e053bc0632264e13a3fbeae6",
+          "prefix": "packages/typescript/",
+          "ancestors": [
+            "f7973164a5f079a2d8b88d0fdb39347222549124",
+            "fe87aa37656075f28c894581a665a54ab8b114ed"
+          ]
+        },
+        {
+          "ref": "02fbacab693474e700f63812cb305af6f53a7264",
+          "prefix": "packages/vscode-typescript-nightly/",
+          "ancestors": [
+            "f7973164a5f079a2d8b88d0fdb39347222549124",
+            "fe87aa37656075f28c894581a665a54ab8b114ed"
+          ]
+        },
+        {
+          "ref": "a78f00d26fd7df147773e55de490e2624ca7fe00",
+          "prefix": "packages/vscode-typescript/",
+          "ancestors": [
+            "f7973164a5f079a2d8b88d0fdb39347222549124",
+            "fe87aa37656075f28c894581a665a54ab8b114ed"
+          ]
+        },
+        {
+          "ref": "89c2e7c9ac6af11973b5994ab289badf7105fdca",
+          "prefix": "tools/cmd/",
+          "ancestors": [
+            "f7973164a5f079a2d8b88d0fdb39347222549124",
+            "cf9a170e93bca4fa7d45781e8066c962c1140020"
+          ]
+        },
+        {
+          "ref": "0af57afcf6886335e4758a91a83eea70c91f227f",
+          "prefix": "tools/customlint/",
+          "ancestors": [
+            "f7973164a5f079a2d8b88d0fdb39347222549124",
+            "cf9a170e93bca4fa7d45781e8066c962c1140020"
+          ]
+        },
+        {
+          "ref": "3c6f3fde012d2db25ff6b7690f0f9e239b303c36",
+          "prefix": "tools/gen-preferences/",
+          "ancestors": [
+            "f7973164a5f079a2d8b88d0fdb39347222549124",
+            "cf9a170e93bca4fa7d45781e8066c962c1140020"
+          ]
+        },
+        {
+          "ref": "24c9e41439ffc650ec792c2a1c88033a9cd46a4a",
+          "prefix": "tools/gen-proto/",
+          "ancestors": [
+            "f7973164a5f079a2d8b88d0fdb39347222549124",
+            "cf9a170e93bca4fa7d45781e8066c962c1140020"
+          ]
+        },
+        {
+          "ref": "d7d41f82e8e79b44aac4e8a66a4336fe5f704244",
+          "prefix": "tools/hooks/",
+          "ancestors": [
+            "f7973164a5f079a2d8b88d0fdb39347222549124",
+            "cf9a170e93bca4fa7d45781e8066c962c1140020"
+          ]
+        },
+        {
+          "ref": "c163aa4c1d95e966f2f045596301f43566108f65",
+          "prefix": "tools/pipelines/",
+          "ancestors": [
+            "f7973164a5f079a2d8b88d0fdb39347222549124",
+            "cf9a170e93bca4fa7d45781e8066c962c1140020"
+          ]
+        },
+        {
+          "ref": "9910cabc4b01f6f240111606042322b934cc28b2",
+          "prefix": "tools/scripts/",
+          "ancestors": [
+            "f7973164a5f079a2d8b88d0fdb39347222549124",
+            "cf9a170e93bca4fa7d45781e8066c962c1140020"
+          ]
+        },
+        {
+          "ref": "d4aac8cf26c23ca6bbe3d8de1ba9ef8b7124576c",
+          "prefix": "tools/signing/",
+          "ancestors": [
+            "f7973164a5f079a2d8b88d0fdb39347222549124",
+            "cf9a170e93bca4fa7d45781e8066c962c1140020"
+          ]
+        },
+        {
+          "ref": "62b165be8a2e7a021d751ab89ca20d7774c774b3",
+          "prefix": "tsc/cmd/",
+          "ancestors": [
+            "f7973164a5f079a2d8b88d0fdb39347222549124",
+            "764011622b017f4d384246b94ba844315117550d"
+          ]
+        },
+        {
+          "ref": "42513b2ff97bebd96cf33c45143b2ec8a9b57cec",
+          "prefix": "tsc/internal/",
+          "ancestors": [
+            "f7973164a5f079a2d8b88d0fdb39347222549124",
+            "764011622b017f4d384246b94ba844315117550d"
+          ]
+        },
+        {
+          "ref": "61a7bed3080876ace54a928cf45887e1f247381c",
+          "prefix": "tsc/testdata/",
+          "ancestors": [
+            "f7973164a5f079a2d8b88d0fdb39347222549124",
+            "764011622b017f4d384246b94ba844315117550d"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15204860",
+      "sha": "0b33c953aae0c90e6d15c4ed41b01e76358f3c28",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "48378947",
+      "sha": "d42812ae0eb68dddff3d75d58645ab545c543147",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "1165277268",
+      "sha": "c70ae6da5d39bc90e09ad2ae0575ccc89f31e284",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "23088740",
+      "sha": "a81d62a22e4b291a05d5b087a89fcc9d16075e83",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "133442384",
+      "sha": "e7b39ebd55c85aaf6a29290c1f5a99e2e21e09dd",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "968197216",
+      "sha": "62bab5b232c15b925d31e655ce844ab939c882b7",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "669879380",
+      "sha": "62f941fe71ed7ddae4005d24fca3d3df38631db7",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "152870372",
+      "sha": "a04a82356da4ce8c90923bc3bb9e7333fc25f68f",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "103633984",
+      "sha": "dc3d60c29d5483d9ea99cf261bbd6203516a2ba7",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "100060912",
+      "sha": "cbc857bdf7749981890c5b561ee44ea31948bfb1",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "65600975",
+      "sha": "d9d9e32f77d471b735948bfe0e6cea1a442e0e65",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "908531752",
+      "sha": "9b4e9788e4a3a731f7567338ed15d3ec549ce03b",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "160919119",
+      "sha": "8f9f47de69982705d96e4165a9f03c6537e8c9fe",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "1206390571",
+      "sha": "ce6828beeeb5d34ab5205d2cbf5935894d5f333e",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "243950408",
+      "sha": "308cc8b7dab1da84b20e7fafdf836a715437f582",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "16408992",
+      "sha": "c868e1ab3d11ac2a0cc3c284b16808f3de5adf31",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "63537249",
+      "sha": "6254386531d263688ccfa542d0e628fbc0de0b28",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "162998479",
+      "sha": "c588d7c8b476df9f9c84912a05d1430fb8cdcdae",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "24195339",
+      "sha": "b4089e5f53f5ca7975dda34ae10f631e82f9c585",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "101296881",
+      "sha": "e47b7c483b27475f48a01c3a176b724dbfb6d2de",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "34526884",
+      "sha": "a581b8420d32c86cf713d3bb25b164e117dffe36",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "872119017",
+      "sha": "30cadb56a407fd631391441709ab792ebca52b08",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "221981891",
+      "sha": "07c7069cdbb1f5c7331d3f4d2abd864dcfde745a",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "1174820787",
+      "sha": "228791fb499afffb54b46200aca536f79142f117",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "23083156",
+      "sha": "e76daeda7044a4824f2f7152a6334bdf62646e27",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "173228436",
+      "sha": "e45e5a62fd66c2e48514931f6e356aff33a79fcb",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "106017343",
+      "sha": "9b2c925c19aae46ff4f9cf54a2fa6d2dbac7fa19",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "172562475",
+      "sha": "9e8dd00f10b881babc273d66949b7ffa0e310097",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "33614304",
+      "sha": "c7e7e1d884d3bb241ea6448f72a989434c2a35ec",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "578822531",
+      "sha": "8476c091c5a107e4507b6b3ec0cb15a069e857b5",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "695864515",
+      "sha": "08896a51c9a6198f50dc9f7508acf39fc460c8f1",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "1006414368",
+      "sha": "e668010778568641babef2cc40be4703ae6916d6",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "311525798",
+      "sha": "78085398be0dea7abaaf5eda914817f46f6ddbbc",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T14:22:50.938Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
     }
   ]
 }
