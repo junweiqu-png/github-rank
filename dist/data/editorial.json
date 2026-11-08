@@ -2312,5 +2312,109 @@
     "domain": "ai",
     "source": "https://github.com/vercel-labs/agent-browser",
     "basis": "仓库公开文档，输入输出为典型使用方式"
+  },
+  "jub0t/concat": {
+    "summary": "本地优先的开源跨平台视频编辑器，支持程序化编辑",
+    "input": "视频素材、剪辑配置与编辑命令",
+    "output": "编辑后的工程与视频",
+    "domain": "media",
+    "source": "https://github.com/jub0t/Concat",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "vercel-labs/agent-desktop": {
+    "summary": "为AI智能体提供桌面操作命令行工具",
+    "input": "桌面操作任务和命令",
+    "output": "桌面自动化执行结果",
+    "domain": "ai",
+    "source": "https://github.com/vercel-labs/agent-desktop",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "trycua/cua": {
+    "summary": "计算机操作智能体的驱动、沙箱和评估工具",
+    "input": "计算机操作任务与测试配置",
+    "output": "跨系统操作与评测结果",
+    "domain": "ai",
+    "source": "https://github.com/trycua/cua",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "storytold/craft-anything": {
+    "summary": "研究软件实现方式并帮助构建自己的工具",
+    "input": "需要研究的软件与开发需求",
+    "output": "软件结构分析及构建成果",
+    "domain": "devtools",
+    "source": "https://github.com/storytold/craft-anything",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "hmjz100/linkswift": {
+    "summary": "获取多个网盘平台的文件下载地址",
+    "input": "已授权的网盘文件链接和下载任务",
+    "output": "可供下载工具使用的地址",
+    "domain": "productivity",
+    "source": "https://github.com/hmjz100/LinkSwift",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "sherlock-project/sherlock": {
+    "summary": "通过用户名检索多个社交网站上的公开账号",
+    "input": "待检索的用户名",
+    "output": "各网站公开账号的匹配结果",
+    "domain": "systems",
+    "source": "https://github.com/sherlock-project/sherlock",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "usagi-org/ai-goofish-monitor": {
+    "summary": "利用浏览器自动化和AI监控闲鱼商品并分析信息",
+    "input": "闲鱼检索条件、监控任务",
+    "output": "商品监控结果与智能分析",
+    "domain": "ai",
+    "source": "https://github.com/Usagi-org/ai-goofish-monitor",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "ebony-vinyl/dsh-our-free-model": {
+    "summary": "为dsh提供免费模型接入的插件",
+    "input": "dsh环境与模型调用任务",
+    "output": "通过插件获得的模型响应",
+    "domain": "ai",
+    "source": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "hgtuj5688/tvbox-desktop": {
+    "summary": "基于Electron的Windows影视聚合客户端",
+    "input": "影视源配置和播放操作",
+    "output": "可观看的聚合媒体界面",
+    "domain": "media",
+    "source": "https://github.com/hgtuj5688/tvbox-desktop",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "yetone/magpie": {
+    "summary": "在菜单栏中管理多个AI编程智能体的模型",
+    "input": "Agent和模型服务配置",
+    "output": "统一的多模型选择与路由",
+    "domain": "ai",
+    "source": "https://github.com/yetone/magpie",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "blinue/magpie": {
+    "summary": "在Windows中放大应用窗口并改善画面显示",
+    "input": "目标窗口和缩放配置",
+    "output": "放大处理后的窗口画面",
+    "domain": "media",
+    "source": "https://github.com/Blinue/Magpie",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "hkuds/deeptutor": {
+    "summary": "面向长期个性化学习的AI辅导系统",
+    "input": "学习资料、问题与学习目标",
+    "output": "交互式讲解和辅导内容",
+    "domain": "learning",
+    "source": "https://github.com/HKUDS/DeepTutor",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
+  },
+  "sansan0/trendradar": {
+    "summary": "聚合热点信息、AI筛选分析并推送趋势简报",
+    "input": "热点来源、关键词与订阅配置",
+    "output": "分析简报和通知",
+    "domain": "data",
+    "source": "https://github.com/sansan0/TrendRadar",
+    "basis": "仓库公开介绍，输入输出为典型使用方式"
   }
 }
