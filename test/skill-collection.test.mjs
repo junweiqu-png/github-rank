@@ -1,6 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {mkdtemp,readFile,writeFile,unlink,rmdir} from 'node:fs/promises';
+import {gunzipSync} from 'node:zlib';
 import {sep} from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {collectSkills} from '../scripts/collect-skills.mjs';
@@ -17,7 +18,7 @@ async function fixtureRoot(t,previous){
  const directory=await mkdtemp(new URL('../.skill-collection-test-',import.meta.url));
  const dataRoot=pathToFileURL(directory+sep);
  t.after(async()=>{
-  for(const file of ['skills.json','skills.tmp']){
+  for(const file of ['skills.json','skills.tmp','scan-checkpoint.json.gz','scan-checkpoint.json.gz.tmp']){
    try{await unlink(new URL(file,dataRoot))}catch(error){if(error.code!=='ENOENT')throw error}
   }
   await rmdir(directory);
@@ -92,4 +93,21 @@ test('Fair passes finish a large repository and a newly discovered candidate usi
  assert.equal(calls.length,2);assert.equal(rawCalls.length,4);assert.equal(result.skills.length,4);
  assert.equal(result.coverage.candidate_repositories,2);assert.equal(result.coverage.complete_repositories,2);
  assert.equal(result.coverage.pending_repositories,0);assert.equal(result.coverage.complete,true);assert.deepEqual(result.errors,[]);
+});
+
+test('Public Skill JSON omits large inventories while gzip checkpoints survive a later run',async t=>{
+ const bigScan={...scan(repoA),inventory:Array.from({length:3500},(_,i)=>({path:'folder-'+i+'/SKILL.md',sha:'abcd',type:'blob',mode:'100644'})),file_states:[{path:'invalid/SKILL.md',status:'invalid',blob_sha:'abc'}],pending_trees:[{ref:'abc',prefix:'unfinished/'}]};
+ const root=await fixtureRoot(t,{skills:[],repositories:[bigScan]});
+ const first=await collectSkills({repositories:[],dataRoot:root,limit:0,api:async()=>{throw Error('No API calls expected')}});
+ assert.equal(first.repositories.length,1);
+ assert.equal(first.repositories[0].inventory,undefined);
+ assert.equal(first.repositories[0].file_states,undefined);
+ const encoded=await readFile(new URL('scan-checkpoint.json.gz',root));
+ const checkpoint=JSON.parse(gunzipSync(encoded).toString('utf8'));
+ assert.deepEqual(checkpoint.repositories[0],bigScan);
+ assert.ok(encoded.length<JSON.stringify(bigScan).length/2);
+ const second=await collectSkills({repositories:[],dataRoot:root,limit:0,api:async()=>{throw Error('No API calls expected')}});
+ assert.deepEqual(second.repositories,first.repositories);
+ const after=JSON.parse(gunzipSync(await readFile(new URL('scan-checkpoint.json.gz',root))).toString('utf8'));
+ assert.deepEqual(after.repositories[0].inventory,bigScan.inventory);
 });
