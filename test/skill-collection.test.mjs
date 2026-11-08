@@ -111,3 +111,27 @@ test('Public Skill JSON omits large inventories while gzip checkpoints survive a
  const after=JSON.parse(gunzipSync(await readFile(new URL('scan-checkpoint.json.gz',root))).toString('utf8'));
  assert.deepEqual(after.repositories[0].inventory,bigScan.inventory);
 });
+// A completed scan at the SAME pinned Git SHA remains valid even when this
+// repository was not read again because another candidate used the budget.
+test('Previously complete, unchanged Skill files remain fresh across collection runs',async t=>{
+ const previous={skills:[{...oldSkill(repoA),revision:'old-commit'}],repositories:[scan(repoA)]};
+ const root=await fixtureRoot(t,previous);
+ const heads=new Map([[String(repoA.id),{id:repoA.id,full_name:repoA.full_name,commit_sha:'old-commit'}]]);
+ const result=await collectSkills({repositories:[repoA],dataRoot:root,heads,limit:0,api:async()=>{throw Error('No API expected')}});
+ assert.equal(result.skills.length,1);
+ assert.equal(result.skills[0].stale,false);
+ assert.equal(result.repositories[0].complete,true);
+});
+test('Changed, incomplete, or unverifiable Skill revisions remain stale',async t=>{
+ const scenarios=[
+  {name:'changed-head',scan:scan(repoA),sha:'different-commit'},
+  {name:'incomplete-scan',scan:{...scan(repoA),complete:false},sha:'old-commit'},
+  {name:'unresolved-head',scan:scan(repoA),sha:null},
+ ];
+ for(const scenario of scenarios){
+  const root=await fixtureRoot(t,{skills:[{...oldSkill(repoA),revision:'old-commit'}],repositories:[scenario.scan]});
+  const heads=scenario.sha?new Map([[String(repoA.id),{id:repoA.id,full_name:repoA.full_name,commit_sha:scenario.sha}]]):new Map();
+  const result=await collectSkills({repositories:[repoA],dataRoot:root,heads,limit:0,api:async()=>{throw Error('No API expected')}});
+  assert.equal(result.skills[0].stale,true,scenario.name);
+ }
+});
