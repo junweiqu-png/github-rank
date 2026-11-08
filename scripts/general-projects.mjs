@@ -29,5 +29,18 @@ ffmpeg/ffmpeg|media|转换和处理音视频的命令行工具集|音视频文�
 godotengine/godot|games|开发二维和三维游戏的开源引擎|游戏场景、脚本与美术资源|可运行或导出的游戏
 freeCodeCamp/freeCodeCamp|learning|通过课程与实践学习编程的开源平台|学习选择和练习代码|练习反馈及课程学习进度
 EbookFoundation/free-programming-books|learning|整理免费编程书籍和课程资源的目录|学习主题或编程语言|相关书籍和课程链接
+jub0t/Concat|media|本地优先的开源跨平台视频编辑器，支持程序化编辑|视频素材、剪辑配置与编辑命令|编辑后的工程与视频
+vercel-labs/agent-desktop|ai|为AI智能体提供桌面操作命令行工具|桌面操作任务和命令|桌面自动化执行结果
+trycua/cua|ai|计算机操作智能体的驱动、沙箱和评估工具|计算机操作任务与测试配置|跨系统操作与评测结果
+storytold/craft-anything|devtools|研究软件实现方式并帮助构建自己的工具|需要研究的软件与开发需求|软件结构分析及构建成果
+hmjz100/LinkSwift|productivity|获取多个网盘平台的文件下载地址|已授权的网盘文件链接和下载任务|可供下载工具使用的地址
+sherlock-project/sherlock|systems|通过用户名检索多个社交网站上的公开账号|待检索的用户名|各网站公开账号的匹配结果
+Usagi-org/ai-goofish-monitor|ai|利用浏览器自动化和AI监控闲鱼商品并分析信息|闲鱼检索条件、监控任务|商品监控结果与智能分析
+Ebony-Vinyl/dsh-our-free-model|ai|为dsh提供免费模型接入的插件|dsh环境与模型调用任务|通过插件获得的模型响应
+hgtuj5688/tvbox-desktop|media|基于Electron的Windows影视聚合客户端|影视源配置和播放操作|可观看的聚合媒体界面
+yetone/magpie|ai|在菜单栏中管理多个AI编程智能体的模型|Agent和模型服务配置|统一的多模型选择与路由
+Blinue/Magpie|media|在Windows中放大应用窗口并改善画面显示|目标窗口和缩放配置|放大处理后的窗口画面
+HKUDS/DeepTutor|learning|面向长期个性化学习的AI辅导系统|学习资料、问题与学习目标|交互式讲解和辅导内容
+sansan0/TrendRadar|data|聚合热点信息、AI筛选分析并推送趋势简报|热点来源、关键词与订阅配置|分析简报和通知
 `;
 export const general=rows.trim().split('\n').map(line=>{const [name,domain,summary,input,output]=line.split('|');return {name,domain,summary,input,output}});
