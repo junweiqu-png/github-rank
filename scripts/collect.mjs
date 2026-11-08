@@ -6,6 +6,7 @@ import {domainOf,repositoryView,typesOf} from '../dist/catalog.js';
 import {collectSkills,isSkillCandidate} from './collect-skills.mjs';
 import {discoverRepositories} from './lib/repository-discovery.mjs';
 import {recentProjectScopes} from './recent-projects.mjs';
+import {recordDiscovery} from './lib/discovery-evidence.mjs';
 import {probeUnlabelledSkillRepositories} from './lib/skill-probe.mjs';
 import {createGithubClient} from './lib/github-client.mjs';
 const root=new URL('../dist/data/',import.meta.url);
@@ -20,23 +21,24 @@ const client=createGithubClient({token:process.env.GITHUB_TOKEN}),{api,rawText}=
 const previous=await readJson('latest.json',{repositories:[]}),previousSkills=await readJson('skills.json',{skills:[],repositories:[]}),errors=[];
 const byId=new Map(previous.repositories.map(r=>[String(r.id),r]));
 const named=new Map(previous.repositories.map(r=>[r.full_name.toLowerCase(),r]));
-function merge(r,skillCandidate=false){
+function merge(r,skillCandidate=false,source=null){
  if(!r||r.id==null||r.private||r.fork)return;
  const old=byId.get(String(r.id));
  const item={...old,id:r.id,full_name:r.full_name,url:r.html_url||r.url||'https://github.com/'+r.full_name,description:r.description||'',category:old?.category||'projects',topics:r.topics||old?.topics||[],stars:r.stargazers_count??r.stars??old?.stars??0,created_at:r.created_at,updated_at:r.pushed_at??r.updated_at,default_branch:r.default_branch||old?.default_branch,archived:r.archived??old?.archived??false,observed_at:new Date().toISOString(),skill_candidate:skillCandidate||old?.skill_candidate||false};
+ if(source)Object.assign(item,recordDiscovery(old||{},source));
  item.domain=allEditorial[item.full_name.toLowerCase()]?.domain||old?.domain||domainOf(item);item.verification=allEditorial[item.full_name.toLowerCase()]?'中文已整理':'自动发现';byId.set(String(item.id),item);named.set(item.full_name.toLowerCase(),item);
 }
 // Refresh validated public project seeds before broad discovery or rate budgets.
 for(const seed of general){
  if(named.has(seed.name.toLowerCase()))continue;
- try{merge(await api('repos/'+seed.name))}catch(e){errors.push('项目种子 '+seed.name+': '+e.message)}
+ try{merge(await api('repos/'+seed.name),false,'curated-general')}catch(e){errors.push('项目种子 '+seed.name+': '+e.message)}
 }
 const day=new Date(Date.now()+28800000).toISOString().slice(0,10),today=new Date(day+'T00:00:00Z');
 const quarter=day.slice(0,5)+String(Math.floor(today.getUTCMonth()/3)*3+1).padStart(2,'0')+'-01';
 const week=new Date(+today-((today.getUTCDay()+6)%7)*86400000).toISOString().slice(0,10);
 for(const start of [null,day.slice(0,4)+'-01-01',quarter,day.slice(0,7)+'-01',week,day]){
  const since=start?new Date(Date.parse(start)-86400000).toISOString().slice(0,10):null;
- try{const result=await api('search/repositories?q='+encodeURIComponent('stars:>0 fork:false'+(since?' created:>='+since:''))+'&sort=stars&order=desc&per_page=100');for(const r of result.items)merge(r)}catch(e){errors.push('项目发现：'+e.message)}
+ try{const result=await api('search/repositories?q='+encodeURIComponent('stars:>0 fork:false'+(since?' created:>='+since:''))+'&sort=stars&order=desc&per_page=100');for(const r of result.items)merge(r,false,'period-top100')}catch(e){errors.push('项目发现：'+e.message)}
 }
 // Broad, resumable discovery covers non-Skill projects as well as Skill-specific sources.
 // Keep existing period leaders for fresh updates, and persist pending pages/partitions.
@@ -54,27 +56,30 @@ const generalQueries=[
 const generalDiscovery=await discoverRepositories({api,queries:generalQueries,
  previousState:await readJson('general-discovery-state.json',null),
  maxRequests:Number(process.env.GENERAL_DISCOVERY_REQUESTS)||30});
-for(const r of generalDiscovery.repositories)merge(r);
+for(const r of generalDiscovery.repositories)merge(r,false,'general-search');
 await writeJson('general-discovery-state.json',generalDiscovery.state);
 errors.push(...generalDiscovery.errors.map(e=>'通用项目发现：'+e));
 // Deep-paginate current and previous calendar months before the slower all-history queue.
 const recentDiscovery=await discoverRepositories({api,queries:recentProjectScopes(new Date()),
  previousState:await readJson('recent-discovery-state.json',null),
  maxRequests:Number(process.env.RECENT_DISCOVERY_REQUESTS)||45});
-for(const r of recentDiscovery.repositories)merge(r);
+for(const r of recentDiscovery.repositories)merge(r,false,'recent-search');
 await writeJson('recent-discovery-state.json',recentDiscovery.state);
 errors.push(...recentDiscovery.errors.map(e=>'近期项目发现：'+e));
 const sources=JSON.parse(await readFile(new URL('skill-sources.json',import.meta.url),'utf8'));
 const discovery=await discoverRepositories({api,queries:sources.queries,previousState:await readJson('discovery-state.json',null),maxRequests:Number(process.env.DISCOVERY_REQUESTS)||60});
-for(const r of discovery.repositories)merge(r,true);
+for(const r of discovery.repositories)merge(r,true,'skill-search');
 await writeJson('discovery-state.json',discovery.state);errors.push(...discovery.errors);
 // Seed configuration bootstraps the crawler; it never defines individual Skills.
 for(const name of new Set([...sources.repositories,...general.map(r=>r.name)])){
  const known=named.get(name.toLowerCase());if(known){if(sources.repositories.includes(name))known.skill_candidate=true;continue}
- try{merge(await api('repos/'+name),sources.repositories.includes(name))}catch(e){errors.push(name+': '+e.message)}
+ try{merge(await api('repos/'+name),sources.repositories.includes(name),sources.repositories.includes(name)?'curated-skill':'curated-general')}catch(e){errors.push(name+': '+e.message)}
 }
 console.log(JSON.stringify({phase:'discovery',repositories:byId.size,general:generalDiscovery.coverage,recent:recentDiscovery.coverage,skills:discovery.coverage}));
-const repositories=[...byId.values()],heads=await client.resolveHeads(repositories);
+const repositories=[...byId.values()];
+const seedNames=new Set([...general.map(r=>r.name),...sources.repositories].map(n=>n.toLowerCase()));
+for(const r of repositories)if(seedNames.has(r.full_name.toLowerCase()))r.curated_seed_listed=true;
+const heads=await client.resolveHeads(repositories);
 for(const r of repositories){const current=heads.get(String(r.id));if(current)Object.assign(r,current)}
 // Sample otherwise unlabelled repositories without depending on naming/Topics.
 const probes=await probeUnlabelledSkillRepositories({api,repositories,heads,
