@@ -3743,6 +3743,796 @@
       "inventory_complete": true,
       "inventory": [],
       "pending_trees": []
+    },
+    {
+      "id": "357728969",
+      "sha": "2596ac5d391d47804c93a42bdbe615804aa62387",
+      "status": "incomplete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": false,
+      "inventory": [],
+      "pending_trees": [
+        {
+          "ref": "93f75adcfd7df86e9d453cef97fc48e1e1bc34e4",
+          "prefix": "bench/",
+          "ancestors": [
+            "2596ac5d391d47804c93a42bdbe615804aa62387"
+          ]
+        },
+        {
+          "ref": "2c61170e2ab00a9453e9ce0cc07948696c8bf51f",
+          "prefix": "completions/",
+          "ancestors": [
+            "2596ac5d391d47804c93a42bdbe615804aa62387"
+          ]
+        },
+        {
+          "ref": "5f40d4e7a8d973fd3626fcc30f5ba81d8ed25224",
+          "prefix": "dockerhub/",
+          "ancestors": [
+            "2596ac5d391d47804c93a42bdbe615804aa62387"
+          ]
+        },
+        {
+          "ref": "b89f5bf58cb779311d2a875a3c33d6058b736137",
+          "prefix": "docs/",
+          "ancestors": [
+            "2596ac5d391d47804c93a42bdbe615804aa62387"
+          ]
+        },
+        {
+          "ref": "76ceeda9cdb3de972f8d25acbf7446bbe313f149",
+          "prefix": "misctools/",
+          "ancestors": [
+            "2596ac5d391d47804c93a42bdbe615804aa62387"
+          ]
+        },
+        {
+          "ref": "af9cc2b0678bdeca6762ca0266857e85e67fc8b3",
+          "prefix": "packages/",
+          "ancestors": [
+            "2596ac5d391d47804c93a42bdbe615804aa62387"
+          ]
+        },
+        {
+          "ref": "9c12db38714f2cd9268104405f030f4b99ee642e",
+          "prefix": "patches/",
+          "ancestors": [
+            "2596ac5d391d47804c93a42bdbe615804aa62387"
+          ]
+        },
+        {
+          "ref": "9f662b9a6668f462b16e9cf00fe835d6f47e5e84",
+          "prefix": "scripts/",
+          "ancestors": [
+            "2596ac5d391d47804c93a42bdbe615804aa62387"
+          ]
+        },
+        {
+          "ref": "03bb28a9de51a9d87e8c166ef66d20e49d8b1d3d",
+          "prefix": "src/",
+          "ancestors": [
+            "2596ac5d391d47804c93a42bdbe615804aa62387"
+          ]
+        },
+        {
+          "ref": "7defcfe9506635affb731417ba96533bbe3b982c",
+          "prefix": "test/",
+          "ancestors": [
+            "2596ac5d391d47804c93a42bdbe615804aa62387"
+          ]
+        },
+        {
+          "ref": "215b370fba9d2fbac6a06d658c8e9da34d8c554f",
+          "prefix": "tools/",
+          "ancestors": [
+            "2596ac5d391d47804c93a42bdbe615804aa62387"
+          ]
+        },
+        {
+          "ref": "aab66ba2d88a7eec0f9c4b37115555457d2338a7",
+          "prefix": ".buildkite/hooks/",
+          "ancestors": [
+            "2596ac5d391d47804c93a42bdbe615804aa62387",
+            "6ede35fdd6965361442093da65dd9bbc37746647"
+          ]
+        },
+        {
+          "ref": "5d96c03257b5773824682e339d7c26dfd2bfe52f",
+          "prefix": ".buildkite/scripts/",
+          "ancestors": [
+            "2596ac5d391d47804c93a42bdbe615804aa62387",
+            "6ede35fdd6965361442093da65dd9bbc37746647"
+          ]
+        },
+        {
+          "ref": "624dc9b2720049a5513a18f69e68b1520b138436",
+          "prefix": ".claude/commands/",
+          "ancestors": [
+            "2596ac5d391d47804c93a42bdbe615804aa62387",
+            "84cce7dac57ed1a9b24ce2f07935daaf0befeab4"
+          ]
+        },
+        {
+          "ref": "43fecf0d50946d4f6b23bf6028936b7134813993",
+          "prefix": ".claude/docs/",
+          "ancestors": [
+            "2596ac5d391d47804c93a42bdbe615804aa62387",
+            "84cce7dac57ed1a9b24ce2f07935daaf0befeab4"
+          ]
+        },
+        {
+          "ref": "894755f842475f022a7da49d3f2ae89875ac6149",
+          "prefix": ".claude/hooks/",
+          "ancestors": [
+            "2596ac5d391d47804c93a42bdbe615804aa62387",
+            "84cce7dac57ed1a9b24ce2f07935daaf0befeab4"
+          ]
+        },
+        {
+          "ref": "b7a3d170d1a9340aa7deae20168b7415ed0317f8",
+          "prefix": ".claude/skills/",
+          "ancestors": [
+            "2596ac5d391d47804c93a42bdbe615804aa62387",
+            "84cce7dac57ed1a9b24ce2f07935daaf0befeab4"
+          ]
+        },
+        {
+          "ref": "724a112a9c02d60250c24052ebf4983f996d59cb",
+          "prefix": ".github/ISSUE_TEMPLATE/",
+          "ancestors": [
+            "2596ac5d391d47804c93a42bdbe615804aa62387",
+            "30e489eb7725b7398308cbb9d59ba5c9e443cfaf"
+          ]
+        },
+        {
+          "ref": "042a5d02b7cf374ca7ff2eab36376a4df916675c",
+          "prefix": ".github/actions/",
+          "ancestors": [
+            "2596ac5d391d47804c93a42bdbe615804aa62387",
+            "30e489eb7725b7398308cbb9d59ba5c9e443cfaf"
+          ]
+        },
+        {
+          "ref": "2d6a8e39e7abd572c0ed3aec34c6a74c000a21b4",
+          "prefix": ".github/workflows/",
+          "ancestors": [
+            "2596ac5d391d47804c93a42bdbe615804aa62387",
+            "30e489eb7725b7398308cbb9d59ba5c9e443cfaf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "599547518",
+      "sha": "fd0c471b3a4c2446c44b2ba8b4699a42e181d7b2",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "32689863",
+      "sha": "fafa083a4fb274bba9cabde0b6e2f50ba6da0622",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "594155488",
+      "sha": "d74543712c8214548b823859c8dba4cf2e52a875",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "90796663",
+      "sha": "7cb283cb4bba7f18627a013a0d97ae056b30315c",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "612230",
+      "sha": "4e8758a801eea9479b32a904f31093e410ddaba4",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "1255180606",
+      "sha": "1c1509094963f9eb9445928d57f2856296057cf4",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "22790488",
+      "sha": "4cabb204f240240bea319605a5ffa46ded728001",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "74791366",
+      "sha": "5311f64b03fc0c2450ab17a45ee9818669c8b9b5",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "340547520",
+      "sha": "d2a4fb6ded7c470be25d1541281da3882495b65b",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "730534580",
+      "sha": "3c6d2255af06164f0818d0959af10de0afd8b8fa",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "382496361",
+      "sha": "c64c6d950db9149b3f0d98daf76ab591bdaabe7c",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "771302083",
+      "sha": "c67291165579e12b40c9231da53b876a99036c63",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "262296122",
+      "sha": "dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "343965132",
+      "sha": "8e5c0dfffdb56181450363f9ccd880bc69737ae8",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "12888993",
+      "sha": "f980596e046a07610486dff1b63d51169ff111b0",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "919443098",
+      "sha": "0cf78561f1d51c84a21b2190626b21116d5c68bb",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "890668799",
+      "sha": "36380287ed3b15d115b55f546617d723072b1296",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "699532645",
+      "sha": "3e2f08f8e75624ec942f864cd56b816885b80b7c",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "4164482",
+      "sha": "a1f2b45ce5a327f42437bdb620a817839d0bd067",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "54173593",
+      "sha": "44ea08aede7d3062e19740116998bde9e7c7ec98",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "5108051",
+      "sha": "ac33ba8f18b9e2941e99fbdc96b6ff52437a015a",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "44882201",
+      "sha": "f7bf7d43cb26d555e51a4c6c83af563a08795605",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "693342566",
+      "sha": "b28380a4710c5ec9638ec037d4168e288f334cba",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "26066727",
+      "sha": "a0fd6b8cee272d47d39c0b6bfdf6d2283efa9a49",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "1181927",
+      "sha": "4ef7904c39fa2c9eedc66d1a75caaf34c0c531b9",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "11180687",
+      "sha": "2d6cf3a851f3d003c2246f74448ebfc086db6418",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "1130564872",
+      "sha": "17251621b15e2452660eec254c3b7db99800f4f0",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "14712850",
+      "sha": "b34734376128492fa4e1b01412193de033e20613",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "88464704",
+      "sha": "6858a9ad67483025f6a9432a926beb9327037be3",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "20904437",
+      "sha": "0f09c3a9b4626d9fe9979cf4d0521d6ae32ab646",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "612344730",
+      "sha": "1d3dc331512929a4b1d3e82354e72acce33b5c7a",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "74293321",
+      "sha": "c60f6e1da05a79d39ea11fdc3153e4d07be35936",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "798201435",
+      "sha": "cae74b203a33994f7e13b9052c3b0d5c93daa0e6",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "212639071",
+      "sha": "9e49ef97f16377d901db01f3562187394828ca6a",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "1052050442",
+      "sha": "36f583c233ea5cee4537ef93455702b55053af18",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "1139971460",
+      "sha": "08a261a0d081ffe11a32986e2f4d76f3fdc33abb",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "1157102282",
+      "sha": "283f51d8f8b7ad85c58734c65351ee67c22a15c8",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "47018239",
+      "sha": "bcb0c90a0ab3c495857ca9ea63f367e68848346c",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "1863329",
+      "sha": "def7ce14811161f3c689a71ca8abc1369da44bd6",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "127988011",
+      "sha": "dcaa93b3150352e5044708d7211b5bed0af4509f",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "655099582",
+      "sha": "7abd96e8284bfae232048fdb77b52397a2114847",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "1104332987",
+      "sha": "7657031ac01184afe2cb220f5ee3545573b5e843",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "71583602",
+      "sha": "49a3dbca7d7398723efa87b56e36dae5b823b253",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "145553672",
+      "sha": "29f4ac896f11058e87e10968569f999c69679b6f",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "52631841",
+      "sha": "25588846c314b15a5e427ffe816e6b4af7be68c7",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "231865705",
+      "sha": "e2b3f62213c77bb8c33c5be355f97625ea1b8b61",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "13807606",
+      "sha": "c7bf2b8eea25952dd257a466c0afa72faae206fb",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "257485422",
+      "sha": "a579e352a66fbdce6a51d4e1f67006ccf4f91343",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "134017286",
+      "sha": "bd4062a1e745b47d87ee8d0b24649529ed28b499",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "2561582",
+      "sha": "3f8ab233dbbd9d2fe577528d2296382954be3d1a",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "71220757",
+      "sha": "08ea40e77db3f42ef8f20c65196f3936a19b6c86",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "101138315",
+      "sha": "e6b18ccea71451a55fcd861d7b96fddf2587b09a",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "26500787",
+      "sha": "ecd367b040ad92a28b64fa93135775f7e2417b37",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "254832799",
+      "sha": "c3a858990f1f772e5c59f10c51f1a7aeb888ef23",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "6296790",
+      "sha": "8552ac1799bd5b889a48ce858ba1d744f8fe0348",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "10744183",
+      "sha": "61a811c9e571d79bb5a7af741397fccb0dcf1bbf",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "718741813",
+      "sha": "a8139779f7c5ae231b7f2a86fa7f83ddc5f7badc",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "1177402105",
+      "sha": "327e20208c3f542841de670cce54754473f58d30",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "203587744",
+      "sha": "55908a76a1d0555c9bbb5d74244c14173df95b06",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "246335987",
+      "sha": "74cff34240dca6991b79c6656770670da7b0c39e",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "1010681419",
+      "sha": "7226f555d48900076eba126acf37c9ed5f002b5d",
+      "status": "complete",
+      "has_skill_file": true,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "26898879",
+      "sha": "e56180ea56d238151900ae81a3726061725f64f7",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
+    },
+    {
+      "id": "579082810",
+      "sha": "57673726396dd94acb23bdb1e67f27c78ee85a8e",
+      "status": "complete",
+      "has_skill_file": false,
+      "checked_at": "2026-11-08T22:46:38.664Z",
+      "inventory_complete": true,
+      "inventory": [],
+      "pending_trees": []
     }
   ]
 }
