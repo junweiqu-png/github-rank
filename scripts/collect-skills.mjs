@@ -48,7 +48,7 @@ export async function collectSkills({api,repositories,limit=Infinity,maxFileRead
   for(const original of selected){
    if(reads>=maxFileReads)break;
    const id=String(original.id),priorScan=scans.get(id);
-   if(quotaStopped&&!(priorScan?.inventory_complete&&priorScan.commit_sha===heads.get(id)?.commit_sha))continue;
+   if(quotaStopped&&!(priorScan?.discovery_rules_version===SKILL_DISCOVERY_RULES_VERSION&&priorScan?.inventory_complete&&priorScan.commit_sha===heads.get(id)?.commit_sha))continue;
    if(pass>0&&(priorScan?.complete||(priorScan?.failed&&!priorScan.inventory_complete)))continue;
    attempted.add(id);work++;
    const old=[...skills.values()].filter(s=>String(s.repository_id)===id);

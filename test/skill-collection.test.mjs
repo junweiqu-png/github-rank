@@ -182,3 +182,19 @@ test('Unmigrated complete scans are not counted as current-policy coverage',asyn
  assert.equal(result.coverage.pending_repositories,1);
  assert.equal(result.coverage.complete,false);
 });
+
+test('Rate limiting stops old-policy re-indexing instead of retrying cached legacy trees',async t=>{
+ const legacyA={...scan(repoA),discovery_rules_version:1,inventory_complete:true,inventory:[{path:'a/SKILL.md',sha:'a',type:'blob'}]};
+ const legacyB={...scan(repoB),discovery_rules_version:1,inventory_complete:true,inventory:[{path:'b/SKILL.md',sha:'b',type:'blob'}]};
+ const root=await fixtureRoot(t,{skills:[oldSkill(repoA),oldSkill(repoB)],repositories:[legacyA,legacyB]});
+ const heads=new Map([repoA,repoB].map(r=>[String(r.id),{id:r.id,full_name:r.full_name,commit_sha:'old-commit'}]));
+ const calls=[];
+ const result=await collectSkills({repositories:[repoA,repoB],dataRoot:root,heads,limit:2,maxFileReads:10,
+  api:async path=>{calls.push(path);const error=Error('API rate limit exceeded');error.code='RATE_LIMIT';throw error}});
+ assert.equal(calls.length,1);
+ assert.equal(calls[0],'repos/'+repoA.full_name+'/git/trees/old-commit?recursive=1');
+ assert.equal(result.coverage.attempted_this_run,1);
+ assert.equal(result.coverage.complete_repositories,0);
+ assert.equal(result.coverage.pending_repositories,2);
+ assert(result.skills.every(s=>s.stale));
+});
