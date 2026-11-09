@@ -102,3 +102,13 @@ test('Generic probe ignores repositories that only contain testdata Skill fixtur
  assert.equal(repo.skill_candidate,undefined);
  assert.equal(result.state.entries[0].status,'complete');
 });
+
+test('A completed negative probe from an older discovery policy is rechecked',async()=>{
+ const repo=unknown(9003,'rev1');
+ const previousState={version:1,entries:[{id:'9003',sha:'rev1',status:'complete',has_skill_file:false,checked_at:'2026-11-08T00:00:00Z',discovery_rules_version:1}]};
+ const result=await probeUnlabelledSkillRepositories({repositories:[repo],previousState,isCandidate:()=>false,api:async()=>hit('crates/setup/src/skill.md')});
+ assert.equal(result.coverage.probed_this_run,1);
+ assert.equal(result.coverage.detected_this_run,1);
+ assert.equal(repo.skill_candidate,true);
+ assert.equal(result.state.entries[0].discovery_rules_version,2);
+});

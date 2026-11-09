@@ -1,4 +1,4 @@
-import {discoverRepositorySkills} from './skill-discovery.mjs';
+import {discoverRepositorySkills,SKILL_DISCOVERY_RULES_VERSION} from './skill-discovery.mjs';
 
 // Probe a bounded sample of ordinary repositories, including those whose names,
 // descriptions and Topics never mention Skills. This is not a fixed allowlist.
@@ -7,7 +7,7 @@ export async function probeUnlabelledSkillRepositories({
  now=new Date(),isCandidate=()=>false,maxTreeRequests=8,
 }={}){
  if(typeof api!=='function'||!Array.isArray(repositories))throw TypeError('Repositories and GitHub API are required');
- const entries=new Map((previousState?.version===1&&Array.isArray(previousState.entries)?previousState.entries:[])
+ const entries=new Map(([1,2].includes(previousState?.version)&&Array.isArray(previousState.entries)?previousState.entries:[])
   .filter(e=>e&&e.id!=null).map(e=>[String(e.id),e]));
  const date=new Date(now),ts=+date;
  if(!Number.isFinite(ts))throw TypeError('Invalid probe time');
@@ -17,11 +17,11 @@ export async function probeUnlabelledSkillRepositories({
   const id=String(repo.id),sha=heads.get(id)?.commit_sha||repo.commit_sha;
   if(!sha){withoutRevision++;continue}
   const old=entries.get(id);
-  if(old?.sha===sha&&old.status==='complete'){
+  if(old?.sha===sha&&old.discovery_rules_version===SKILL_DISCOVERY_RULES_VERSION&&old.status==='complete'){
    cached++;if(old.has_skill_file){repo.skill_candidate=true;positive++}
    continue;
   }
-  if(old?.sha===sha&&old.status==='incomplete'&&ts-Date.parse(old.checked_at)<20*3600*1000){retry.push({repo,sha});continue}
+  if(old?.sha===sha&&old.discovery_rules_version===SKILL_DISCOVERY_RULES_VERSION&&old.status==='incomplete'&&ts-Date.parse(old.checked_at)<20*3600*1000){retry.push({repo,sha});continue}
   unseen.push({repo,sha,previous:old});
  }
  // Retry old incomplete scans first; otherwise fresh arrivals can starve them.
@@ -52,25 +52,25 @@ export async function probeUnlabelledSkillRepositories({
     maxFileReads:0,maxTreeRequests,
     getTree:(r,ref,recursive)=>api('repos/'+r.full_name+'/git/trees/'+encodeURIComponent(ref)+(recursive?'?recursive=1':'')),
     getText:()=>{throw Error('Probing must not read SKILL.md content')},
-   },[],prior?.sha===sha?{commit_sha:sha,inventory:prior.inventory,pending_trees:prior.pending_trees,inventory_complete:prior.inventory_complete}:{});
+   },[],prior?.sha===sha?{commit_sha:sha,discovery_rules_version:prior.discovery_rules_version,inventory:prior.inventory,pending_trees:prior.pending_trees,inventory_complete:prior.inventory_complete}:{});
 
    const has=scan.inventory.length>0;
    const status=has||scan.inventory_complete?'complete':'incomplete';
-   entries.set(id,{id,sha,status,has_skill_file:has,checked_at:date.toISOString(),
+   entries.set(id,{id,sha,status,has_skill_file:has,checked_at:date.toISOString(),discovery_rules_version:SKILL_DISCOVERY_RULES_VERSION,
     inventory_complete:scan.inventory_complete,
     inventory:status==='complete'?[]:scan.inventory,
     pending_trees:status==='complete'?[]:scan.pending_trees});
    if(has){repo.skill_candidate=true;detected++}
    if(status==='incomplete')errors.push(repo.full_name+': '+scan.errors.join('; '));
   }catch(error){
-   entries.set(id,{id,sha,status:'incomplete',has_skill_file:false,checked_at:date.toISOString()});
+   entries.set(id,{id,sha,status:'incomplete',has_skill_file:false,checked_at:date.toISOString(),discovery_rules_version:SKILL_DISCOVERY_RULES_VERSION});
    errors.push(repo.full_name+': '+error.message);
    if(error.code==='RATE_LIMIT')rateLimited=true;
   }
  }};
  await Promise.all(Array.from({length:Math.min(chosen.length,concurrent)},worker));
  const pending=unseen.length-probed+retry.length+withoutRevision;
- return {state:{version:1,entries:[...entries.values()]},
+ return {state:{version:SKILL_DISCOVERY_RULES_VERSION,entries:[...entries.values()]},
   coverage:{unlabelled:unseen.length+retry.length+cached+withoutRevision,cached,previously_detected:positive,probed_this_run:probed,detected_this_run:detected,pending,incomplete:errors.length,complete:pending===0&&errors.length===0},
   errors};
 }

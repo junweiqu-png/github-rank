@@ -1,6 +1,6 @@
 import {mkdir,readFile,writeFile,rename} from 'node:fs/promises';
 import {gzipSync,gunzipSync} from 'node:zlib';
-import {discoverRepositorySkills} from './lib/skill-discovery.mjs';
+import {discoverRepositorySkills,SKILL_DISCOVERY_RULES_VERSION} from './lib/skill-discovery.mjs';
 const root=new URL('../dist/data/',import.meta.url);
 export function isSkillCandidate(r,previous=[]){return r.skill_candidate===true||r.category==='skills'||previous.some(s=>String(s.repository_id)===String(r.id))||/(^|[-_/])skills?($|[-_/])/i.test(r.full_name)||/skill\.md|\bagent skills?\b/i.test(r.description||'')||(r.topics||[]).some(t=>/^(agent-skills?|claude-skills|skills|claude-code-skills)$/.test(t))}
 
@@ -15,22 +15,22 @@ export async function collectSkills({api,repositories,limit=Infinity,maxFileRead
  const scans=new Map(storedScans.map(r=>[String(r.id),r]));
  const priority=new Set(priorityRepositoryIds.map(String));
  const candidates=repositories.filter(r=>isSkillCandidate(r,previous.skills));
- candidates.sort((a,b)=>Number(priority.has(String(b.id)))-Number(priority.has(String(a.id)))||Number(scans.get(String(a.id))?.complete===true)-Number(scans.get(String(b.id))?.complete===true)||(Date.parse(scans.get(String(a.id))?.checked_at)||0)-(Date.parse(scans.get(String(b.id))?.checked_at)||0)||b.stars-a.stars);
+ candidates.sort((a,b)=>Number(priority.has(String(b.id)))-Number(priority.has(String(a.id)))||Number(scans.get(String(a.id))?.discovery_rules_version===SKILL_DISCOVERY_RULES_VERSION)-Number(scans.get(String(b.id))?.discovery_rules_version===SKILL_DISCOVERY_RULES_VERSION)||Number(scans.get(String(a.id))?.complete===true)-Number(scans.get(String(b.id))?.complete===true)||(Date.parse(scans.get(String(a.id))?.checked_at)||0)-(Date.parse(scans.get(String(b.id))?.checked_at)||0)||b.stars-a.stars);
  const selected=candidates.slice(0,limit);
  // "Not scanned during this run" is not the same as "stale". A previously
  // complete, SHA-pinned scan remains valid when the current Git head matches.
  // Unknown heads, changed commits, or incomplete scans are conservatively stale.
  const skills=new Map(previous.skills.map(s=>{
   const id=String(s.repository_id),scan=scans.get(id),head=heads.get(id);
-  const unchanged=scan?.complete===true&&scan?.failed!==true&&
+  const unchanged=scan?.discovery_rules_version===SKILL_DISCOVERY_RULES_VERSION&&scan?.complete===true&&scan?.failed!==true&&
    typeof head?.commit_sha==='string'&&head.commit_sha.length>0&&
    scan.commit_sha===head.commit_sha&&s.revision===head.commit_sha;
   return [s.id,{...s,stale:!unchanged}];
  }));
  const errorsById=new Map(),attempted=new Set(),completed=new Set(),deferredById=new Map();let reads=0,quotaStopped=false,processed=0;
  function dataset(){
-  const relevant=candidates.map(r=>scans.get(String(r.id))).filter(Boolean),done=relevant.filter(r=>r.complete).length;
-  return {updated_at:new Date().toISOString(),source:'GitHub SKILL.md frontmatter',grain:'skill',skills:[...skills.values()],repositories:[...scans.values()].map(({inventory,pending_trees,file_states,...publicScan})=>publicScan),coverage:{candidate_repositories:candidates.length,scanned_repositories:relevant.length,complete_repositories:done,pending_repositories:candidates.length-done,failed_repositories:relevant.filter(r=>r.failed).length,tree_indexed_repositories:relevant.filter(r=>r.inventory_complete||r.complete).length,pending_files:relevant.reduce((n,r)=>n+(r.metadata_pending||0),0),attempted_this_run:attempted.size,complete_this_run:completed.size,file_reads_this_run:reads,discovery_complete:discoveryComplete,complete:discoveryComplete&&done===candidates.length},metrics:{installs:{source:'skills.sh',status:'not_connected',definition:'平台安装统计，不是 GitHub 通用安装次数'}},errors:[...errorsById.values()].flat().slice(0,200)};
+  const relevant=candidates.map(r=>scans.get(String(r.id))).filter(Boolean),done=relevant.filter(r=>r.complete&&r.discovery_rules_version===SKILL_DISCOVERY_RULES_VERSION).length;
+  return {updated_at:new Date().toISOString(),source:'GitHub SKILL.md frontmatter',grain:'skill',skills:[...skills.values()],repositories:[...scans.values()].map(({inventory,pending_trees,file_states,...publicScan})=>publicScan),coverage:{discovery_rules_version:SKILL_DISCOVERY_RULES_VERSION,candidate_repositories:candidates.length,scanned_repositories:relevant.length,complete_repositories:done,pending_repositories:candidates.length-done,failed_repositories:relevant.filter(r=>r.failed).length,tree_indexed_repositories:relevant.filter(r=>r.discovery_rules_version===SKILL_DISCOVERY_RULES_VERSION&&(r.inventory_complete||r.complete)).length,pending_files:relevant.reduce((n,r)=>n+(r.metadata_pending||0),0),attempted_this_run:attempted.size,complete_this_run:completed.size,file_reads_this_run:reads,discovery_complete:discoveryComplete,complete:discoveryComplete&&done===candidates.length},metrics:{installs:{source:'skills.sh',status:'not_connected',definition:'平台安装统计，不是 GitHub 通用安装次数'}},errors:[...errorsById.values()].flat().slice(0,200)};
  }
  async function persist(){
   const data=dataset();await mkdir(root,{recursive:true});
@@ -72,7 +72,7 @@ export async function collectSkills({api,repositories,limit=Infinity,maxFileRead
     for(const s of result.skills){const translated=copy[s.repository.toLowerCase()+':'+s.name];skills.set(s.id,{...s,summary:translated?.summary||s.description,input:translated?.input||'具体输入和前置条件见技能文档',output:translated?.output||'具体交付内容见技能文档',translation_status:translated?'curated':'original',official_install_url:translated?.official_install_url||null,metrics:{installs:{source:'skills.sh',value:null,status:'not_connected',observed_at:null}}})}
     const failure=result.errors.some(e=>!e.startsWith('Metadata file budget reached;'));
     errorsById.set(id,result.errors.map(e=>repo.full_name+': '+e));if(result.complete)completed.add(id);
-    scans.set(id,{id:repo.id,repository:repo.full_name,checked_at:new Date().toISOString(),complete:result.complete,failed:failure,skill_count:result.skills.length,commit_sha:repo.commit_sha,inventory_complete:result.inventory_complete,inventory:result.inventory,pending_trees:result.pending_trees,file_states:result.file_states,metadata_pending:result.metadata_pending});
+    scans.set(id,{id:repo.id,repository:repo.full_name,checked_at:new Date().toISOString(),complete:result.complete,failed:failure,skill_count:result.skills.length,commit_sha:repo.commit_sha,discovery_rules_version:SKILL_DISCOVERY_RULES_VERSION,inventory_complete:result.inventory_complete,inventory:result.inventory,pending_trees:result.pending_trees,file_states:result.file_states,metadata_pending:result.metadata_pending});
    }catch(e){
     if(e.code==='RATE_LIMIT'){quotaStopped=true;continue}
     errorsById.set(id,[original.full_name+': '+e.message]);for(const s of old)skills.set(s.id,{...s,stale:true});scans.set(id,{...priorScan,id:original.id,repository:original.full_name,checked_at:new Date().toISOString(),complete:false,failed:true,skill_count:old.length});
