@@ -9,6 +9,14 @@ function validPath(path){
  return typeof path==='string'&&path.length>0&&!path.startsWith('/')&&!path.includes('\\')&&!path.split('/').some(p=>p==='.'||p==='..'||p==='');
 }
 
+// Files under explicit test-fixture directories are sample inputs, not Skills
+// users can install from this repository. Keep ordinary examples eligible.
+function isTestFixturePath(path){
+ const parts=path.split('/').map(part=>part.toLowerCase());
+ if(parts.some(part=>['testdata','test-data','test-fixtures','__fixtures__'].includes(part)))return true;
+ return parts.some((part,index)=>['test','tests','spec','specs'].includes(part)&&parts[index+1]==='fixtures');
+}
+
 function validMetadata(fields){
  if(!fields||typeof fields!=='object'||Array.isArray(fields))return null;
  if(typeof fields.name!=='string'||typeof fields.description!=='string')return null;
@@ -55,7 +63,7 @@ export async function discoverRepositorySkills(repo,{getTree,getText,maxFileRead
  function addEntries(tree,prefix=''){
   for(const entry of tree.tree){
    const path=prefix+entry.path;
-   if(entry.type!=='blob'||entry.mode==='120000'||!/(^|\/)SKILL\.md$/.test(path))continue;
+   if(entry.type!=='blob'||entry.mode==='120000'||!/(^|\/)skill\.md$/i.test(path)||isTestFixturePath(path))continue;
    if(!validPath(path)){errors.push('Rejected invalid SKILL.md path');continue}
    const existing=files.get(path);
    if(existing&&existing.sha!==entry.sha){errors.push('Conflicting tree entries: '+path);continue}
@@ -125,7 +133,7 @@ export async function discoverRepositorySkills(repo,{getTree,getText,maxFileRead
     repository_id:repo.id,
     repository:repo.full_name,
     path:entry.path,
-    directory:entry.path==='SKILL.md'?'':entry.path.slice(0,-'/SKILL.md'.length),
+    directory:entry.path.includes('/')?entry.path.slice(0,entry.path.lastIndexOf('/')):'',
     blob_sha:entry.sha||null,
     revision:ref,
     name:fields.name,

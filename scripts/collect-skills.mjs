@@ -2,7 +2,7 @@ import {mkdir,readFile,writeFile,rename} from 'node:fs/promises';
 import {gzipSync,gunzipSync} from 'node:zlib';
 import {discoverRepositorySkills} from './lib/skill-discovery.mjs';
 const root=new URL('../dist/data/',import.meta.url);
-export function isSkillCandidate(r,previous=[]){return r.skill_candidate===true||r.category==='skills'||previous.some(s=>String(s.repository_id)===String(r.id))||/(^|[-_/])skills?($|[-_/])/i.test(r.full_name)||/SKILL\.md|\bagent skills?\b/i.test(r.description||'')||(r.topics||[]).some(t=>/^(agent-skills?|claude-skills|skills|claude-code-skills)$/.test(t))}
+export function isSkillCandidate(r,previous=[]){return r.skill_candidate===true||r.category==='skills'||previous.some(s=>String(s.repository_id)===String(r.id))||/(^|[-_/])skills?($|[-_/])/i.test(r.full_name)||/skill\.md|\bagent skills?\b/i.test(r.description||'')||(r.topics||[]).some(t=>/^(agent-skills?|claude-skills|skills|claude-code-skills)$/.test(t))}
 
 export async function collectSkills({api,repositories,limit=Infinity,maxFileReads=30000,perRepositoryFileReads=256,passes=1,rawText,heads=new Map(),priorityRepositoryIds=[],discoveryComplete=false,dataRoot=root}){
  const root=dataRoot;

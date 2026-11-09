@@ -107,3 +107,24 @@ test('A truncated tree resumes queued subtrees after a tree budget instead of re
  assert.equal(next.complete,true);assert.equal(next.skills.length,2);assert.deepEqual(next.pending_trees,[]);
  assert.deepEqual(calls,[[repo.commit_sha,true],[repo.commit_sha,false],['a-tree',false],['b-tree',false]]);
 });
+
+test('Lowercase skill.md with valid frontmatter is discovered as a real Skill',async()=>{
+ const path='crates/setup/src/skill.md';
+ const result=await discoverRepositorySkills(repo,reader([blob(path)],{[path]:text('craft-anything','Investigate shipped software with evidence-backed answers')}));
+ assert.equal(result.complete,true);
+ assert.equal(result.skills.length,1);
+ assert.equal(result.skills[0].name,'craft-anything');
+ assert.equal(result.skills[0].path,path);
+ assert.equal(result.skills[0].directory,'crates/setup/src');
+});
+test('Test fixture Skill files are not published as usable repository Skills',async()=>{
+ const paths=[
+  'internal/sessions/testdata/droid-skills/skills/greet-user/SKILL.md',
+  'internal/sessions/testdata/grok-tools/skills/greet-user/SKILL.md',
+  'tests/fixtures/sample-skill/SKILL.md',
+  'skills/real-skill/SKILL.md'
+ ];
+ const result=await discoverRepositorySkills(repo,reader(paths.map(p=>blob(p)),Object.fromEntries(paths.map((p,i)=>[p,text(['fixture-one','fixture-two','fixture-three','real-skill'][i])]))));
+ assert.equal(result.complete,true);
+ assert.deepEqual(result.skills.map(s=>s.path),['skills/real-skill/SKILL.md']);
+});

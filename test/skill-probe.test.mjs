@@ -88,3 +88,17 @@ test('Independent Git-tree probes run concurrently under a fixed concurrency cap
  assert.ok(peak>=2,'Independent tree scans should overlap');
  assert.ok(peak<=3,'Concurrency cap must be respected');
 });
+
+test('Generic probe recognizes a lowercase skill.md path',async()=>{
+ const repo=unknown(9001);
+ const result=await probeUnlabelledSkillRepositories({repositories:[repo],isCandidate:()=>false,api:async()=>hit('crates/setup/src/skill.md')});
+ assert.equal(result.coverage.detected_this_run,1);
+ assert.equal(repo.skill_candidate,true);
+});
+test('Generic probe ignores repositories that only contain testdata Skill fixtures',async()=>{
+ const repo=unknown(9002);
+ const result=await probeUnlabelledSkillRepositories({repositories:[repo],isCandidate:()=>false,api:async()=>hit('internal/sessions/testdata/droid-skills/skills/greet-user/SKILL.md')});
+ assert.equal(result.coverage.detected_this_run,0);
+ assert.equal(repo.skill_candidate,undefined);
+ assert.equal(result.state.entries[0].status,'complete');
+});
