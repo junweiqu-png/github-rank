@@ -2,7 +2,7 @@ import {mkdir,readFile,writeFile,rename} from 'node:fs/promises';
 import {gzipSync,gunzipSync} from 'node:zlib';
 import {discoverRepositorySkills} from './lib/skill-discovery.mjs';
 const root=new URL('../dist/data/',import.meta.url);
-export function isSkillCandidate(r,previous=[]){return r.skill_candidate===true||r.category==='skills'||previous.some(s=>String(s.repository_id)===String(r.id))||/(^|[-_/])skills?($|[-_/])/i.test(r.full_name)||/SKILL\.md|\bagent skills?\b/i.test(r.description||'')||(r.topics||[]).some(t=>/^(agent-skills?|claude-skills|skills|claude-code-skills)$/.test(t))}
+export function isSkillCandidate(r,previous=[]){return r.skill_candidate===true||r.category==='skills'||previous.some(s=>String(s.repository_id)===String(r.id))||/(^|[-_/])skills?($|[-_/])/i.test(r.full_name)||/skill\.md|\bagent skills?\b/i.test(r.description||'')||(r.topics||[]).some(t=>/^(agent-skills?|claude-skills|skills|claude-code-skills)$/.test(t))}
 
 export async function collectSkills({api,repositories,limit=Infinity,maxFileReads=30000,perRepositoryFileReads=256,passes=1,rawText,heads=new Map(),priorityRepositoryIds=[],discoveryComplete=false,dataRoot=root}){
  const root=dataRoot;
@@ -16,7 +16,17 @@ export async function collectSkills({api,repositories,limit=Infinity,maxFileRead
  const priority=new Set(priorityRepositoryIds.map(String));
  const candidates=repositories.filter(r=>isSkillCandidate(r,previous.skills));
  candidates.sort((a,b)=>Number(priority.has(String(b.id)))-Number(priority.has(String(a.id)))||Number(scans.get(String(a.id))?.complete===true)-Number(scans.get(String(b.id))?.complete===true)||(Date.parse(scans.get(String(a.id))?.checked_at)||0)-(Date.parse(scans.get(String(b.id))?.checked_at)||0)||b.stars-a.stars);
- const selected=candidates.slice(0,limit),skills=new Map(previous.skills.map(s=>[s.id,{...s,stale:true}]));
+ const selected=candidates.slice(0,limit);
+ // "Not scanned during this run" is not the same as "stale". A previously
+ // complete, SHA-pinned scan remains valid when the current Git head matches.
+ // Unknown heads, changed commits, or incomplete scans are conservatively stale.
+ const skills=new Map(previous.skills.map(s=>{
+  const id=String(s.repository_id),scan=scans.get(id),head=heads.get(id);
+  const unchanged=scan?.complete===true&&scan?.failed!==true&&
+   typeof head?.commit_sha==='string'&&head.commit_sha.length>0&&
+   scan.commit_sha===head.commit_sha&&s.revision===head.commit_sha;
+  return [s.id,{...s,stale:!unchanged}];
+ }));
  const errorsById=new Map(),attempted=new Set(),completed=new Set(),deferredById=new Map();let reads=0,quotaStopped=false,processed=0;
  function dataset(){
   const relevant=candidates.map(r=>scans.get(String(r.id))).filter(Boolean),done=relevant.filter(r=>r.complete).length;
