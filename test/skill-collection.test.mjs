@@ -10,7 +10,7 @@ const oldDate='2026-10-01T00:00:00Z';
 const repoA={id:1,full_name:'fixture-a/skills',category:'skills',stars:5};
 const repoB={id:2,full_name:'fixture-b/skills',category:'skills',stars:4};
 const oldSkill=repo=>({id:repo.id+':old/SKILL.md',repository_id:repo.id,repository:repo.full_name,path:'old/SKILL.md',blob_sha:'old-blob',name:'old-skill',description:'Previous valid observation',observed_at:oldDate,stale:false});
-const scan=(repo,checked_at=oldDate)=>({id:repo.id,repository:repo.full_name,checked_at,complete:true,skill_count:1,commit_sha:'old-commit'});
+const scan=(repo,checked_at=oldDate)=>({id:repo.id,repository:repo.full_name,checked_at,complete:true,skill_count:1,commit_sha:'old-commit',discovery_rules_version:2});
 
 async function fixtureRoot(t,previous){
  // Keep fixtures inside the writable checkout. Some Windows sandboxes deny
@@ -134,4 +134,67 @@ test('Changed, incomplete, or unverifiable Skill revisions remain stale',async t
   const result=await collectSkills({repositories:[repoA],dataRoot:root,heads,limit:0,api:async()=>{throw Error('No API expected')}});
   assert.equal(result.skills[0].stale,true,scenario.name);
  }
+});
+
+// A scan from the previous path policy must be re-indexed, even at the same Git SHA.
+// It must drop old test fixtures, preserve valid cached Skills, and find lowercase manifests.
+test('Legacy complete scans are re-indexed under current Skill discovery rules',async t=>{
+ const fixturePath='internal/sessions/testdata/droid-skills/skills/greet-user/SKILL.md';
+ const realPath='skills/real/SKILL.md';
+ const lowerPath='crates/setup/src/skill.md';
+ const fixture={...oldSkill(repoA),id:repoA.id+':'+fixturePath,path:fixturePath,blob_sha:'fixture-blob',name:'greet-user',revision:'old-commit'};
+ const real={...oldSkill(repoA),id:repoA.id+':'+realPath,path:realPath,blob_sha:'real-blob',name:'real-skill',revision:'old-commit'};
+ const oldB={...oldSkill(repoB),revision:'old-commit'};
+ const legacy={...scan(repoA),discovery_rules_version:1,inventory_complete:true,inventory:[
+  {path:fixturePath,type:'blob',mode:'100644',sha:'fixture-blob'},
+  {path:realPath,type:'blob',mode:'100644',sha:'real-blob'}
+ ]};
+ const highStarCurrent={...repoB,stars:1000};
+ const root=await fixtureRoot(t,{skills:[fixture,real,oldB],repositories:[legacy,scan(repoB)]});
+ const heads=new Map([repoA,highStarCurrent].map(r=>[String(r.id),{id:r.id,full_name:r.full_name,commit_sha:'old-commit'}]));
+ const calls=[],raw=[];
+ const result=await collectSkills({repositories:[repoA,highStarCurrent],dataRoot:root,heads,limit:1,maxFileReads:1,
+  api:async path=>{calls.push(path);if(path==='repos/'+repoA.full_name+'/git/trees/old-commit?recursive=1')return {tree:[
+   {path:fixturePath,type:'blob',mode:'100644',sha:'fixture-blob'},
+   {path:realPath,type:'blob',mode:'100644',sha:'real-blob'},
+   {path:lowerPath,type:'blob',mode:'100644',sha:'lower-blob'}
+  ],truncated:false};throw Error('Unexpected API request '+path)},
+  rawText:async(_repo,path)=>{raw.push(path);return '---\nname: craft-anything\ndescription: A valid lowercase Skill manifest\n---\n'}
+ });
+ assert.equal(result.coverage.attempted_this_run,1);
+ assert.equal(calls.length,1);
+ assert.deepEqual(raw,[lowerPath]);
+ assert.equal(result.skills.some(s=>s.path===fixturePath),false);
+ assert.equal(result.skills.find(s=>s.path===realPath)?.stale,false);
+ assert.equal(result.skills.find(s=>s.path===lowerPath)?.name,'craft-anything');
+ assert.equal(result.repositories.find(s=>s.id===repoA.id).discovery_rules_version,2);
+ assert.equal(result.repositories.find(s=>s.id===repoB.id).checked_at,oldDate);
+});
+
+test('Unmigrated complete scans are not counted as current-policy coverage',async t=>{
+ const legacy={...scan(repoA),discovery_rules_version:1,inventory_complete:true,inventory:[{path:'legacy/SKILL.md',sha:'legacy-blob',type:'blob',mode:'100644'}]};
+ const root=await fixtureRoot(t,{skills:[{...oldSkill(repoA),revision:'old-commit'}],repositories:[legacy]});
+ const heads=new Map([[String(repoA.id),{id:repoA.id,full_name:repoA.full_name,commit_sha:'old-commit'}]]);
+ const result=await collectSkills({repositories:[repoA],dataRoot:root,heads,limit:0,api:async()=>{throw Error('No scan selected') }});
+ assert.equal(result.skills[0].stale,true);
+ assert.equal(result.coverage.discovery_rules_version,2);
+ assert.equal(result.coverage.complete_repositories,0);
+ assert.equal(result.coverage.pending_repositories,1);
+ assert.equal(result.coverage.complete,false);
+});
+
+test('Rate limiting stops old-policy re-indexing instead of retrying cached legacy trees',async t=>{
+ const legacyA={...scan(repoA),discovery_rules_version:1,inventory_complete:true,inventory:[{path:'a/SKILL.md',sha:'a',type:'blob'}]};
+ const legacyB={...scan(repoB),discovery_rules_version:1,inventory_complete:true,inventory:[{path:'b/SKILL.md',sha:'b',type:'blob'}]};
+ const root=await fixtureRoot(t,{skills:[oldSkill(repoA),oldSkill(repoB)],repositories:[legacyA,legacyB]});
+ const heads=new Map([repoA,repoB].map(r=>[String(r.id),{id:r.id,full_name:r.full_name,commit_sha:'old-commit'}]));
+ const calls=[];
+ const result=await collectSkills({repositories:[repoA,repoB],dataRoot:root,heads,limit:2,maxFileReads:10,
+  api:async path=>{calls.push(path);const error=Error('API rate limit exceeded');error.code='RATE_LIMIT';throw error}});
+ assert.equal(calls.length,1);
+ assert.equal(calls[0],'repos/'+repoA.full_name+'/git/trees/old-commit?recursive=1');
+ assert.equal(result.coverage.attempted_this_run,1);
+ assert.equal(result.coverage.complete_repositories,0);
+ assert.equal(result.coverage.pending_repositories,2);
+ assert(result.skills.every(s=>s.stale));
 });

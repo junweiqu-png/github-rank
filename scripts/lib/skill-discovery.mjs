@@ -1,5 +1,6 @@
 import {parseDocument} from 'yaml';
 
+export const SKILL_DISCOVERY_RULES_VERSION=2;
 const MAX_TREE_REQUESTS=512;
 const MAX_SKILL_FILES=2000;
 const MAX_SOURCE_CHARS=1024*1024;
@@ -80,7 +81,7 @@ export async function discoverRepositorySkills(repo,{getTree,getText,maxFileRead
 
  try{
   if(repo.id===undefined||typeof repo.full_name!=='string')throw Error('Repository id and full_name are required');
-  const sameRevision=previousScan.commit_sha===ref&&Array.isArray(previousScan.inventory);
+  const sameRevision=previousScan.discovery_rules_version===SKILL_DISCOVERY_RULES_VERSION&&previousScan.commit_sha===ref&&Array.isArray(previousScan.inventory);
   const resumeTrees=sameRevision&&previousScan.pending_trees?.length;
   const cachedInventory=sameRevision&&previousScan.inventory_complete;
   const recursive=cachedInventory||resumeTrees?{tree:previousScan.inventory,truncated:!!resumeTrees}:await readTree(ref,true);
@@ -155,5 +156,5 @@ export async function discoverRepositorySkills(repo,{getTree,getText,maxFileRead
    if(typeof previous.path==='string'&&!fresh.has(previous.path))fresh.set(previous.path,{...previous,stale:true});
   }
  }
- return {skills:[...fresh.values()].sort((a,b)=>a.path.localeCompare(b.path)),complete,errors,commit_sha:ref,inventory_complete:inventoryComplete,inventory:[...files.values()].map(e=>({path:e.path,sha:e.sha,type:'blob',mode:e.mode||'100644'})),pending_trees:pendingTrees,file_states:fileStates,metadata_pending:pending,file_reads:fileReads};
+ return {skills:[...fresh.values()].sort((a,b)=>a.path.localeCompare(b.path)),complete,errors,commit_sha:ref,discovery_rules_version:SKILL_DISCOVERY_RULES_VERSION,inventory_complete:inventoryComplete,inventory:[...files.values()].map(e=>({path:e.path,sha:e.sha,type:'blob',mode:e.mode||'100644'})),pending_trees:pendingTrees,file_states:fileStates,metadata_pending:pending,file_reads:fileReads};
 }
