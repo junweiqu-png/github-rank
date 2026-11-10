@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-09T14:25:59.701Z",
+  "updated_at": "2026-11-10T20:52:16.300Z",
   "discovery": {
     "general": {
       "queries": 9,
-      "completed_queries": 3,
-      "pending_queries": 6,
-      "pending_partitions": 123,
+      "completed_queries": 4,
+      "pending_queries": 5,
+      "pending_partitions": 129,
       "requests_this_run": 30,
-      "repositories_this_run": 3000,
+      "repositories_this_run": 2844,
       "complete": false,
       "scope": "configured repository searches, not all of GitHub"
     },
@@ -16,8 +16,8 @@
       "completed_queries": 4,
       "pending_queries": 0,
       "pending_partitions": 0,
-      "requests_this_run": 45,
-      "repositories_this_run": 3834,
+      "requests_this_run": 44,
+      "repositories_this_run": 3778,
       "complete": true,
       "scope": "configured repository searches, not all of GitHub"
     },
@@ -25,68 +25,87 @@
       "queries": 11,
       "completed_queries": 0,
       "pending_queries": 11,
-      "pending_partitions": 220,
+      "pending_partitions": 239,
       "requests_this_run": 60,
-      "repositories_this_run": 4896,
+      "repositories_this_run": 6000,
       "complete": false,
       "scope": "configured repository searches, not all of GitHub"
     },
     "unlabelled_skill_probes": {
-      "unlabelled": 12970,
-      "cached": 0,
+      "unlabelled": 14999,
+      "cached": 324,
       "previously_detected": 0,
       "probed_this_run": 512,
-      "detected_this_run": 5,
-      "pending": 12458,
-      "incomplete": 13,
+      "detected_this_run": 63,
+      "pending": 14163,
+      "incomplete": 17,
       "complete": false
     }
   },
   "skills": {
     "discovery_rules_version": 2,
-    "candidate_repositories": 14821,
-    "scanned_repositories": 1663,
-    "complete_repositories": 317,
-    "pending_repositories": 14504,
-    "failed_repositories": 6,
-    "tree_indexed_repositories": 324,
-    "pending_files": 34182,
-    "attempted_this_run": 325,
-    "complete_this_run": 317,
+    "candidate_repositories": 18355,
+    "scanned_repositories": 2057,
+    "complete_repositories": 704,
+    "pending_repositories": 17651,
+    "failed_repositories": 9,
+    "tree_indexed_repositories": 717,
+    "pending_files": 43787,
+    "attempted_this_run": 394,
+    "complete_this_run": 387,
     "file_reads_this_run": 6000,
     "discovery_complete": false,
     "complete": false
   },
   "requests": {
     "requests": {
-      "core": 1441,
-      "search": 141,
+      "core": 1538,
+      "search": 140,
       "raw": 6000,
-      "graphql": 558
+      "graphql": 666
     },
-    "retries": 2,
+    "retries": 0,
     "core": {
-      "remaining": 3557,
+      "remaining": 4323,
       "limit": 5000,
-      "reset": 1794234723
+      "reset": 1794347311
     },
     "search": {
-      "remaining": 27,
+      "remaining": 26,
       "limit": 30,
-      "reset": 1794231681
+      "reset": 1794340793
     },
     "graphql": {
-      "remaining": 4576,
+      "remaining": 4492,
       "limit": 5000,
-      "reset": 1794235231
+      "reset": 1794344357
     },
     "heads": {
-      "requested": 27786,
-      "resolved": 27416,
-      "rejected": 2,
+      "requested": 33291,
+      "resolved": 32506,
+      "rejected": 4,
       "failed_batches": 0,
-      "fallback": 370,
+      "fallback": 785,
       "errors": [
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
+        "GraphQL returned partial or missing repository data",
         "GraphQL returned partial or missing repository data",
         "GraphQL returned partial or missing repository data",
         "GraphQL returned partial or missing repository data",
