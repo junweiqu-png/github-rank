@@ -17,186 +17,6 @@
   "pending": [
     {
       "query": "stars:>=100 fork:false",
-      "start": "2010-10-19T06:56:15Z",
-      "end": "2010-12-12T02:14:59Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2010-12-12T02:15:00Z",
-      "end": "2011-02-03T21:33:44Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2011-02-03T21:33:45Z",
-      "end": "2011-03-29T16:52:29Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2011-03-29T16:52:30Z",
-      "end": "2011-05-22T12:11:14Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2011-05-22T12:11:15Z",
-      "end": "2011-07-15T07:29:59Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2011-07-15T07:30:00Z",
-      "end": "2011-09-07T02:48:44Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2011-09-07T02:48:45Z",
-      "end": "2011-10-30T22:07:29Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2011-10-30T22:07:30Z",
-      "end": "2011-12-23T17:26:14Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2011-12-23T17:26:15Z",
-      "end": "2012-02-15T12:44:59Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2012-02-15T12:45:00Z",
-      "end": "2012-04-09T08:03:44Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2012-04-09T08:03:45Z",
-      "end": "2012-06-02T03:22:29Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2012-06-02T03:22:30Z",
-      "end": "2012-07-25T22:41:14Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2012-07-25T22:41:15Z",
-      "end": "2012-09-17T17:59:59Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2012-09-17T18:00:00Z",
-      "end": "2012-11-10T13:18:44Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2012-11-10T13:18:45Z",
-      "end": "2013-01-03T08:37:29Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2013-01-03T08:37:30Z",
-      "end": "2013-02-26T03:56:14Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2013-02-26T03:56:15Z",
-      "end": "2013-04-20T23:14:59Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2013-04-20T23:15:00Z",
-      "end": "2013-06-13T18:33:44Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2013-06-13T18:33:45Z",
-      "end": "2013-08-06T13:52:29Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2013-08-06T13:52:30Z",
-      "end": "2013-09-29T09:11:14Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2013-09-29T09:11:15Z",
-      "end": "2013-11-22T04:29:59Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2013-11-22T04:30:00Z",
-      "end": "2014-01-14T23:48:44Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2014-01-14T23:48:45Z",
-      "end": "2014-03-09T19:07:29Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2014-03-09T19:07:30Z",
-      "end": "2014-05-02T14:26:14Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2014-05-02T14:26:15Z",
-      "end": "2014-06-25T09:44:59Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2014-06-25T09:45:00Z",
-      "end": "2014-08-18T05:03:44Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2014-08-18T05:03:45Z",
-      "end": "2014-10-11T00:22:29Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2014-10-11T00:22:30Z",
-      "end": "2014-12-03T19:41:14Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2014-12-03T19:41:15Z",
-      "end": "2015-01-26T14:59:59Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
-      "start": "2015-01-26T15:00:00Z",
-      "end": "2015-03-21T10:18:44Z",
-      "page": 1
-    },
-    {
-      "query": "stars:>=100 fork:false",
       "start": "2015-03-21T10:18:45Z",
       "end": "2015-05-14T05:37:29Z",
       "page": 1
@@ -788,6 +608,354 @@
       "start": "2010-08-26T11:37:30Z",
       "end": "2010-10-19T06:56:14Z",
       "page": 2
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2010-10-19T06:56:15Z",
+      "end": "2010-12-12T02:14:59Z",
+      "page": 2
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2010-12-12T02:15:00Z",
+      "end": "2011-02-03T21:33:44Z",
+      "page": 2
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2011-02-03T21:33:45Z",
+      "end": "2011-03-02T19:13:07Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2011-03-02T19:13:08Z",
+      "end": "2011-03-29T16:52:29Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2011-03-29T16:52:30Z",
+      "end": "2011-04-25T14:31:52Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2011-04-25T14:31:53Z",
+      "end": "2011-05-22T12:11:14Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2011-05-22T12:11:15Z",
+      "end": "2011-06-18T09:50:37Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2011-06-18T09:50:38Z",
+      "end": "2011-07-15T07:29:59Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2011-07-15T07:30:00Z",
+      "end": "2011-08-11T05:09:22Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2011-08-11T05:09:23Z",
+      "end": "2011-09-07T02:48:44Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2011-09-07T02:48:45Z",
+      "end": "2011-10-04T00:28:07Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2011-10-04T00:28:08Z",
+      "end": "2011-10-30T22:07:29Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2011-10-30T22:07:30Z",
+      "end": "2011-11-26T19:46:52Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2011-11-26T19:46:53Z",
+      "end": "2011-12-23T17:26:14Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2011-12-23T17:26:15Z",
+      "end": "2012-01-19T15:05:37Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2012-01-19T15:05:38Z",
+      "end": "2012-02-15T12:44:59Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2012-02-15T12:45:00Z",
+      "end": "2012-03-13T10:24:22Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2012-03-13T10:24:23Z",
+      "end": "2012-04-09T08:03:44Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2012-04-09T08:03:45Z",
+      "end": "2012-05-06T05:43:07Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2012-05-06T05:43:08Z",
+      "end": "2012-06-02T03:22:29Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2012-06-02T03:22:30Z",
+      "end": "2012-06-29T01:01:52Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2012-06-29T01:01:53Z",
+      "end": "2012-07-25T22:41:14Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2012-07-25T22:41:15Z",
+      "end": "2012-08-21T20:20:37Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2012-08-21T20:20:38Z",
+      "end": "2012-09-17T17:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2012-09-17T18:00:00Z",
+      "end": "2012-10-14T15:39:22Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2012-10-14T15:39:23Z",
+      "end": "2012-11-10T13:18:44Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2012-11-10T13:18:45Z",
+      "end": "2012-12-07T10:58:07Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2012-12-07T10:58:08Z",
+      "end": "2013-01-03T08:37:29Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2013-01-03T08:37:30Z",
+      "end": "2013-01-30T06:16:52Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2013-01-30T06:16:53Z",
+      "end": "2013-02-26T03:56:14Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2013-02-26T03:56:15Z",
+      "end": "2013-03-25T01:35:37Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2013-03-25T01:35:38Z",
+      "end": "2013-04-20T23:14:59Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2013-04-20T23:15:00Z",
+      "end": "2013-05-17T20:54:22Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2013-05-17T20:54:23Z",
+      "end": "2013-06-13T18:33:44Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2013-06-13T18:33:45Z",
+      "end": "2013-07-10T16:13:07Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2013-07-10T16:13:08Z",
+      "end": "2013-08-06T13:52:29Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2013-08-06T13:52:30Z",
+      "end": "2013-09-02T11:31:52Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2013-09-02T11:31:53Z",
+      "end": "2013-09-29T09:11:14Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2013-09-29T09:11:15Z",
+      "end": "2013-10-26T06:50:37Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2013-10-26T06:50:38Z",
+      "end": "2013-11-22T04:29:59Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2013-11-22T04:30:00Z",
+      "end": "2013-12-19T02:09:22Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2013-12-19T02:09:23Z",
+      "end": "2014-01-14T23:48:44Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2014-01-14T23:48:45Z",
+      "end": "2014-02-10T21:28:07Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2014-02-10T21:28:08Z",
+      "end": "2014-03-09T19:07:29Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2014-03-09T19:07:30Z",
+      "end": "2014-04-05T16:46:52Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2014-04-05T16:46:53Z",
+      "end": "2014-05-02T14:26:14Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2014-05-02T14:26:15Z",
+      "end": "2014-05-29T12:05:37Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2014-05-29T12:05:38Z",
+      "end": "2014-06-25T09:44:59Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2014-06-25T09:45:00Z",
+      "end": "2014-07-22T07:24:22Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2014-07-22T07:24:23Z",
+      "end": "2014-08-18T05:03:44Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2014-08-18T05:03:45Z",
+      "end": "2014-09-14T02:43:07Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2014-09-14T02:43:08Z",
+      "end": "2014-10-11T00:22:29Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2014-10-11T00:22:30Z",
+      "end": "2014-11-06T22:01:52Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2014-11-06T22:01:53Z",
+      "end": "2014-12-03T19:41:14Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2014-12-03T19:41:15Z",
+      "end": "2014-12-30T17:20:37Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2014-12-30T17:20:38Z",
+      "end": "2015-01-26T14:59:59Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2015-01-26T15:00:00Z",
+      "end": "2015-02-22T12:39:22Z",
+      "page": 1
+    },
+    {
+      "query": "stars:>=100 fork:false",
+      "start": "2015-02-22T12:39:23Z",
+      "end": "2015-03-21T10:18:44Z",
+      "page": 1
     }
   ]
 }
