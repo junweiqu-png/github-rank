@@ -6,8 +6,33 @@
     "stars:100..499 fork:false created:2026-11-01..2026-11-30",
     "stars:100..499 fork:false created:2026-10-01..2026-10-31"
   ],
-  "cycle_started_at": "2026-11-11T19:42:57.546Z",
-  "cycle_completed_at": "2026-11-11T19:42:57.546Z",
-  "complete": true,
-  "pending": []
+  "cycle_started_at": "2026-11-12T20:03:09.071Z",
+  "cycle_completed_at": null,
+  "complete": false,
+  "pending": [
+    {
+      "query": "stars:100..499 fork:false created:2026-10-01..2026-10-31",
+      "start": "2026-10-01T00:00:00Z",
+      "end": "2026-10-08T17:59:59Z",
+      "page": 7
+    },
+    {
+      "query": "stars:100..499 fork:false created:2026-10-01..2026-10-31",
+      "start": "2026-10-08T18:00:00Z",
+      "end": "2026-10-16T11:59:59Z",
+      "page": 7
+    },
+    {
+      "query": "stars:100..499 fork:false created:2026-10-01..2026-10-31",
+      "start": "2026-10-16T12:00:00Z",
+      "end": "2026-10-24T05:59:59Z",
+      "page": 7
+    },
+    {
+      "query": "stars:100..499 fork:false created:2026-11-01..2026-11-30",
+      "start": "2026-11-01T00:00:00Z",
+      "end": "2026-11-12T23:59:59Z",
+      "page": 10
+    }
+  ]
 }
