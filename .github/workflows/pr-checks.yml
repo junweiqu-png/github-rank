@@ -21,6 +21,10 @@ jobs:
           node --check scripts/collect.mjs
           node --check scripts/collect-skills.mjs
           node --check scripts/verify-output.mjs
+          node --check scripts/build-client-data.mjs
+          node --check dist/fast-app.js
+      - name: Generate lightweight client data
+        run: node scripts/build-client-data.mjs
       - name: Run regression tests
         run: node --test
       - name: Verify generated data integrity
