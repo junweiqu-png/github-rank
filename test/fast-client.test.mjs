@@ -43,6 +43,7 @@ test('Generated fast indexes contain every source project and Skill, no manual a
  assert.equal(stats.skills,sourceSkills.skills.length);
  assert.ok(boot.preview.length>29);
  assert.ok(statSync(new URL('fast/boot.json',root)).size<250000,'First paint boot payload must be small');
+ assert.ok(statSync(new URL('fast/index.json',root)).size<14*1024*1024,'Complete rank index must be less than 14 MiB');
  const byId=new Map(source.repositories.map(r=>[r.id,r]));
  const seen=new Set();
  for(const row of index.rows){
