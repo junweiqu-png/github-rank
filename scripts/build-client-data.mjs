@@ -1,4 +1,4 @@
-import {readFile,writeFile,mkdir,rm} from 'node:fs/promises';
+import {readFile,writeFile,mkdir,rm,stat} from 'node:fs/promises';
 import {gzipSync,gunzipSync} from 'node:zlib';
 import {FAST_SCHEMA_VERSION,FAST_SHARDS,packProject,packSkill,newestFirst,shardOf} from '../dist/fast-format.js';
 
@@ -81,5 +81,8 @@ const stats={version:FAST_SCHEMA_VERSION,updated_at:latest.updated_at,
  projects:rows.length,skills:skills.skills.length,skill_shards:FAST_SHARDS,
  history_snapshots:dates.length};
 await write('stats.json',stats);
-console.log(JSON.stringify({phase:'fast-client-data',...stats,preview:90,
+const bootBytes=(await stat(new URL('boot.json',out))).size;
+const indexBytes=(await stat(new URL('index.json',out))).size;
+const skillSearchBytes=(await stat(new URL('skill-search.json',out))).size;
+console.log(JSON.stringify({phase:'fast-client-data',...stats,boot_bytes:bootBytes,index_bytes:indexBytes,skill_search_bytes:skillSearchBytes,preview:90,
  skill_bucket_records:skillBuckets.reduce((n,a)=>n+a.length,0)}));
