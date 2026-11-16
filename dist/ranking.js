@@ -10,5 +10,20 @@ export function range(period,date){
  else if(period==='week'){day-=(wall.getUTCDay()+6)%7;start=utc(y,m,day);end=start+7*86400000}
  else {start=+d;end=start+86400000}return [start,end];
 }
-export function rank(repos,{period='all',date,category='all',area='all',domain='all',q=''}={}){const [a,b]=range(period,date);return repos.filter(r=>+new Date(r.created_at)>=a&&+new Date(r.created_at)<b&&(category==='all'||typesOf(r).includes(category))&&(area==='all'||(area==='ai'?r.domain==='ai':r.domain!=='ai'))&&(domain==='all'||r.domain===domain)&&`${r.full_name} ${r.description||''} ${r.summary||''} ${r.input||''} ${r.output||''} ${(r.topics||[]).join(' ')} ${(r.skills||[]).map(s=>s.name+' '+(s.summary||s.description||'')).join(' ')}`.toLowerCase().includes(q.toLowerCase())).sort((a,b)=>b.stars-a.stars||a.full_name.localeCompare(b.full_name));}
-
+export function rank(repos,{period='all',date,category='all',area='all',domain='all',q='',preSorted=false}={}){
+ const [a,b]=range(period,date),term=q.toLowerCase();
+ const rows=repos.filter(r=>{
+  if(+new Date(r.created_at)<a||+new Date(r.created_at)>=b)return false;
+  if(category!=='all'&&!typesOf(r).includes(category))return false;
+  if(area!=='all'&&(area==='ai'?r.domain!=='ai':r.domain==='ai'))return false;
+  if(domain!=='all'&&r.domain!==domain)return false;
+  if(!term)return true;
+  const text=[
+   r.full_name,r.description||'',r.summary||'',r.input||'',r.output||'',
+   (r.topics||[]).join(' '),r._skillSearch||'',
+   (r.skills||[]).map(s=>s.name+' '+(s.summary||s.description||'')).join(' ')
+  ].join(' ').toLowerCase();
+  return text.includes(term);
+ });
+ return preSorted?rows:rows.sort((a,b)=>b.stars-a.stars||a.full_name.localeCompare(b.full_name));
+}
