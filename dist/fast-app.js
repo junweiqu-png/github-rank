@@ -93,7 +93,7 @@ function renderPagination(total,pages){
 }
 function render(){
  if(!data)return;
- const ranked=rank(data.repositories,state);
+ const ranked=rank(data.repositories,{...state,preSorted:true});
  const pages=Math.max(1,Math.ceil(ranked.length/pageSize));page=Math.min(page,pages);
  const [a,b]=range(state.period,state.date);
  $('.section-head h1').firstChild.textContent=state.category==='skills'?'Skills 榜 ':'已收录项目 Star 榜 ';
