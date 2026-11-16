@@ -31,6 +31,7 @@ test('Compact schema preserves exact identity, Star, date and type filtering',()
 test('Generated fast indexes contain every source project and Skill, no manual allowlist',()=>{
  const source=data('latest.json'),sourceSkills=data('skills.json');
  const boot=data('fast/boot.json'),index=data('fast/index.json'),stats=data('fast/stats.json');
+ const search=new Map(data('fast/search.json').rows.map(r=>[r[0],r]));
  assert.equal(boot.version,FAST_SCHEMA_VERSION);
  assert.equal(index.version,FAST_SCHEMA_VERSION);
  assert.equal(boot.updated_at,index.updated_at);
@@ -52,10 +53,13 @@ test('Generated fast indexes contain every source project and Skill, no manual a
   assert.equal(restored.created_at,original.created_at);
   assert.deepEqual(restored.types,original.types);
   assert.equal(restored.skill_count,original.skill_count);
-  assert.equal(restored.description,original.description||'');
+  assert.equal(restored.description,'','first-load index excludes bulky text');
+  assert.equal(search.get(restored.id)?.[1],original.description||'');
+  assert.equal(search.get(restored.id)?.[2],(original.topics||[]).join(' '));
   assert.ok(!seen.has(restored.id));seen.add(restored.id);
  }
  assert.equal(seen.size,source.repositories.length);
+ assert.equal(search.size,source.repositories.length);
  assert.deepEqual(boot.preview,index.rows.slice(0,boot.preview.length));
  for(let i=1;i<index.rows.length;i++)assert.ok(newestFirst(index.rows[i-1],index.rows[i])<=0);
  let skillCount=0;
