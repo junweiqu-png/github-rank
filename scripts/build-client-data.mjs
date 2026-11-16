@@ -21,7 +21,7 @@ function safeDate(value){return typeof value==='string'&&/^\d{4}-\d{2}-\d{2}$/.t
 const latest=await readJson('latest.json');
 const skills=await readJson('skills.json');
 if(!Array.isArray(latest.repositories)||!Array.isArray(skills.skills))throw Error('Missing source catalogs');
-const rows=latest.repositories.map(packProject).sort(newestFirst);
+const rows=latest.repositories.map(r=>packProject(r,false)).sort(newestFirst);
 const ids=new Set(rows.map(r=>r[0]));
 if(ids.size!==rows.length)throw Error('Duplicated project IDs in fast catalog source');
 if(rows.some(r=>!Number.isInteger(r[0])||!r[1]||!Number.isFinite(r[2])))throw Error('Invalid fast project row');
@@ -45,6 +45,10 @@ await write('boot.json',{
 });
 await write('index.json',{
  version:FAST_SCHEMA_VERSION,updated_at:latest.updated_at,total:rows.length,rows
+});
+await write('search.json',{
+ version:FAST_SCHEMA_VERSION,updated_at:latest.updated_at,
+ rows:latest.repositories.map(r=>[r.id,r.description||'',(r.topics||[]).join(' ')])
 });
 await write('skill-search.json',{
  version:FAST_SCHEMA_VERSION,updated_at:latest.updated_at,
