@@ -118,6 +118,7 @@ function render(){
    +(data!==latest?' 这是历史版本，不使用最新技能扫描结果补分类。':'')
    +(data.has_errors?' 部分数据沿用上次记录。':'');
  if(indexError&&data.isPreview)status.textContent+=' 完整索引加载失败，可点击「重试完整加载」。';
+ if(state.q.trim()&&data===latest&&(!projectTextById.size||!skillTermsById.size))status.textContent+=' 完整搜索索引按需加载中，结果稍后自动补全。';
  status.className=data.has_errors?'error':'';
  $('#skill-progress').hidden=state.category!=='skills'||data!==latest;
  $('#skill-progress').textContent=skillProgress();
@@ -147,7 +148,7 @@ async function ensureProjectSearch(){
  projectSearchPromise=json(fastUrl('search.json')).then(payload=>{
   if(payload.version!==FAST_SCHEMA_VERSION)throw Error('项目全文索引版本不兼容');
   projectTextById=new Map(payload.rows.map(row=>[row[0],row]));
-  attachSearchText(latest);if(data!==latest)attachSearchText(data);render();
+  attachSearchText(latest);render();
  }).catch(error=>{projectSearchPromise=null;console.error('Project search unavailable',error)});
  return projectSearchPromise;
 }
@@ -156,7 +157,7 @@ async function ensureSkillSearch(){
  skillSearchPromise=json(fastUrl('skill-search.json')).then(payload=>{
   if(payload.version!==FAST_SCHEMA_VERSION)throw Error('Skill 搜索索引版本不兼容');
   skillTermsById=new Map(payload.rows);
-  attachSearchText(latest);if(data!==latest)attachSearchText(data);render();
+  attachSearchText(latest);render();
  }).catch(e=>{skillSearchPromise=null;$('#status').textContent='Skill 名称搜索暂不可用：'+e.message+'。仓库搜索仍然可用。'});
  return skillSearchPromise;
 }
