@@ -55,6 +55,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: node scripts/collect.mjs
+      - name: Generate lightweight browser indexes and lazy-load shards
+        run: node scripts/build-client-data.mjs
       - name: Verify rankings and catalog
         run: node --test
       - name: Validate data size, checkpoints and required project coverage
