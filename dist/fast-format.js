@@ -8,12 +8,12 @@ export function shardOf(id){
  if(!Number.isSafeInteger(number)||number<0)throw TypeError('Invalid GitHub repository id');
  return String(number%FAST_SHARDS).padStart(2,'0');
 }
-export function packProject(r){
+export function packProject(r,includeText=true){
  return [
   r.id,r.full_name,r.stars,r.created_at,r.domain||'other',
   r.types||[r.category||'projects'],r.skill_count||0,r.skill_verification||'',
   r.archived?1:0,r.updated_at||'',r.observed_at||'',r.category||'projects',
-  r.description||'',(r.topics||[]).join(' ')
+  includeText?(r.description||''):'',includeText?(r.topics||[]).join(' '):''
  ];
 }
 export function unpackProject(a){
