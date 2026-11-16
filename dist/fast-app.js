@@ -9,7 +9,8 @@ const fmt=n=>new Intl.NumberFormat('zh-CN').format(n);
 const pageSize=30;
 const state={period:'all',date:local(new Date()),category:'all',area:'all',domain:'all',q:''};
 let data=null,latest=null,editorial={},dates=[],serial=0,page=1,detailSerial=0;
-let skillCoverage={},skillTotal=0,indexError=false,skillSearchPromise=null;
+let skillCoverage={},skillTotal=0,indexError=false,skillSearchPromise=null,projectSearchPromise=null;
+let projectTextById=new Map(),skillTermsById=new Map();
 const skillsByRepository=new Map(),shardPromises=new Map(),trendPromises=new Map();
 $('#date').value=state.date;$('#date').max=state.date;
 
@@ -30,6 +31,14 @@ function applyEditorial(d){
  for(const r of d.repositories){
   const copy=editorial[r.full_name.toLowerCase()];
   if(copy){r.summary=copy.summary;r.input=copy.input;r.output=copy.output}
+ }
+}
+function attachSearchText(d){
+ if(!d)return;
+ for(const r of d.repositories){
+  const project=projectTextById.get(r.id);
+  if(project){r.description=project[1];r.topics=project[2]?project[2].split(' '):[]}
+  r._skillSearch=skillTermsById.get(r.id)||'';
  }
 }
 function decorate(r){
@@ -133,13 +142,21 @@ function render(){
  $('#retry-full')?.addEventListener('click',loadFullIndex);
 }
 function update(){page=1;sync();render()}
+async function ensureProjectSearch(){
+ if(projectSearchPromise)return projectSearchPromise;
+ projectSearchPromise=json(fastUrl('search.json')).then(payload=>{
+  if(payload.version!==FAST_SCHEMA_VERSION)throw Error('项目全文索引版本不兼容');
+  projectTextById=new Map(payload.rows.map(row=>[row[0],row]));
+  attachSearchText(latest);if(data!==latest)attachSearchText(data);render();
+ }).catch(error=>{projectSearchPromise=null;console.error('Project search unavailable',error)});
+ return projectSearchPromise;
+}
 async function ensureSkillSearch(){
  if(skillSearchPromise)return skillSearchPromise;
  skillSearchPromise=json(fastUrl('skill-search.json')).then(payload=>{
   if(payload.version!==FAST_SCHEMA_VERSION)throw Error('Skill 搜索索引版本不兼容');
-  const byId=new Map(payload.rows);
-  for(const set of [latest,data])if(set)for(const r of set.repositories)r._skillSearch=byId.get(r.id)||'';
-  render();
+  skillTermsById=new Map(payload.rows);
+  attachSearchText(latest);if(data!==latest)attachSearchText(data);render();
  }).catch(e=>{skillSearchPromise=null;$('#status').textContent='Skill 名称搜索暂不可用：'+e.message+'。仓库搜索仍然可用。'});
  return skillSearchPromise;
 }
@@ -198,7 +215,7 @@ let searchTimer;
 $('#search').oninput=e=>{
  state.q=e.target.value;
  clearTimeout(searchTimer);
- searchTimer=setTimeout(()=>{update();if(state.q.trim()&&data===latest)ensureSkillSearch()},220);
+ searchTimer=setTimeout(()=>{update();if(state.q.trim()&&data===latest){ensureProjectSearch();ensureSkillSearch()}},220);
 };
 $('#snapshot').onchange=async e=>{
  const key=e.target.value,token=++serial;
@@ -230,7 +247,7 @@ $('#list').onclick=async event=>{
   +'</dd><dt>输入</dt><dd>'+escape(r.input)+'</dd><dt>输出</dt><dd>'+escape(r.output)
   +'</dd></dl><p><a target="_blank" rel="noopener" href="'+escape(r.url)
   +'">GitHub 项目 / 使用文档 ↗</a></p>'+renderSkillChildren(r)
-  +'<details><summary>原文与说明来源</summary><p>'+escape(r.description||'仓库暂无简介')
+  +'<details><summary>原文与说明来源</summary><p id="detail-description">'+escape(r.description||'仓库简介按需加载中…')
   +'</p><p>'+escape(r.basis)+'</p><a target="_blank" rel="noopener" href="'+escape(r.source)
   +'">查看来源 ↗</a></details><dl><dt>仓库总 Star</dt><dd>'+fmt(r.stars)
   +'</dd><dt>创建</dt><dd>'+local(r.created_at)+'</dd><dt>最近提交</dt><dd>'
@@ -238,6 +255,11 @@ $('#list').onclick=async event=>{
   +(r.observed_at?escape(new Date(r.observed_at).toLocaleString('zh-CN',{timeZone:'Asia/Shanghai'})):'未记录')
   +'</dd></dl><h3>Star 历史</h3><div id="trend">正在读取此仓库的轻量历史数据…</div>';
  $('#dialog').showModal();
+ if(data===latest&&!r.description){ensureProjectSearch().then(()=>{
+  const current=latest.repositories.find(x=>x.id===r.id);
+  const element=$('#detail-description');
+  if(token===detailSerial&&element)element.textContent=current?.description||'仓库暂无简介';
+ })}
  try{
   const points=await trendFor(r.id);
   if(token!==detailSerial||!$('#dialog').open)return;
@@ -253,11 +275,11 @@ async function loadFullIndex(){
   if(payload.version!==FAST_SCHEMA_VERSION||payload.rows.length!==payload.total)throw Error('完整索引数量不符');
   const old=latest;
   const full=decode(payload);
-  applyEditorial(full);
+  applyEditorial(full);attachSearchText(full);
   latest=full;
   if(data===old)data=full;
   render();
-  if(state.q.trim())ensureSkillSearch();
+  if(state.q.trim()){ensureProjectSearch();ensureSkillSearch()}
  }catch(error){indexError=true;render();console.error('Full index unavailable',error)}
 }
 try{
