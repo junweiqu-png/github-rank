@@ -1,3 +1,4 @@
+import {readSkills} from '../scripts/lib/skill-storage.mjs';
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync,statSync} from 'node:fs';
@@ -29,7 +30,7 @@ test('Compact schema preserves exact identity, Star, date and type filtering',()
 });
 
 test('Generated fast indexes contain every source project and Skill, no manual allowlist',()=>{
- const source=data('latest.json'),sourceSkills=data('skills.json');
+ const source=data('latest.json'),sourceSkills=readSkills(root);
  const boot=data('fast/boot.json'),index=data('fast/index.json'),stats=data('fast/stats.json');
  const search=new Map(data('fast/search.json').rows.map(r=>[r[0],r]));
  assert.equal(boot.version,FAST_SCHEMA_VERSION);
@@ -63,16 +64,20 @@ test('Generated fast indexes contain every source project and Skill, no manual a
  assert.equal(search.size,source.repositories.length);
  assert.deepEqual(boot.preview,index.rows.slice(0,boot.preview.length));
  for(let i=1;i<index.rows.length;i++)assert.ok(newestFirst(index.rows[i-1],index.rows[i])<=0);
- let skillCount=0;
+ const expectedSkills=new Map(sourceSkills.skills.map(s=>[s.id,packSkill(s)]));
+ assert.equal(expectedSkills.size,sourceSkills.skills.length,'Unique canonical Skill IDs');
  for(let bucket=0;bucket<FAST_SHARDS;bucket++){
   const shard=data('fast/skills/'+String(bucket).padStart(2,'0')+'.json');
   for(const item of shard){
    assert.equal(Number(shardOf(item[0])),bucket);
    assert.ok(byId.has(item[0]));
-   skillCount++;
+   const id=String(item[0])+':'+item[6];
+   assert.ok(expectedSkills.has(id),'Duplicate or unexpected Skill '+id);
+   assert.deepEqual(item,expectedSkills.get(id));
+   expectedSkills.delete(id);
   }
  }
- assert.equal(skillCount,sourceSkills.skills.length);
+ assert.equal(expectedSkills.size,0,'Every canonical Skill is present');
 });
 
 test('Client avoids monolithic source downloads and per-repository full history requests',()=>{
