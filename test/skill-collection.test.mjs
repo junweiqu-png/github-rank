@@ -1,3 +1,4 @@
+import {readSkills} from '../scripts/lib/skill-storage.mjs';
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {mkdtemp,readFile,writeFile,unlink,rmdir} from 'node:fs/promises';
@@ -18,7 +19,7 @@ async function fixtureRoot(t,previous){
  const directory=await mkdtemp(new URL('../.skill-collection-test-',import.meta.url));
  const dataRoot=pathToFileURL(directory+sep);
  t.after(async()=>{
-  for(const file of ['skills.json','skills.tmp','scan-checkpoint.json.gz','scan-checkpoint.json.gz.tmp']){
+  for(const file of ['skills.json','skills.json.gz','skills.json.gz.tmp','scan-checkpoint.json.gz','scan-checkpoint.json.gz.tmp']){
    try{await unlink(new URL(file,dataRoot))}catch(error){if(error.code!=='ENOENT')throw error}
   }
   await rmdir(directory);
@@ -51,7 +52,7 @@ test('Exhausting the file budget in repository A preserves unstarted B and its s
  assert(result.skills.some(s=>s.id===oldSkill(repoB).id&&s.observed_at===oldDate));
  assert(result.skills.some(s=>s.name==='a-new'&&!s.stale));
  assert.deepEqual(result.repositories.find(r=>r.id===repoB.id),previous.repositories[1]);
- const saved=JSON.parse(await readFile(new URL('skills.json',dataRoot),'utf8'));
+ const saved=readSkills(dataRoot);
  assert.deepEqual(saved.skills,result.skills);
 });
 
@@ -78,7 +79,7 @@ test('A failed empty-looking scan retains old skills; only a complete empty tree
  assert.equal(failed.skills.length,1);assert.equal(failed.skills[0].stale,true);assert.equal(failed.repositories[0].complete,false);
  const complete=await collectSkills({repositories:[repoA],dataRoot,api:metadataApi(repoA,{tree:[],truncated:false})});
  assert.deepEqual(complete.skills,[]);assert.equal(complete.repositories[0].complete,true);assert.deepEqual(complete.errors,[]);
- const saved=JSON.parse(await readFile(new URL('skills.json',dataRoot),'utf8'));
+ const saved=readSkills(dataRoot);
  assert.deepEqual(saved.skills,[]);
 });
 
