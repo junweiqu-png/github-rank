@@ -1,3 +1,4 @@
+import {readSkills,writeSkills,SAFE_GIT_BYTES} from './lib/skill-storage.mjs';
 import {mkdir,readFile,writeFile,rename} from 'node:fs/promises';
 import {gzipSync,gunzipSync} from 'node:zlib';
 import {discoverRepositorySkills,SKILL_DISCOVERY_RULES_VERSION} from './lib/skill-discovery.mjs';
@@ -6,7 +7,7 @@ export function isSkillCandidate(r,previous=[]){return r.skill_candidate===true|
 
 export async function collectSkills({api,repositories,limit=Infinity,maxFileReads=30000,perRepositoryFileReads=256,passes=1,rawText,heads=new Map(),priorityRepositoryIds=[],discoveryComplete=false,dataRoot=root}){
  const root=dataRoot;
- let previous={skills:[],repositories:[]};try{previous=JSON.parse(await readFile(new URL('skills.json',root),'utf8'))}catch{}
+ const previous=readSkills(root,{allowMissing:true});
  // Public catalog excludes file inventories; lossless scan checkpoints are gzip-compressed.
  // Recover legacy embedded state when upgrading a site published before this change.
  let checkpoint;try{checkpoint=JSON.parse(gunzipSync(await readFile(new URL('scan-checkpoint.json.gz',root))).toString('utf8'))}catch{}
@@ -36,11 +37,10 @@ export async function collectSkills({api,repositories,limit=Infinity,maxFileRead
   const data=dataset();await mkdir(root,{recursive:true});
   const compressed=gzipSync(Buffer.from(JSON.stringify({version:1,repositories:[...scans.values()]})),{level:4});
   // GitHub rejects individual Git blobs larger than 100 MiB; fail before committing.
-  if(compressed.byteLength>90*1024*1024)throw Error('Skill scan checkpoint exceeds safe Git size');
+  if(compressed.byteLength>SAFE_GIT_BYTES)throw Error('Skill scan checkpoint exceeds safe Git size');
   await writeFile(new URL('scan-checkpoint.json.gz.tmp',root),compressed);
   await rename(new URL('scan-checkpoint.json.gz.tmp',root),new URL('scan-checkpoint.json.gz',root));
-  await writeFile(new URL('skills.tmp',root),JSON.stringify(data));
-  await rename(new URL('skills.tmp',root),new URL('skills.json',root));
+  await writeSkills(root,data);
   return data
  }
  for(let pass=0;pass<passes;pass++){
