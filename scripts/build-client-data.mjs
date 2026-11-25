@@ -1,3 +1,4 @@
+import {readSkills} from './lib/skill-storage.mjs';
 import {readFile,writeFile,mkdir,rm,stat} from 'node:fs/promises';
 import {gzipSync,gunzipSync} from 'node:zlib';
 import {FAST_SCHEMA_VERSION,FAST_SHARDS,packProject,packSkill,newestFirst,shardOf} from '../dist/fast-format.js';
@@ -19,7 +20,7 @@ async function write(rel,data){
 function safeDate(value){return typeof value==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(value)}
 
 const latest=await readJson('latest.json');
-const skills=await readJson('skills.json');
+const skills=readSkills(root);
 if(!Array.isArray(latest.repositories)||!Array.isArray(skills.skills))throw Error('Missing source catalogs');
 const rows=latest.repositories.map(r=>packProject(r,false)).sort(newestFirst);
 const ids=new Set(rows.map(r=>r[0]));
