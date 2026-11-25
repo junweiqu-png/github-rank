@@ -1,3 +1,4 @@
+import {readSkills,SAFE_GIT_BYTES} from './lib/skill-storage.mjs';
 import {readdirSync,statSync,readFileSync} from 'node:fs';
 import {gunzipSync} from 'node:zlib';
 import {join} from 'node:path';
@@ -5,7 +6,7 @@ import {fileURLToPath} from 'node:url';
 import {CONFIGURED_SOURCES,independentDiscovery} from './lib/discovery-evidence.mjs';
 const root=fileURLToPath(new URL('../dist/data/',import.meta.url));
 const latest=JSON.parse(readFileSync(join(root,'latest.json'),'utf8'));
-const skills=JSON.parse(readFileSync(join(root,'skills.json'),'utf8'));
+const skills=readSkills(new URL('../dist/data/',import.meta.url));
 const checkpoint=JSON.parse(gunzipSync(readFileSync(join(root,'scan-checkpoint.json.gz'))));
 // Publication checks invariants, not a hand-picked list of repository names.
 if(!Array.isArray(latest.repositories)||!latest.repositories.length)throw Error('Missing public repository catalog');
@@ -38,7 +39,7 @@ const audited=latest.manual_audit?.verified_repositories||[];
 const missingAudited=audited.filter(n=>!names.has(n.toLowerCase()));
 if(skills.repositories.some(r=>r.inventory||r.file_states||r.pending_trees))throw Error('Public skills catalog leaks unbounded checkpoint state');
 if(!Array.isArray(checkpoint.repositories))throw Error('Missing compressed scan checkpoints');
-const max=90*1024*1024;
+const max=SAFE_GIT_BYTES;
 let largest={name:'',size:0};
 function visit(dir){for(const item of readdirSync(dir,{withFileTypes:true})){
  const name=join(dir,item.name);
