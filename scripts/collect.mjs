@@ -1,3 +1,4 @@
+import {readSkills} from './lib/skill-storage.mjs';
 import {mkdir,readFile,writeFile,rename} from 'node:fs/promises';
 import {editorial} from './editorial.mjs';
 import {general} from './general-projects.mjs';
@@ -18,7 +19,7 @@ allEditorial['vercel-labs/agent-browser']={summary:'供 AI Agent 浏览和操作
 await writeJson('editorial.json',allEditorial);
 if(process.argv.includes('--editorial-only'))process.exit(0);
 const client=createGithubClient({token:process.env.GITHUB_TOKEN}),{api,rawText}=client;
-const previous=await readJson('latest.json',{repositories:[]}),previousSkills=await readJson('skills.json',{skills:[],repositories:[]}),errors=[];
+const previous=await readJson('latest.json',{repositories:[]}),previousSkills=readSkills(root,{allowMissing:true}),errors=[];
 const byId=new Map(previous.repositories.map(r=>[String(r.id),r]));
 const named=new Map(previous.repositories.map(r=>[r.full_name.toLowerCase(),r]));
 function merge(r,skillCandidate=false,source=null){
